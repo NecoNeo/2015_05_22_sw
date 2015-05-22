@@ -1,0 +1,2174 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>弹窗</title>
+<link type="text/css" href="../css/easyui/themes/icon.css"
+	rel="Stylesheet" />
+<link type="text/css" href="../css/easyui/themes/gray/easyui.css"
+	rel="Stylesheet" />
+<link type="text/css" href="../css/style.css" rel="Stylesheet" />
+</head>
+<body>
+
+
+	<h1 style="margin: 20px 0px">1/项目、任务、即时通、流程使用中 选人、选择界面</h1>
+	<div class="panel window" style="width: 780px; position: relative;">
+		<div style="overflow: hidden; width: 778.233px; height: 746px;"
+			title="" class="panel-body panel-body-noborder window-body">
+			<div class="panel" style="display: block; width: 778px;">
+				<div title=""
+					class="panel-body panel-body-noheader panel-body-noborder dialog-content"
+					style="width: 778px; height: 700px;">
+					<section class="popup_padding">
+
+						<section class="choice_form">
+							<section class="gray_border">
+								<dl>
+									<dt>
+										<a href="#">类型：</a>
+										<section class="popup_choice" style="display: none">
+											<em class="icon pop_arrow"></em>
+											<section class="choice_content">
+												<a href="#">机构1</a><a href="#">机构2</a><a href="#">机构2</a><a href="#">机构2</a><a href="#">机构2</a><a href="#">机构1</a><a href="#">机构2</a><a href="#">机构2</a><a href="#">机构2</a><a href="#">机构2</a><a href="#">机构1</a><a href="#">机构2</a><a href="#">机构2</a><a href="#">机构2</a><a href="#">机构2</a>
+											</section>
+											<section class="pagination">
+												<section class="right">
+													<a class="icon_bg" href="#"><em title="上一页" alt="上一页"
+														class="icon cprev"></em></a><span><a class="active"
+														href="#">1</a><a href="#">2</a><a href="#">3</a><a
+														href="#">4</a></span><span>跳转到 <input type="text"
+														value="1"> &nbsp;页/共4页
+													</span><a class="icon_bg" href="#"><em title="下一页" alt="下一页"
+														class="icon cnext"></em></a>
+												</section>
+												<section class="left">
+													<a href="#" class="btn btn_blue">确定</a>
+												</section>
+											</section>
+										</section>
+									</dt>
+									<dd>
+										<a href="#" class="right">&gt;&gt;</a><span><a href="#"
+											class="active">本机构</a><a href="#">机构1</a><a href="#">客户</a><a
+											href="#">供应商</a><a href="#">服务商</a><a href="#">往来机构</a><a
+											href="#">快递</a></span>
+									</dd>
+								</dl>
+								<div class="clear">&nbsp;</div>
+								<dl>
+									<dt>
+										<a href="#">分类1：</a>
+									</dt>
+									<dd>
+										<a href="#" class="right">&gt;&gt;</a><span><a href="#">全部</a><a
+											href="#">本部门</a><a href="#">财务部</a><a href="#" class="active">销售部</a><a
+											href="#">销售部</a><a href="#">销售部</a></span>
+									</dd>
+								</dl>
+								<div class="clear">&nbsp;</div>
+								<dl class="no_dash">
+									<dt>
+										<a href="#">分类2：</a>
+									</dt>
+									<dd>
+										<a href="#" class="right">&gt;&gt;</a><span><a href="#"
+											class="active">全部</a><a href="#">本部门</a><a href="#">财务部</a><a
+											href="#">销售部</a><a href="#">销售部</a><a href="#">销售部</a></span>
+									</dd>
+								</dl>
+								<div class="clear">&nbsp;</div>
+								<dl class="no_dash">
+									<dt>
+										<a href="#">角色：</a>
+									</dt>
+									<dd>
+										<a href="#" class="right">&gt;&gt;</a><span><a href="#"
+											class="active">角色1</a><a href="#">角色1</a><a href="#">角色1</a><a
+											href="#">角色1</a><a href="#">角色1</a><a href="#">角色1</a></span>
+									</dd>
+								</dl>
+								<div class="clear">&nbsp;</div>
+							</section>
+
+							<section class="tap gray_border">
+								<a href="#" class="active">高频</a><a href="#">岗位</a><a href="#">职位</a><a
+									href="#">人员</a>
+							</section>
+
+							<section class="choice_result">
+								<section class="search right">
+									<a class="fr" href="#"><em onclick="findByName();"
+										class="icon csearch"></em></a> <input type="search" id="queryName"
+										placeholder="请输入关键字">
+								</section>
+								<section class="left">
+									<dl>
+										<dt>选择路径：</dt>
+										<dd>
+											<span><a href="#" class="active"><em class="fr">x</em>本机构&nbsp;&gt;&nbsp;销售&nbsp;&gt;&nbsp;岗位</a></span>
+										</dd>
+									</dl>
+								</section>
+								<div class="clear">&nbsp;</div>
+							</section>
+
+
+							<section class="choice_details">
+								<section class="list_tree">
+									<section class="title">
+										待选项（<b class="blue">25</b>）
+									</section>
+									<section class="content">
+										<section class="right">
+											<section class="fast_choice">
+												<section class="stitle">快捷选择</section>
+												<section class="fast_choice_list">
+													<section class="scroll">
+														<section class="padding">
+															<ul>
+																<li><input type="checkbox" />发起人</li>
+																<li><input type="checkbox" />执行时选择</li>
+															</ul>
+															<hr />
+															<b>发起人的</b>
+															<ul>
+																<li><input type="checkbox" />直属上级</li>
+																<li><input type="checkbox" />直属上上级</li>
+																<li><input type="checkbox" />部门负责人</li>
+															</ul>
+															<hr />
+															<ul>
+																<li><input type="checkbox" />本部门负责人</li>
+																<li><input type="checkbox" />本部门最高上级</li>
+																<li><input type="checkbox" />财务经理</li>
+																<li><input type="checkbox" />总经理</li>
+															</ul>
+														</section>
+													</section>
+												</section>
+											</section>
+
+										</section>
+										<section class="left">
+											<section class="tree_tab">
+												<a class="active" href="#">高频</a><a href="#">最近</a><a
+													href="#">全部</a>
+											</section>
+											<section class="tree_menu">
+												<section class="scroll">
+													<section class="padding">
+														<ul>
+															<li><a href="#"><em class="icon l-arrow-down"></em>我自己</a>
+																<ul>
+																	<li><a href="#"><em class="icon l-arrow-down"></em>机构2&nbsp;<b
+																			class="blue">&gt;</b>&nbsp;销售部</a>
+																		<ol>
+																			<li><a href="#" class="active">销售部经理</a></li>
+																			<li><a href="#">销售部经理</a></li>
+																		</ol></li>
+																</ul></li>
+															<li><a href="#"><em class="icon l-arrow-down"></em>机构1</a>
+																<ul>
+																	<li><a href="#"><em class="icon l-arrow-down"></em>销售部</a>
+																		<ol>
+																			<li><a href="#">销售部经理</a></li>
+																			<li><a href="#">销售部经理</a></li>
+																		</ol></li>
+																</ul></li>
+															<li><a href="#"><em class="icon l-arrow-down"></em>机构2</a>
+																<ul>
+																	<li><a href="#">销售部</a></li>
+																	<li><a href="#">财务部</a></li>
+																</ul></li>
+
+														</ul>
+													</section>
+												</section>
+											</section>
+										</section>
+
+										<div class="clear">&nbsp;</div>
+									</section>
+								</section>
+								<section class="btn_group">
+									<a href="#" class="btn btn_gray">添加</a><a href="#"
+										class="btn btn_gray">全部添加</a><a href="#" class="btn btn_gray">删除</a><a
+										href="#" class="btn btn_gray">全部删除</a>
+								</section>
+								<section class="tree_result">
+									<section class="title">
+										已选项（<b>1</b>）
+									</section>
+									<section class="tree_rmenu">
+										<section class="scroll">
+											<section class="padding">
+												<ul>
+													<li><a href="#" class="active">我自己&nbsp;<b
+															class="blue">&gt;</b>&nbsp;机构2&nbsp;<b class="blue">&gt;</b>&nbsp;销售部&nbsp;<b
+															class="blue">&gt;</b>&nbsp;销售部经理
+													</a></li>
+
+
+												</ul>
+											</section>
+										</section>
+									</section>
+								</section>
+							</section>
+						</section>
+					</section>
+
+				</div>
+			</div>
+			<div class="dialog-button">
+				<a href="javascript:void(0)" class="l-btn l-btn-small" group=""
+					id=""><span class="l-btn-left"><span class="l-btn-text">保存</span></span></a><a
+					href="javascript:void(0)" class="l-btn l-btn-small" group="" id=""><span
+					class="l-btn-left"><span class="l-btn-text">取消</span></span></a>
+			</div>
+		</div>
+	</div>
+
+
+	<h1 style="margin: 20px 0px">2/项目、任务、即时通、流程使用中 选人、选择界面2-左侧树2</h1>
+	<div class="panel window" style="width: 780px; position: relative;">
+		<div style="overflow: hidden; width: 778.233px; height: 745px;"
+			title="" class="panel-body panel-body-noborder window-body">
+			<div class="panel" style="display: block; width: 778px;">
+				<div title=""
+					class="panel-body panel-body-noheader panel-body-noborder dialog-content"
+					style="width: 778px; height: 700px;">
+					<section class="popup_padding">
+
+						<section class="choice_form">
+							<section class="gray_border">
+								<dl>
+									<dt>
+										<a href="#">类型：</a>
+										<section class="popup_choice" style="display: none">
+											<em class="icon pop_arrow"></em>
+											<section class="choice_content">
+												<a href="#">机构1</a><a href="#">机构2</a><a href="#">机构2</a><a
+													href="#">机构2</a><a href="#">机构2</a><a href="#">机构1</a><a
+													href="#">机构2</a><a href="#">机构2</a><a href="#">机构2</a><a
+													href="#">机构2</a><a href="#">机构1</a><a href="#">机构2</a><a
+													href="#">机构2</a><a href="#">机构2</a><a href="#">机构2</a><a
+													href="#">机构1</a><a href="#">机构2</a><a href="#">机构2</a><a
+													href="#">机构2</a><a href="#">机构2</a><a href="#">机构1</a><a
+													href="#">机构2</a><a href="#">机构2</a><a href="#">机构2</a><a
+													href="#">机构2</a><a href="#">机构1</a><a href="#">机构2</a><a
+													href="#">机构2</a><a href="#">机构2</a><a href="#">机构2</a>
+											</section>
+											<section class="pagination">
+												<section class="right">
+													<a class="icon_bg" href="#"><em title="上一页" alt="上一页"
+														class="icon cprev"></em></a><span><a class="active"
+														href="#">1</a><a href="#">2</a><a href="#">3</a><a
+														href="#">4</a></span><span>跳转到 <input type="text"
+														value="1"> &nbsp;页/共4页
+													</span><a class="icon_bg" href="#"><em title="下一页" alt="下一页"
+														class="icon cnext"></em></a>
+												</section>
+												<section class="left">
+													<a href="#" class="btn btn_blue">确定</a>
+												</section>
+											</section>
+										</section>
+									</dt>
+									<dd>
+										<a href="#" class="right">&gt;&gt;</a><span><a href="#">本机构</a><a
+											href="#">机构1</a><a href="#" class="active">客户</a><a href="#">供应商</a><a
+											href="#">服务商</a><a href="#">往来机构</a><a href="#">快递</a></span>
+									</dd>
+								</dl>
+								<div class="clear">&nbsp;</div>
+								<dl>
+									<dt>
+										<a href="#">类型2：</a>
+									</dt>
+									<dd>
+										<a href="#" class="right">&gt;&gt;</a><span><a href="#"
+											class="active">上海</a><a href="#">上海</a><a href="#">南京</a><a
+											href="#">天津</a><a href="#">北京</a><a href="#">苏州</a><a
+											href="#">西安</a></span>
+									</dd>
+								</dl>
+								<div class="clear">&nbsp;</div>
+								<dl>
+									<dt>
+										<a href="#">分类1：</a>
+									</dt>
+									<dd>
+										<a href="#" class="right">&gt;&gt;</a><span><a href="#">全部</a><a
+											href="#">本部门</a><a href="#">财务部</a><a href="#" class="active">销售部</a><a
+											href="#">销售部</a><a href="#">销售部</a></span>
+									</dd>
+								</dl>
+								<div class="clear">&nbsp;</div>
+								<dl class="no_dash">
+									<dt>
+										<a href="#">分类2：</a>
+									</dt>
+									<dd>
+										<a href="#" class="right">&gt;&gt;</a><span><a href="#"
+											class="active">全部</a><a href="#">本部门</a><a href="#">财务部</a><a
+											href="#">销售部</a><a href="#">销售部</a><a href="#">销售部</a></span>
+									</dd>
+								</dl>
+								<div class="clear">&nbsp;</div>
+								<dl class="no_dash">
+									<dt>
+										<a href="#">角色：</a>
+									</dt>
+									<dd>
+										<a href="#" class="right">&gt;&gt;</a><span><a href="#"
+											class="active">角色1</a><a href="#">角色1</a><a href="#">角色1</a><a
+											href="#">角色1</a><a href="#">角色1</a><a href="#">角色1</a></span>
+									</dd>
+								</dl>
+								<div class="clear">&nbsp;</div>
+							</section>
+
+							<section class="tap gray_border">
+								<a href="#" class="active">高频</a><a href="#">岗位</a><a href="#">职位</a><a
+									href="#">人员</a>
+							</section>
+
+							<section class="choice_result">
+								<section class="search right">
+									<a class="fr" href="#"><em onclick="findByName();"
+										class="icon csearch"></em></a> <input type="search" id="queryName"
+										placeholder="请输入关键字">
+								</section>
+								<section class="left">
+									<dl>
+										<dt>选择路径：</dt>
+										<dd>
+											<span><a href="#" class="active"><em class="fr">x</em>本机构&nbsp;&gt;&nbsp;销售&nbsp;&gt;&nbsp;岗位</a></span>
+										</dd>
+									</dl>
+								</section>
+								<div class="clear">&nbsp;</div>
+							</section>
+
+
+							<section class="choice_details">
+								<section class="list_tree">
+									<section class="title">
+										待选项（<b class="blue">25</b>）
+									</section>
+									<section class="content">
+										<section class="right">
+											<section class="fast_choice">
+												<section class="stitle">快捷选择</section>
+												<section class="fast_choice_list">
+													<section class="scroll">
+														<section class="padding">
+															<ul>
+																<li><input type="checkbox" />发起人</li>
+																<li><input type="checkbox" />执行时选择</li>
+															</ul>
+															<hr />
+															<b>发起人的</b>
+															<ul>
+																<li><input type="checkbox" />直属上级</li>
+																<li><input type="checkbox" />直属上上级</li>
+																<li><input type="checkbox" />部门负责人</li>
+															</ul>
+															<hr />
+															<ul>
+																<li><input type="checkbox" />本部门负责人</li>
+																<li><input type="checkbox" />本部门最高上级</li>
+																<li><input type="checkbox" />财务经理</li>
+																<li><input type="checkbox" />总经理</li>
+															</ul>
+														</section>
+													</section>
+												</section>
+											</section>
+
+										</section>
+										<section class="left">
+											<section class="tree_tab">
+												<a class="active" href="#">高频</a><a href="#">最近</a><a
+													href="#">全部</a>
+											</section>
+											<section class="tree_menu">
+												<section class="scroll">
+													<section class="padding">
+														<ul>
+															<li><a href="#"><em class="icon l-arrow-down"></em>岗位&nbsp;<b
+																	class="blue">&gt;</b>&nbsp;总部&nbsp;<b class="blue">&gt;</b>&nbsp;JQ111</a>
+																<ul>
+																	<li><a href="#" class="active">总经理</a></li>
+																	<li><a href="#">岗位</a></li>
+																	<li><a href="#">岗位</a></li>
+																	<li><a href="#">岗位</a></li>
+																	<li><a href="#">岗位</a></li>
+																</ul></li>
+															<li><a href="#"><em class="icon l-arrow-down"></em>岗位&nbsp;<b
+																	class="blue">&gt;</b>&nbsp;总部&nbsp;<b class="blue">&gt;</b>&nbsp;JQ112</a>
+																<ul>
+																	<li><a href="#">总经理</a></li>
+																	<li><a href="#">岗位</a></li>
+																	<li><a href="#">岗位</a></li>
+																	<li><a href="#">岗位</a></li>
+																	<li><a href="#">岗位</a></li>
+																</ul></li>
+														</ul>
+													</section>
+												</section>
+											</section>
+										</section>
+
+										<div class="clear">&nbsp;</div>
+									</section>
+								</section>
+								<section class="btn_group">
+									<a href="#" class="btn btn_gray">添加</a><a href="#"
+										class="btn btn_gray">全部添加</a><a href="#" class="btn btn_gray">删除</a><a
+										href="#" class="btn btn_gray">全部删除</a>
+								</section>
+								<section class="tree_result">
+									<section class="title">
+										已选项（<b>1</b>）
+									</section>
+									<section class="tree_rmenu">
+										<section class="scroll">
+											<section class="padding">
+												<ul>
+													<li><a href="#" class="active">岗位&nbsp;<b
+															class="blue">&gt;</b>&nbsp;总部&nbsp;<b class="blue">&gt;</b>&nbsp;JQ111&nbsp;<b
+															class="blue">&gt;</b>&nbsp;总经理
+													</a></li>
+
+												</ul>
+											</section>
+										</section>
+									</section>
+								</section>
+							</section>
+						</section>
+					</section>
+
+				</div>
+			</div>
+			<div class="dialog-button">
+				<a href="javascript:void(0)" class="l-btn l-btn-small" group=""
+					id=""><span class="l-btn-left"><span class="l-btn-text">保存</span></span></a><a
+					href="javascript:void(0)" class="l-btn l-btn-small" group="" id=""><span
+					class="l-btn-left"><span class="l-btn-text">取消</span></span></a>
+			</div>
+		</div>
+	</div>
+
+	<h1 style="margin: 20px 0px">3/项目、任务、即时通、流程使用中 选人、选择界面3-无快速选择</h1>
+	<div class="panel window" style="width: 780px; position: relative;">
+		<div style="overflow: hidden; width: 778.233px; height: 745px;"
+			title="" class="panel-body panel-body-noborder window-body">
+			<div class="panel" style="display: block; width: 778px;">
+				<div title=""
+					class="panel-body panel-body-noheader panel-body-noborder dialog-content"
+					style="width: 778px; height: 700px;">
+					<section class="popup_padding">
+
+						<section class="choice_form">
+							<section class="gray_border">
+								<dl>
+									<dt>
+										<a href="#">类型：</a>
+										<section class="popup_choice" style="display: none">
+											<em class="icon pop_arrow"></em>
+											<section class="choice_content">
+												<a href="#">机构1</a><a href="#">机构2</a><a href="#">机构2</a><a
+													href="#">机构2</a><a href="#">机构2</a><a href="#">机构1</a><a
+													href="#">机构2</a><a href="#">机构2</a><a href="#">机构2</a><a
+													href="#">机构2</a><a href="#">机构1</a><a href="#">机构2</a><a
+													href="#">机构2</a><a href="#">机构2</a><a href="#">机构2</a><a
+													href="#">机构1</a><a href="#">机构2</a><a href="#">机构2</a><a
+													href="#">机构2</a><a href="#">机构2</a><a href="#">机构1</a><a
+													href="#">机构2</a><a href="#">机构2</a><a href="#">机构2</a><a
+													href="#">机构2</a><a href="#">机构1</a><a href="#">机构2</a><a
+													href="#">机构2</a><a href="#">机构2</a><a href="#">机构2</a>
+											</section>
+											<section class="pagination">
+												<section class="right">
+													<a class="icon_bg" href="#"><em title="上一页" alt="上一页"
+														class="icon cprev"></em></a><span><a class="active"
+														href="#">1</a><a href="#">2</a><a href="#">3</a><a
+														href="#">4</a></span><span>跳转到 <input type="text"
+														value="1"> &nbsp;页/共4页
+													</span><a class="icon_bg" href="#"><em title="下一页" alt="下一页"
+														class="icon cnext"></em></a>
+												</section>
+												<section class="left">
+													<a href="#" class="btn btn_blue">确定</a>
+												</section>
+											</section>
+										</section>
+									</dt>
+									<dd>
+										<a href="#" class="right">&gt;&gt;</a><span><a href="#">本机构</a><a
+											href="#">机构1</a><a href="#" class="active">客户</a><a href="#">供应商</a><a
+											href="#">服务商</a><a href="#">往来机构</a><a href="#">快递</a></span>
+									</dd>
+								</dl>
+								<div class="clear">&nbsp;</div>
+								<dl>
+									<dt>
+										<a href="#">类型2：</a>
+									</dt>
+									<dd>
+										<a href="#" class="right">&gt;&gt;</a><span><a href="#"
+											class="active">上海</a><a href="#">上海</a><a href="#">南京</a><a
+											href="#">天津</a><a href="#">北京</a><a href="#">苏州</a><a
+											href="#">西安</a></span>
+									</dd>
+								</dl>
+								<div class="clear">&nbsp;</div>
+								<dl>
+									<dt>
+										<a href="#">分类1：</a>
+									</dt>
+									<dd>
+										<a href="#" class="right">&gt;&gt;</a><span><a href="#">全部</a><a
+											href="#">本部门</a><a href="#">财务部</a><a href="#" class="active">销售部</a><a
+											href="#">销售部</a><a href="#">销售部</a></span>
+									</dd>
+								</dl>
+								<div class="clear">&nbsp;</div>
+								<dl class="no_dash">
+									<dt>
+										<a href="#">分类2：</a>
+									</dt>
+									<dd>
+										<a href="#" class="right">&gt;&gt;</a><span><a href="#"
+											class="active">全部</a><a href="#">本部门</a><a href="#">财务部</a><a
+											href="#">销售部</a><a href="#">销售部</a><a href="#">销售部</a></span>
+									</dd>
+								</dl>
+								<div class="clear">&nbsp;</div>
+								<dl class="no_dash">
+									<dt>
+										<a href="#">角色：</a>
+									</dt>
+									<dd>
+										<a href="#" class="right">&gt;&gt;</a><span><a href="#"
+											class="active">角色1</a><a href="#">角色1</a><a href="#">角色1</a><a
+											href="#">角色1</a><a href="#">角色1</a><a href="#">角色1</a></span>
+									</dd>
+								</dl>
+								<div class="clear">&nbsp;</div>
+							</section>
+
+							<section class="tap gray_border">
+								<a href="#" class="active">高频</a><a href="#">岗位</a><a href="#">职位</a><a
+									href="#">人员</a>
+							</section>
+
+							<section class="choice_result">
+								<section class="search right">
+									<a class="fr" href="#"><em onclick="findByName();"
+										class="icon csearch"></em></a> <input type="search" id="queryName"
+										placeholder="请输入关键字">
+								</section>
+								<section class="left">
+									<dl>
+										<dt>选择路径：</dt>
+										<dd>
+											<span><a href="#" class="active"><em class="fr">x</em>本机构&nbsp;&gt;&nbsp;销售&nbsp;&gt;&nbsp;岗位</a></span>
+										</dd>
+									</dl>
+								</section>
+								<div class="clear">&nbsp;</div>
+							</section>
+
+
+							<section class="choice_details">
+								<section class="list_tree">
+									<section class="title">
+										待选项（<b class="blue">25</b>）
+									</section>
+									<section class="content">
+
+										<section class="tree_tab">
+											<a class="active" href="#">高频</a><a href="#">最近</a><a
+												href="#">全部</a>
+										</section>
+										<section class="tree_menu">
+											<section class="scroll">
+												<section class="padding">
+													<ul>
+														<li><a href="#"><em class="icon l-arrow-down"></em>岗位&nbsp;<b
+																class="blue">&gt;</b>&nbsp;总部&nbsp;<b class="blue">&gt;</b>&nbsp;JQ111</a>
+															<ul>
+																<li><a href="#" class="active">总经理</a></li>
+																<li><a href="#">岗位</a></li>
+																<li><a href="#">岗位</a></li>
+																<li><a href="#">岗位</a></li>
+																<li><a href="#">岗位</a></li>
+															</ul></li>
+														<li><a href="#"><em class="icon l-arrow-down"></em>岗位&nbsp;<b
+																class="blue">&gt;</b>&nbsp;总部&nbsp;<b class="blue">&gt;</b>&nbsp;JQ112</a>
+															<ul>
+																<li><a href="#">总经理</a></li>
+																<li><a href="#">岗位</a></li>
+																<li><a href="#">岗位</a></li>
+																<li><a href="#">岗位</a></li>
+																<li><a href="#">岗位</a></li>
+															</ul></li>
+													</ul>
+												</section>
+											</section>
+										</section>
+
+									</section>
+								</section>
+								<section class="btn_group">
+									<a href="#" class="btn btn_gray">添加</a><a href="#"
+										class="btn btn_gray">全部添加</a><a href="#" class="btn btn_gray">删除</a><a
+										href="#" class="btn btn_gray">全部删除</a>
+								</section>
+								<section class="tree_result">
+									<section class="title">
+										已选项（<b>1</b>）
+									</section>
+									<section class="tree_rmenu">
+										<section class="scroll">
+											<section class="padding">
+												<ul>
+													<li><a href="#" class="active">岗位&nbsp;<b
+															class="blue">&gt;</b>&nbsp;总部&nbsp;<b class="blue">&gt;</b>&nbsp;JQ111&nbsp;<b
+															class="blue">&gt;</b>&nbsp;总经理
+													</a></li>
+
+												</ul>
+											</section>
+										</section>
+									</section>
+								</section>
+							</section>
+						</section>
+					</section>
+
+				</div>
+			</div>
+			<div class="dialog-button">
+				<a href="javascript:void(0)" class="l-btn l-btn-small" group=""
+					id=""><span class="l-btn-left"><span class="l-btn-text">保存</span></span></a><a
+					href="javascript:void(0)" class="l-btn l-btn-small" group="" id=""><span
+					class="l-btn-left"><span class="l-btn-text">取消</span></span></a>
+			</div>
+		</div>
+	</div>
+
+	<h1 style="margin: 20px 0px">4/项目、任务、即时通、流程使用中 选人、选择界面4</h1>
+	<div class="panel window" style="width: 780px; position: relative;">
+		<div style="overflow: hidden; width: 778.233px; height: 745px;"
+			title="" class="panel-body panel-body-noborder window-body">
+			<div class="panel" style="display: block; width: 778px;">
+				<div title=""
+					class="panel-body panel-body-noheader panel-body-noborder dialog-content"
+					style="width: 778px; height: 700px;">
+					<section class="popup_padding">
+
+						<section class="choice_form">
+							<section class="gray_border">
+								<dl>
+									<dt>
+										<a href="#">类型：</a>
+										<section class="popup_choice" style="display: none">
+											<em class="icon pop_arrow"></em>
+											<section class="choice_content">
+												<a href="#">机构1</a><a href="#">机构2</a><a href="#">机构2</a><a
+													href="#">机构2</a><a href="#">机构2</a><a href="#">机构1</a><a
+													href="#">机构2</a><a href="#">机构2</a><a href="#">机构2</a><a
+													href="#">机构2</a><a href="#">机构1</a><a href="#">机构2</a><a
+													href="#">机构2</a><a href="#">机构2</a><a href="#">机构2</a><a
+													href="#">机构1</a><a href="#">机构2</a><a href="#">机构2</a><a
+													href="#">机构2</a><a href="#">机构2</a><a href="#">机构1</a><a
+													href="#">机构2</a><a href="#">机构2</a><a href="#">机构2</a><a
+													href="#">机构2</a><a href="#">机构1</a><a href="#">机构2</a><a
+													href="#">机构2</a><a href="#">机构2</a><a href="#">机构2</a>
+											</section>
+											<section class="pagination">
+												<section class="right">
+													<a class="icon_bg" href="#"><em title="上一页" alt="上一页"
+														class="icon cprev"></em></a><span><a class="active"
+														href="#">1</a><a href="#">2</a><a href="#">3</a><a
+														href="#">4</a></span><span>跳转到 <input type="text"
+														value="1"> &nbsp;页/共4页
+													</span><a class="icon_bg" href="#"><em title="下一页" alt="下一页"
+														class="icon cnext"></em></a>
+												</section>
+												<section class="left">
+													<a href="#" class="btn btn_blue">确定</a>
+												</section>
+											</section>
+										</section>
+									</dt>
+									<dd>
+										<a href="#" class="right">&gt;&gt;</a><span><a href="#">本机构</a><a
+											href="#" class="active">客户</a><a href="#">供应商</a><a href="#">服务商</a><a
+											href="#">往来机构</a><a href="#">快递</a></span>
+									</dd>
+								</dl>
+								<div class="clear">&nbsp;</div>
+								<dl>
+									<dt>
+										<a href="#">类型2：</a>
+									</dt>
+									<dd>
+										<a href="#" class="right">&gt;&gt;</a><span><a href="#"
+											class="active">上海</a><a href="#">南通</a><a href="#">南京</a><a
+											href="#">天津</a><a href="#">北京</a><a href="#">苏州</a><a
+											href="#">西安</a></span>
+									</dd>
+								</dl>
+								<div class="clear">&nbsp;</div>
+								<dl>
+									<dt>
+										<a href="#">分类1：</a>
+									</dt>
+									<dd>
+										<a href="#" class="right">&gt;&gt;</a><span><a href="#">中国</a><a
+											href="#">美国</a><a href="#">新加坡</a><a href="#" class="active">加拿大</a></span>
+									</dd>
+								</dl>
+								<div class="clear">&nbsp;</div>
+								<dl class="no_dash">
+									<dt>
+										<a href="#">分类2：</a>
+									</dt>
+									<dd>
+										<a href="#" class="right">&gt;&gt;</a><span><a href="#">北京</a><a
+											href="#">上海</a><a href="#" class="active">广东</a><a href="#">江苏</a></span>
+										<section class="popup_choice">
+											<section class="choice_content">
+												<span class="active"><input type="checkbox" checked="checked" />广州</span><span><input
+													type="checkbox" />中山</span><span><input type="checkbox" />佛山</span><span><input
+													type="checkbox" />珠海</span><span><input type="checkbox" />广州</span><span><input
+													type="checkbox" />中山</span><span><input type="checkbox" />佛山</span><span><input
+													type="checkbox" />珠海</span><span><input type="checkbox" />广州</span><span><input
+													type="checkbox" />中山</span><span><input type="checkbox" />佛山</span><span><input
+													type="checkbox" />珠海</span><span><input type="checkbox" />广州</span><span><input
+													type="checkbox" />中山</span><span><input type="checkbox" />佛山</span><span><input
+													type="checkbox" />珠海</span><span><input type="checkbox" />广州</span><span><input
+													type="checkbox" />中山</span><span><input type="checkbox" />佛山</span><span><input
+													type="checkbox" />珠海</span><span><input type="checkbox" />广州</span><span><input
+													type="checkbox" />中山</span><span><input type="checkbox" />佛山</span><span><input
+													type="checkbox" />珠海</span>
+											</section>
+
+										</section>
+									</dd>
+								</dl>
+								<div class="clear">&nbsp;</div>
+								<dl class="no_dash">
+									<dt>
+										<a href="#">角色：</a>
+									</dt>
+									<dd>
+										<a href="#" class="right">&gt;&gt;</a><span><a href="#"
+											class="active">角色1</a><a href="#">角色1</a><a href="#">角色1</a><a
+											href="#">角色1</a><a href="#">角色1</a><a href="#">角色1</a></span>
+									</dd>
+								</dl>
+								<div class="clear">&nbsp;</div>
+							</section>
+
+							<section class="tap gray_border">
+								<a href="#" class="active">高频</a><a href="#">岗位</a><a href="#">职位</a><a
+									href="#">人员</a>
+							</section>
+
+							<section class="choice_result">
+								<section class="search right">
+									<a class="fr" href="#"><em onclick="findByName();"
+										class="icon csearch"></em></a> <input type="search" id="queryName"
+										placeholder="请输入关键字">
+								</section>
+								<section class="left">
+									<dl>
+										<dt>选择路径：</dt>
+										<dd>
+											<span><a href="#" class="active"><em class="fr">x</em>本机构&nbsp;&gt;&nbsp;销售&nbsp;&gt;&nbsp;岗位</a></span>
+										</dd>
+									</dl>
+								</section>
+								<div class="clear">&nbsp;</div>
+							</section>
+
+
+							<section class="choice_details">
+								<section class="list_tree">
+									<section class="title">
+										待选项（<b class="blue">25</b>）
+									</section>
+									<section class="content">
+
+										<section class="tree_tab">
+											<a class="active" href="#">高频</a><a href="#">最近</a><a
+												href="#">全部</a>
+										</section>
+										<section class="tree_menu">
+											<section class="scroll">
+												<section class="padding">
+													<ul>
+														<li><a href="#"><em class="icon l-arrow-down"></em>我自己</a>
+															<ul>
+																<li><a href="#"><em class="icon l-arrow-down"></em>广东&nbsp;<b
+																		class="blue">&gt;</b>&nbsp;广州</a>
+																	<ol>
+																		<li><a href="#" class="active">广州A客户</a></li>
+																	</ol></li>
+																<li><a href="#"><em class="icon l-arrow-down"></em>广东&nbsp;<b
+																		class="blue">&gt;</b>&nbsp;广州</a>
+																	<ol>
+																		<li><a href="#">广州A客户</a></li>
+																	</ol></li>
+															</ul></li>
+
+													</ul>
+												</section>
+											</section>
+										</section>
+
+									</section>
+								</section>
+								<section class="btn_group">
+									<a href="#" class="btn btn_gray">添加</a><a href="#"
+										class="btn btn_gray">全部添加</a><a href="#" class="btn btn_gray">删除</a><a
+										href="#" class="btn btn_gray">全部删除</a>
+								</section>
+								<section class="tree_result">
+									<section class="title">
+										已选项（<b>1</b>）
+									</section>
+									<section class="tree_rmenu">
+										<section class="scroll">
+											<section class="padding">
+												<ul>
+													<li><a href="#" class="active">我自己&nbsp;<b
+															class="blue">&gt;</b>&nbsp;广东&nbsp;<b class="blue">&gt;</b>&nbsp;广州&nbsp;<b
+															class="blue">&gt;</b>&nbsp;广州A客户
+													</a></li>
+
+												</ul>
+											</section>
+										</section>
+									</section>
+								</section>
+							</section>
+						</section>
+					</section>
+
+				</div>
+			</div>
+			<div class="dialog-button">
+				<a href="javascript:void(0)" class="l-btn l-btn-small" group=""
+					id=""><span class="l-btn-left"><span class="l-btn-text">保存</span></span></a><a
+					href="javascript:void(0)" class="l-btn l-btn-small" group="" id=""><span
+					class="l-btn-left"><span class="l-btn-text">取消</span></span></a>
+			</div>
+		</div>
+	</div>
+
+
+
+
+
+
+
+
+	<h2 style="margin: 20px 0px;">5</h2>
+	<div class="panel window" style="width: 780px; position: relative;">
+		<div style="overflow: hidden; width: 778.233px; height: 681.233px;"
+			title="" class="panel-body panel-body-noborder window-body">
+			<div class="panel" style="display: block; width: 778px;">
+				<div title=""
+					class="panel-body panel-body-noheader panel-body-noborder dialog-content"
+					style="width: 778px; height: 636px;">
+					<section class="popup_padding">
+						<section class="choice_form">
+							<section class="gray_border">
+								<dl>
+									<dt>
+										<a href="#">机构：</a>
+										<section class="popup_choice" style="">
+											<em class="icon pop_arrow"></em>
+											<section class="choice_content">
+												<a href="#">机构1</a><a href="#">机构2</a><a href="#">机构2</a><a
+													href="#">机构2</a><a href="#">机构2</a><a href="#">机构1</a><a
+													href="#">机构2</a><a href="#">机构2</a><a href="#">机构2</a><a
+													href="#">机构2</a><a href="#">机构1</a><a href="#">机构2</a><a
+													href="#">机构2</a><a href="#">机构2</a><a href="#">机构2</a><a
+													href="#">机构1</a><a href="#">机构2</a><a href="#">机构2</a><a
+													href="#">机构2</a><a href="#">机构2</a><a href="#">机构1</a><a
+													href="#">机构2</a><a href="#">机构2</a><a href="#">机构2</a><a
+													href="#">机构2</a><a href="#">机构1</a><a href="#">机构2</a><a
+													href="#">机构2</a><a href="#">机构2</a><a href="#">机构2</a>
+											</section>
+											<section class="pagination">
+												<section class="right">
+													<a class="icon_bg" href="#"><em title="上一页" alt="上一页"
+														class="icon cprev"></em></a><span><a class="active"
+														href="#">1</a><a href="#">2</a><a href="#">3</a><a
+														href="#">4</a></span><span>跳转到 <input type="text"
+														value="1"> &nbsp;页/共4页
+													</span><a class="icon_bg" href="#"><em title="下一页" alt="下一页"
+														class="icon cnext"></em></a>
+												</section>
+												<section class="left">
+													<a href="#" class="btn btn_blue">确定</a>
+												</section>
+											</section>
+										</section>
+									</dt>
+									<dd>
+										<a href="#" class="right">&gt;&gt;</a><span><a href="#"
+											class="active">机构1</a><a href="#">机构1</a><a href="#">机构1</a><a
+											href="#">机构1</a><a href="#">机构1</a><a href="#">机构1</a></span>
+									</dd>
+								</dl>
+								<div class="clear">&nbsp;</div>
+								<dl class="no_dash">
+									<dt>
+										<a href="#" class="active">部门：</a>
+									</dt>
+									<dd>
+										<a href="#" class="right">&gt;&gt;</a><span><a href="#"
+											class="active">销售部</a><a href="#">销售部</a><a href="#">销售部</a><a
+											href="#">销售部</a><a href="#">销售部</a><a href="#">销售部</a></span>
+									</dd>
+								</dl>
+								<div class="clear">&nbsp;</div>
+							</section>
+
+							<section class="tap gray_border">
+								<a href="#">岗位</a><a href="#">职位</a>
+							</section>
+
+
+							<section class="gray_border">
+								<dl class="no_dash">
+									<dt>
+										<a href="#">角色：</a>
+									</dt>
+									<dd>
+										<a href="#" class="right">&gt;&gt;</a><span><a href="#"
+											class="active">角色1</a><a href="#">角色1</a><a href="#">角色1</a><a
+											href="#">角色1</a><a href="#">角色1</a><a href="#">角色1</a></span>
+									</dd>
+								</dl>
+								<div class="clear">&nbsp;</div>
+							</section>
+							<section class="choice_result">
+								<dl>
+									<dt>选择路径：</dt>
+									<dd>
+										<span><a href="#" class="active"><em class="fr">x</em>本机构&nbsp;&gt;&nbsp;本部门</a><a
+											href="#" class="active"><em class="fr">x</em>机构1</a></span>
+									</dd>
+								</dl>
+								<div class="clear">&nbsp;</div>
+							</section>
+
+
+							<section class="choice_details">
+								<section class="list_tree">
+									<section class="title">
+										待选项（<b class="blue">25</b>）
+									</section>
+									<section class="content">
+										<section class="right">
+											<section class="fast_choice">
+												<section class="stitle">快捷选择</section>
+												<section class="fast_choice_list">
+													<section class="scroll">
+														<section class="padding">
+															<ul>
+																<li><input type="checkbox" />发起人</li>
+																<li><input type="checkbox" />发起人</li>
+															</ul>
+															<hr />
+															<b>发起人的</b>
+															<ul>
+																<li><input type="checkbox" />直属上级</li>
+																<li><input type="checkbox" />直属上上级</li>
+																<li><input type="checkbox" />部门负责人</li>
+															</ul>
+															<hr />
+															<ul>
+																<li><input type="checkbox" />财务经理</li>
+																<li><input type="checkbox" />总经理</li>
+															</ul>
+														</section>
+													</section>
+												</section>
+											</section>
+
+										</section>
+										<section class="left">
+											<section class="tree_tab">
+												<a href="#" class="active">机构1</a><a href="#">高频分类</a>
+											</section>
+											<section class="tree_menu">
+												<section class="scroll">
+													<section class="padding">
+														<ul>
+															<li><a href="#"><em class="icon l-arrow-down"></em>机构1</a>
+																<ul>
+																	<li><a href="#"><em class="icon l-arrow-down"></em>销售部</a>
+																		<ol>
+																			<li><a href="#" class="active">销售总监</a></li>
+																			<li><a href="#">销售总监</a></li>
+																			<li><a href="#">销售总监</a></li>
+																			<li><a href="#">销售总监</a></li>
+																			<li><a href="#">销售总监</a></li>
+																			<li><a href="#">销售总监</a></li>
+																		</ol></li>
+																</ul></li>
+															<li><a href="#"><em class="icon l-arrow-down"></em>岗位&nbsp;<b
+																	class="blue">&gt;</b>&nbsp;财务部&nbsp;<b class="blue">&gt;</b>&nbsp;机构1</a>
+																<ul>
+																	<li><a href="#">财务总监</a></li>
+																	<li><a href="#">财务总监</a></li>
+																	<li><a href="#">财务总监</a></li>
+																	<li><a href="#">财务总监</a></li>
+																	<li><a href="#">财务总监</a></li>
+																	<li><a href="#">财务总监</a></li>
+																	<li><a href="#">财务总监</a></li>
+																	<li><a href="#">财务总监</a></li>
+																	<li><a href="#">财务总监</a></li>
+																	<li><a href="#">财务总监</a></li>
+																	<li><a href="#">财务总监</a></li>
+																	<li><a href="#">财务总监</a></li>
+																</ul></li>
+														</ul>
+													</section>
+												</section>
+											</section>
+										</section>
+
+										<div class="clear">&nbsp;</div>
+									</section>
+								</section>
+								<section class="btn_group">
+									<a href="#" class="btn btn_gray">添加</a><a href="#"
+										class="btn btn_gray">删除</a><a href="#" class="btn btn_gray">全部添加</a><a
+										href="#" class="btn btn_gray">全部删除</a>
+								</section>
+								<section class="tree_result">
+									<section class="title">
+										已选项（<b>1</b>）
+									</section>
+									<section class="tree_rmenu">
+										<section class="scroll">
+											<section class="padding">
+												<ul>
+													<li><a href="#">销售总监&nbsp;<b class="blue">&gt;</b>&nbsp;销售部&nbsp;<b
+															class="blue">&gt;</b>&nbsp;机构1
+													</a></li>
+													<li><a href="#" class="active">销售总监&nbsp;<b
+															class="blue">&gt;</b>&nbsp;销售部&nbsp;<b class="blue">&gt;</b>&nbsp;机构1
+													</a></li>
+													<li><a href="#">销售总监&nbsp;<b class="blue">&gt;</b>&nbsp;销售部&nbsp;<b
+															class="blue">&gt;</b>&nbsp;机构1
+													</a></li>
+													<li><a href="#">销售总监&nbsp;<b class="blue">&gt;</b>&nbsp;销售部&nbsp;<b
+															class="blue">&gt;</b>&nbsp;机构1
+													</a></li>
+													<li><a href="#">销售总监&nbsp;<b class="blue">&gt;</b>&nbsp;销售部&nbsp;<b
+															class="blue">&gt;</b>&nbsp;机构1
+													</a></li>
+													<li><a href="#">销售总监&nbsp;<b class="blue">&gt;</b>&nbsp;销售部&nbsp;<b
+															class="blue">&gt;</b>&nbsp;机构1
+													</a></li>
+													<li><a href="#" class="active">销售总监&nbsp;<b
+															class="blue">&gt;</b>&nbsp;销售部&nbsp;<b class="blue">&gt;</b>&nbsp;机构1
+													</a></li>
+													<li><a href="#">销售总监&nbsp;<b class="blue">&gt;</b>&nbsp;销售部&nbsp;<b
+															class="blue">&gt;</b>&nbsp;机构1
+													</a></li>
+													<li><a href="#">销售总监&nbsp;<b class="blue">&gt;</b>&nbsp;销售部&nbsp;<b
+															class="blue">&gt;</b>&nbsp;机构1
+													</a></li>
+													<li><a href="#">销售总监&nbsp;<b class="blue">&gt;</b>&nbsp;销售部&nbsp;<b
+															class="blue">&gt;</b>&nbsp;机构1
+													</a></li>
+													<li><a href="#">销售总监&nbsp;<b class="blue">&gt;</b>&nbsp;销售部&nbsp;<b
+															class="blue">&gt;</b>&nbsp;机构1
+													</a></li>
+													<li><a href="#" class="active">销售总监&nbsp;<b
+															class="blue">&gt;</b>&nbsp;销售部&nbsp;<b class="blue">&gt;</b>&nbsp;机构1
+													</a></li>
+													<li><a href="#">销售总监&nbsp;<b class="blue">&gt;</b>&nbsp;销售部&nbsp;<b
+															class="blue">&gt;</b>&nbsp;机构1
+													</a></li>
+													<li><a href="#">销售总监&nbsp;<b class="blue">&gt;</b>&nbsp;销售部&nbsp;<b
+															class="blue">&gt;</b>&nbsp;机构1
+													</a></li>
+													<li><a href="#">销售总监&nbsp;<b class="blue">&gt;</b>&nbsp;销售部&nbsp;<b
+															class="blue">&gt;</b>&nbsp;机构1
+													</a></li>
+													<li><a href="#">销售总监&nbsp;<b class="blue">&gt;</b>&nbsp;销售部&nbsp;<b
+															class="blue">&gt;</b>&nbsp;机构1
+													</a></li>
+													<li><a href="#" class="active">销售总监&nbsp;<b
+															class="blue">&gt;</b>&nbsp;销售部&nbsp;<b class="blue">&gt;</b>&nbsp;机构1
+													</a></li>
+													<li><a href="#">销售总监&nbsp;<b class="blue">&gt;</b>&nbsp;销售部&nbsp;<b
+															class="blue">&gt;</b>&nbsp;机构1
+													</a></li>
+													<li><a href="#">销售总监&nbsp;<b class="blue">&gt;</b>&nbsp;销售部&nbsp;<b
+															class="blue">&gt;</b>&nbsp;机构1
+													</a></li>
+													<li><a href="#">销售总监&nbsp;<b class="blue">&gt;</b>&nbsp;销售部&nbsp;<b
+															class="blue">&gt;</b>&nbsp;机构1
+													</a></li>
+													<li><a href="#">销售总监&nbsp;<b class="blue">&gt;</b>&nbsp;销售部&nbsp;<b
+															class="blue">&gt;</b>&nbsp;机构1
+													</a></li>
+													<li><a href="#" class="active">销售总监&nbsp;<b
+															class="blue">&gt;</b>&nbsp;销售部&nbsp;<b class="blue">&gt;</b>&nbsp;机构1
+													</a></li>
+													<li><a href="#">销售总监&nbsp;<b class="blue">&gt;</b>&nbsp;销售部&nbsp;<b
+															class="blue">&gt;</b>&nbsp;机构1
+													</a></li>
+													<li><a href="#">销售总监&nbsp;<b class="blue">&gt;</b>&nbsp;销售部&nbsp;<b
+															class="blue">&gt;</b>&nbsp;机构1
+													</a></li>
+													<li><a href="#">销售总监&nbsp;<b class="blue">&gt;</b>&nbsp;销售部&nbsp;<b
+															class="blue">&gt;</b>&nbsp;机构1
+													</a></li>
+													<li><a href="#">销售总监&nbsp;<b class="blue">&gt;</b>&nbsp;销售部&nbsp;<b
+															class="blue">&gt;</b>&nbsp;机构1
+													</a></li>
+													<li><a href="#" class="active">销售总监&nbsp;<b
+															class="blue">&gt;</b>&nbsp;销售部&nbsp;<b class="blue">&gt;</b>&nbsp;机构1
+													</a></li>
+													<li><a href="#">销售总监&nbsp;<b class="blue">&gt;</b>&nbsp;销售部&nbsp;<b
+															class="blue">&gt;</b>&nbsp;机构1
+													</a></li>
+													<li><a href="#">销售总监&nbsp;<b class="blue">&gt;</b>&nbsp;销售部&nbsp;<b
+															class="blue">&gt;</b>&nbsp;机构1
+													</a></li>
+													<li><a href="#">销售总监&nbsp;<b class="blue">&gt;</b>&nbsp;销售部&nbsp;<b
+															class="blue">&gt;</b>&nbsp;机构1
+													</a></li>
+													<li><a href="#">销售总监&nbsp;<b class="blue">&gt;</b>&nbsp;销售部&nbsp;<b
+															class="blue">&gt;</b>&nbsp;机构1
+													</a></li>
+													<li><a href="#" class="active">销售总监&nbsp;<b
+															class="blue">&gt;</b>&nbsp;销售部&nbsp;<b class="blue">&gt;</b>&nbsp;机构1
+													</a></li>
+													<li><a href="#">销售总监&nbsp;<b class="blue">&gt;</b>&nbsp;销售部&nbsp;<b
+															class="blue">&gt;</b>&nbsp;机构1
+													</a></li>
+													<li><a href="#">销售总监&nbsp;<b class="blue">&gt;</b>&nbsp;销售部&nbsp;<b
+															class="blue">&gt;</b>&nbsp;机构1
+													</a></li>
+													<li><a href="#">销售总监&nbsp;<b class="blue">&gt;</b>&nbsp;销售部&nbsp;<b
+															class="blue">&gt;</b>&nbsp;机构1
+													</a></li>
+													<li><a href="#">销售总监&nbsp;<b class="blue">&gt;</b>&nbsp;销售部&nbsp;<b
+															class="blue">&gt;</b>&nbsp;机构1
+													</a></li>
+													<li><a href="#" class="active">销售总监&nbsp;<b
+															class="blue">&gt;</b>&nbsp;销售部&nbsp;<b class="blue">&gt;</b>&nbsp;机构1
+													</a></li>
+													<li><a href="#">销售总监&nbsp;<b class="blue">&gt;</b>&nbsp;销售部&nbsp;<b
+															class="blue">&gt;</b>&nbsp;机构1
+													</a></li>
+													<li><a href="#">销售总监&nbsp;<b class="blue">&gt;</b>&nbsp;销售部&nbsp;<b
+															class="blue">&gt;</b>&nbsp;机构1
+													</a></li>
+													<li><a href="#">销售总监&nbsp;<b class="blue">&gt;</b>&nbsp;销售部&nbsp;<b
+															class="blue">&gt;</b>&nbsp;机构1
+													</a></li>
+												</ul>
+											</section>
+										</section>
+									</section>
+								</section>
+							</section>
+						</section>
+					</section>
+
+				</div>
+			</div>
+			<div class="dialog-button">
+				<a href="javascript:void(0)" class="l-btn l-btn-small" group=""
+					id=""><span class="l-btn-left"><span class="l-btn-text">保存</span></span></a><a
+					href="javascript:void(0)" class="l-btn l-btn-small" group="" id=""><span
+					class="l-btn-left"><span class="l-btn-text">取消</span></span></a>
+			</div>
+		</div>
+	</div>
+
+	<!--无tab -->
+	<div class="panel window"
+		style="width: 780px; position: relative; top: 20px;">
+		<!-- 		<div class="panel-header panel-header-noborder window-header"
+			style="width: 778.233px;">
+			<div class="panel-title" style="">选择对象</div>
+			<div class="panel-tool">
+				<a href="javascript:void(0)" class="panel-tool-close"></a>
+			</div>
+		</div> -->
+		<div style="overflow: hidden; width: 778.233px; height: 681.233px;"
+			title="" class="panel-body panel-body-noborder window-body">
+			<div class="panel" style="display: block; width: 778px;">
+				<div title=""
+					class="panel-body panel-body-noheader panel-body-noborder dialog-content"
+					style="width: 778px; height: 636px;">
+					<section class="popup_padding">
+
+						<section class="choice_form">
+							<section class="gray_border">
+								<dl>
+									<dt>
+										<a href="#">机构：</a>
+
+									</dt>
+									<dd>
+										<a href="#" class="right">&gt;&gt;</a><span><a href="#"
+											class="active">机构1</a><a href="#">机构1</a><a href="#">机构1</a><a
+											href="#">机构1</a><a href="#">机构1</a><a href="#">机构1</a></span>
+									</dd>
+								</dl>
+								<div class="clear">&nbsp;</div>
+								<dl class="no_dash">
+									<dt>
+										<a href="#" class="active">部门：</a>
+										<section class="popup_choice">
+											<em class="icon pop_arrow"></em>
+											<section class="choice_content">
+												<a href="#">机构1</a><a href="#">机构2</a><a href="#">机构2</a><a
+													href="#">机构2</a><a href="#">机构2</a><a href="#">机构1</a><a
+													href="#">机构2</a><a href="#">机构2</a><a href="#">机构2</a><a
+													href="#">机构2</a><a href="#">机构1</a><a href="#">机构2</a><a
+													href="#">机构2</a><a href="#">机构2</a><a href="#">机构2</a><a
+													href="#">机构1</a><a href="#">机构2</a><a href="#">机构2</a><a
+													href="#">机构2</a><a href="#">机构2</a><a href="#">机构1</a><a
+													href="#">机构2</a><a href="#">机构2</a><a href="#">机构2</a><a
+													href="#">机构2</a><a href="#">机构1</a><a href="#">机构2</a><a
+													href="#">机构2</a><a href="#">机构2</a><a href="#">机构2</a>
+											</section>
+											<section class="pagination">
+												<section class="right">
+													<a class="icon_bg" href="#"><em title="上一页" alt="上一页"
+														class="icon cprev"></em></a><span><a class="active"
+														href="#">1</a><a href="#">2</a><a href="#">3</a><a
+														href="#">4</a></span><span>跳转到 <input type="text"
+														value="1"> &nbsp;页/共4页
+													</span><a class="icon_bg" href="#"><em title="下一页" alt="下一页"
+														class="icon cnext"></em></a>
+												</section>
+												<section class="left">
+													<a href="#" class="btn btn_blue">确定</a>
+												</section>
+											</section>
+										</section>
+									</dt>
+									<dd>
+										<a href="#" class="right">&gt;&gt;</a><span><a href="#"
+											class="active">销售部</a><a href="#">销售部</a><a href="#">销售部</a><a
+											href="#">销售部</a><a href="#">销售部</a><a href="#">销售部</a></span>
+									</dd>
+								</dl>
+								<div class="clear">&nbsp;</div>
+							</section>
+
+							<section class="tap gray_border">
+								<a href="#">岗位</a><a href="#">职位</a>
+							</section>
+
+
+							<section class="gray_border">
+								<dl class="no_dash">
+									<dt>
+										<a href="#">角色：</a>
+									</dt>
+									<dd>
+										<a href="#" class="right">&gt;&gt;</a><span><a href="#"
+											class="active">角色1</a><a href="#">角色1</a><a href="#">角色1</a><a
+											href="#">角色1</a><a href="#">角色1</a><a href="#">角色1</a></span>
+									</dd>
+								</dl>
+								<div class="clear">&nbsp;</div>
+							</section>
+							<section class="choice_result">
+								<dl>
+									<dt>选择路径：</dt>
+									<dd>
+										<span><a href="#" class="active"><em class="fr">x</em>机构1&nbsp;&gt;&nbsp;财务部</a><a
+											href="#" class="active"><em class="fr">x</em>机构1</a></span>
+									</dd>
+								</dl>
+								<div class="clear">&nbsp;</div>
+							</section>
+
+
+							<section class="choice_details">
+								<section class="list_tree">
+									<section class="title">
+										待选项（<b class="blue">25</b>）
+									</section>
+									<section class="content">
+										<section class="right">
+											<section class="fast_choice">
+												<section class="stitle">快捷选择</section>
+												<section class="fast_choice_list">
+													<section class="scroll">
+														<section class="padding">
+															<ul>
+																<li><input type="checkbox" />发起人</li>
+																<li><input type="checkbox" />发起人</li>
+															</ul>
+															<hr />
+															<b>发起人的</b>
+															<ul>
+																<li><input type="checkbox" />直属上级</li>
+																<li><input type="checkbox" />直属上上级</li>
+																<li><input type="checkbox" />部门负责人</li>
+															</ul>
+															<hr />
+															<ul>
+																<li><input type="checkbox" />财务经理</li>
+																<li><input type="checkbox" />总经理</li>
+															</ul>
+														</section>
+													</section>
+												</section>
+											</section>
+
+										</section>
+										<section class="left">
+											<!-- height发生变化 -->
+											<section class="tree_menu height">
+												<section class="scroll">
+													<section class="padding">
+														<ul>
+															<li><a href="#"><em class="icon l-arrow-down"></em>机构1</a>
+																<ul>
+																	<li><a href="#"><em class="icon l-arrow-down"></em>销售部</a>
+																		<ol>
+																			<li><a href="#" class="active">销售总监</a></li>
+																			<li><a href="#">销售总监</a></li>
+																			<li><a href="#">销售总监</a></li>
+																			<li><a href="#">销售总监</a></li>
+																			<li><a href="#">销售总监</a></li>
+																			<li><a href="#">销售总监</a></li>
+																			<li><a href="#">销售总监</a></li>
+																			<li><a href="#">销售总监</a></li>
+																			<li><a href="#">销售总监</a></li>
+																			<li><a href="#">销售总监</a></li>
+																			<li><a href="#">销售总监</a></li>
+																		</ol></li>
+																</ul></li>
+															<li><a href="#"><em class="icon l-arrow-down"></em>岗位&nbsp;<b
+																	class="blue">&gt;</b>&nbsp;财务部&nbsp;<b class="blue">&gt;</b>&nbsp;机构1</a>
+																<ul>
+																	<li><a href="#">财务总监</a></li>
+																	<li><a href="#">财务总监</a></li>
+																	<li><a href="#">财务总监</a></li>
+																	<li><a href="#">财务总监</a></li>
+																	<li><a href="#">财务总监</a></li>
+																	<li><a href="#">财务总监</a></li>
+																	<li><a href="#">财务总监</a></li>
+																	<li><a href="#">财务总监</a></li>
+																	<li><a href="#">财务总监</a></li>
+																	<li><a href="#">财务总监</a></li>
+																	<li><a href="#">财务总监</a></li>
+																	<li><a href="#">财务总监</a></li>
+																</ul></li>
+														</ul>
+													</section>
+												</section>
+											</section>
+										</section>
+
+										<div class="clear">&nbsp;</div>
+									</section>
+								</section>
+								<section class="btn_group">
+									<a href="#" class="btn btn_gray">添加</a><a href="#"
+										class="btn btn_gray">删除</a><a href="#" class="btn btn_gray">全部添加</a><a
+										href="#" class="btn btn_gray">全部删除</a>
+								</section>
+								<section class="tree_result">
+									<section class="title">
+										已选项（<b>1</b>）
+									</section>
+									<section class="tree_rmenu">
+										<section class="scroll">
+											<section class="padding">
+												<ul>
+													<li><a href="#">销售总监&nbsp;<b class="blue">&gt;</b>&nbsp;销售部&nbsp;<b
+															class="blue">&gt;</b>&nbsp;机构1
+													</a></li>
+													<li><a href="#" class="active">销售总监&nbsp;<b
+															class="blue">&gt;</b>&nbsp;销售部&nbsp;<b class="blue">&gt;</b>&nbsp;机构1
+													</a></li>
+													<li><a href="#">销售总监&nbsp;<b class="blue">&gt;</b>&nbsp;销售部&nbsp;<b
+															class="blue">&gt;</b>&nbsp;机构1
+													</a></li>
+													<li><a href="#">销售总监&nbsp;<b class="blue">&gt;</b>&nbsp;销售部&nbsp;<b
+															class="blue">&gt;</b>&nbsp;机构1
+													</a></li>
+													<li><a href="#">销售总监&nbsp;<b class="blue">&gt;</b>&nbsp;销售部&nbsp;<b
+															class="blue">&gt;</b>&nbsp;机构1
+													</a></li>
+													<li><a href="#">销售总监&nbsp;<b class="blue">&gt;</b>&nbsp;销售部&nbsp;<b
+															class="blue">&gt;</b>&nbsp;机构1
+													</a></li>
+													<li><a href="#" class="active">销售总监&nbsp;<b
+															class="blue">&gt;</b>&nbsp;销售部&nbsp;<b class="blue">&gt;</b>&nbsp;机构1
+													</a></li>
+													<li><a href="#">销售总监&nbsp;<b class="blue">&gt;</b>&nbsp;销售部&nbsp;<b
+															class="blue">&gt;</b>&nbsp;机构1
+													</a></li>
+													<li><a href="#">销售总监&nbsp;<b class="blue">&gt;</b>&nbsp;销售部&nbsp;<b
+															class="blue">&gt;</b>&nbsp;机构1
+													</a></li>
+													<li><a href="#">销售总监&nbsp;<b class="blue">&gt;</b>&nbsp;销售部&nbsp;<b
+															class="blue">&gt;</b>&nbsp;机构1
+													</a></li>
+													<li><a href="#">销售总监&nbsp;<b class="blue">&gt;</b>&nbsp;销售部&nbsp;<b
+															class="blue">&gt;</b>&nbsp;机构1
+													</a></li>
+													<li><a href="#" class="active">销售总监&nbsp;<b
+															class="blue">&gt;</b>&nbsp;销售部&nbsp;<b class="blue">&gt;</b>&nbsp;机构1
+													</a></li>
+													<li><a href="#">销售总监&nbsp;<b class="blue">&gt;</b>&nbsp;销售部&nbsp;<b
+															class="blue">&gt;</b>&nbsp;机构1
+													</a></li>
+													<li><a href="#">销售总监&nbsp;<b class="blue">&gt;</b>&nbsp;销售部&nbsp;<b
+															class="blue">&gt;</b>&nbsp;机构1
+													</a></li>
+													<li><a href="#">销售总监&nbsp;<b class="blue">&gt;</b>&nbsp;销售部&nbsp;<b
+															class="blue">&gt;</b>&nbsp;机构1
+													</a></li>
+													<li><a href="#">销售总监&nbsp;<b class="blue">&gt;</b>&nbsp;销售部&nbsp;<b
+															class="blue">&gt;</b>&nbsp;机构1
+													</a></li>
+													<li><a href="#" class="active">销售总监&nbsp;<b
+															class="blue">&gt;</b>&nbsp;销售部&nbsp;<b class="blue">&gt;</b>&nbsp;机构1
+													</a></li>
+													<li><a href="#">销售总监&nbsp;<b class="blue">&gt;</b>&nbsp;销售部&nbsp;<b
+															class="blue">&gt;</b>&nbsp;机构1
+													</a></li>
+													<li><a href="#">销售总监&nbsp;<b class="blue">&gt;</b>&nbsp;销售部&nbsp;<b
+															class="blue">&gt;</b>&nbsp;机构1
+													</a></li>
+													<li><a href="#">销售总监&nbsp;<b class="blue">&gt;</b>&nbsp;销售部&nbsp;<b
+															class="blue">&gt;</b>&nbsp;机构1
+													</a></li>
+													<li><a href="#">销售总监&nbsp;<b class="blue">&gt;</b>&nbsp;销售部&nbsp;<b
+															class="blue">&gt;</b>&nbsp;机构1
+													</a></li>
+													<li><a href="#" class="active">销售总监&nbsp;<b
+															class="blue">&gt;</b>&nbsp;销售部&nbsp;<b class="blue">&gt;</b>&nbsp;机构1
+													</a></li>
+													<li><a href="#">销售总监&nbsp;<b class="blue">&gt;</b>&nbsp;销售部&nbsp;<b
+															class="blue">&gt;</b>&nbsp;机构1
+													</a></li>
+													<li><a href="#">销售总监&nbsp;<b class="blue">&gt;</b>&nbsp;销售部&nbsp;<b
+															class="blue">&gt;</b>&nbsp;机构1
+													</a></li>
+													<li><a href="#">销售总监&nbsp;<b class="blue">&gt;</b>&nbsp;销售部&nbsp;<b
+															class="blue">&gt;</b>&nbsp;机构1
+													</a></li>
+													<li><a href="#">销售总监&nbsp;<b class="blue">&gt;</b>&nbsp;销售部&nbsp;<b
+															class="blue">&gt;</b>&nbsp;机构1
+													</a></li>
+													<li><a href="#" class="active">销售总监&nbsp;<b
+															class="blue">&gt;</b>&nbsp;销售部&nbsp;<b class="blue">&gt;</b>&nbsp;机构1
+													</a></li>
+													<li><a href="#">销售总监&nbsp;<b class="blue">&gt;</b>&nbsp;销售部&nbsp;<b
+															class="blue">&gt;</b>&nbsp;机构1
+													</a></li>
+													<li><a href="#">销售总监&nbsp;<b class="blue">&gt;</b>&nbsp;销售部&nbsp;<b
+															class="blue">&gt;</b>&nbsp;机构1
+													</a></li>
+													<li><a href="#">销售总监&nbsp;<b class="blue">&gt;</b>&nbsp;销售部&nbsp;<b
+															class="blue">&gt;</b>&nbsp;机构1
+													</a></li>
+													<li><a href="#">销售总监&nbsp;<b class="blue">&gt;</b>&nbsp;销售部&nbsp;<b
+															class="blue">&gt;</b>&nbsp;机构1
+													</a></li>
+													<li><a href="#" class="active">销售总监&nbsp;<b
+															class="blue">&gt;</b>&nbsp;销售部&nbsp;<b class="blue">&gt;</b>&nbsp;机构1
+													</a></li>
+													<li><a href="#">销售总监&nbsp;<b class="blue">&gt;</b>&nbsp;销售部&nbsp;<b
+															class="blue">&gt;</b>&nbsp;机构1
+													</a></li>
+													<li><a href="#">销售总监&nbsp;<b class="blue">&gt;</b>&nbsp;销售部&nbsp;<b
+															class="blue">&gt;</b>&nbsp;机构1
+													</a></li>
+													<li><a href="#">销售总监&nbsp;<b class="blue">&gt;</b>&nbsp;销售部&nbsp;<b
+															class="blue">&gt;</b>&nbsp;机构1
+													</a></li>
+													<li><a href="#">销售总监&nbsp;<b class="blue">&gt;</b>&nbsp;销售部&nbsp;<b
+															class="blue">&gt;</b>&nbsp;机构1
+													</a></li>
+													<li><a href="#" class="active">销售总监&nbsp;<b
+															class="blue">&gt;</b>&nbsp;销售部&nbsp;<b class="blue">&gt;</b>&nbsp;机构1
+													</a></li>
+													<li><a href="#">销售总监&nbsp;<b class="blue">&gt;</b>&nbsp;销售部&nbsp;<b
+															class="blue">&gt;</b>&nbsp;机构1
+													</a></li>
+													<li><a href="#">销售总监&nbsp;<b class="blue">&gt;</b>&nbsp;销售部&nbsp;<b
+															class="blue">&gt;</b>&nbsp;机构1
+													</a></li>
+													<li><a href="#">销售总监&nbsp;<b class="blue">&gt;</b>&nbsp;销售部&nbsp;<b
+															class="blue">&gt;</b>&nbsp;机构1
+													</a></li>
+												</ul>
+											</section>
+										</section>
+									</section>
+								</section>
+							</section>
+						</section>
+					</section>
+
+				</div>
+			</div>
+			<div class="dialog-button">
+				<a href="javascript:void(0)" class="l-btn l-btn-small" group=""
+					id=""><span class="l-btn-left"><span class="l-btn-text">保存</span></span></a><a
+					href="javascript:void(0)" class="l-btn l-btn-small" group="" id=""><span
+					class="l-btn-left"><span class="l-btn-text">取消</span></span></a>
+			</div>
+		</div>
+	</div>
+
+
+
+	<!--无tab 无right -->
+	<div class="panel window"
+		style="width: 780px; position: relative; top: 20px;">
+		<!-- <div class="panel-header panel-header-noborder window-header"
+			style="width: 778.233px;">
+			<div class="panel-title" style="">选择对象</div>
+			<div class="panel-tool">
+				<a href="javascript:void(0)" class="panel-tool-close"></a>
+			</div>
+		</div> -->
+		<div style="overflow: hidden; width: 778.233px; height: 681.233px;"
+			title="" class="panel-body panel-body-noborder window-body">
+			<div class="panel" style="display: block; width: 778px;">
+				<div title=""
+					class="panel-body panel-body-noheader panel-body-noborder dialog-content"
+					style="width: 778px; height: 636px;">
+					<section class="popup_padding">
+
+						<section class="choice_form">
+							<section class="gray_border">
+								<dl>
+									<dt>
+										<a href="#">机构：</a>
+
+									</dt>
+									<dd>
+										<a href="#" class="right">&gt;&gt;</a><span><a href="#"
+											class="active">机构1</a><a href="#">机构1</a><a href="#">机构1</a><a
+											href="#">机构1</a><a href="#">机构1</a><a href="#">机构1</a></span>
+									</dd>
+								</dl>
+								<div class="clear">&nbsp;</div>
+								<dl class="no_dash">
+									<dt>
+										<a href="#" class="active">部门：</a>
+										<section class="popup_choice">
+											<em class="icon pop_arrow"></em>
+											<section class="choice_content">
+												<a href="#">机构1</a><a href="#">机构2</a><a href="#">机构2</a><a
+													href="#">机构2</a><a href="#">机构2</a><a href="#">机构1</a><a
+													href="#">机构2</a><a href="#">机构2</a><a href="#">机构2</a><a
+													href="#">机构2</a><a href="#">机构1</a><a href="#">机构2</a><a
+													href="#">机构2</a><a href="#">机构2</a><a href="#">机构2</a><a
+													href="#">机构1</a><a href="#">机构2</a><a href="#">机构2</a><a
+													href="#">机构2</a><a href="#">机构2</a><a href="#">机构1</a><a
+													href="#">机构2</a><a href="#">机构2</a><a href="#">机构2</a><a
+													href="#">机构2</a><a href="#">机构1</a><a href="#">机构2</a><a
+													href="#">机构2</a><a href="#">机构2</a><a href="#">机构2</a>
+											</section>
+											<section class="pagination">
+												<section class="right">
+													<a class="icon_bg" href="#"><em title="上一页" alt="上一页"
+														class="icon cprev"></em></a><span><a class="active"
+														href="#">1</a><a href="#">2</a><a href="#">3</a><a
+														href="#">4</a></span><span>跳转到 <input type="text"
+														value="1"> &nbsp;页/共4页
+													</span><a class="icon_bg" href="#"><em title="下一页" alt="下一页"
+														class="icon cnext"></em></a>
+												</section>
+												<section class="left">
+													<a href="#" class="btn btn_blue">确定</a>
+												</section>
+											</section>
+										</section>
+									</dt>
+									<dd>
+										<a href="#" class="right">&gt;&gt;</a><span><a href="#"
+											class="active">销售部</a><a href="#">销售部</a><a href="#">销售部</a><a
+											href="#">销售部</a><a href="#">销售部</a><a href="#">销售部</a></span>
+									</dd>
+								</dl>
+								<div class="clear">&nbsp;</div>
+							</section>
+
+							<section class="tap gray_border">
+								<a href="#">岗位</a><a href="#">职位</a>
+							</section>
+
+
+							<section class="gray_border">
+								<dl class="no_dash">
+									<dt>
+										<a href="#">角色：</a>
+									</dt>
+									<dd>
+										<a href="#" class="right">&gt;&gt;</a><span><a href="#"
+											class="active">角色1</a><a href="#">角色1</a><a href="#">角色1</a><a
+											href="#">角色1</a><a href="#">角色1</a><a href="#">角色1</a></span>
+									</dd>
+								</dl>
+								<div class="clear">&nbsp;</div>
+							</section>
+							<section class="choice_result">
+								<dl>
+									<dt>选择路径：</dt>
+									<dd>
+										<span><a href="#" class="active"><em class="fr">x</em>机构1&nbsp;&gt;&nbsp;财务部</a><a
+											href="#" class="active"><em class="fr">x</em>机构1</a></span>
+									</dd>
+								</dl>
+								<div class="clear">&nbsp;</div>
+							</section>
+
+
+							<section class="choice_details">
+								<section class="list_tree">
+									<section class="title">
+										待选项（<b class="blue">25</b>）
+									</section>
+									<section class="content">
+										<!-- 去right -->
+										<section>
+											<!-- height发生变化 -->
+											<section class="tree_menu height">
+												<section class="scroll">
+													<section class="padding">
+														<ul>
+															<li><a href="#"><em class="icon l-arrow-down"></em>机构1</a>
+																<ul>
+																	<li><a href="#"><em class="icon l-arrow-down"></em>销售部</a>
+																		<ol>
+																			<li><a href="#" class="active">销售总监</a></li>
+																			<li><a href="#">销售总监</a></li>
+																			<li><a href="#">销售总监</a></li>
+																			<li><a href="#">销售总监</a></li>
+																			<li><a href="#">销售总监</a></li>
+																			<li><a href="#">销售总监</a></li>
+																			<li><a href="#">销售总监</a></li>
+																			<li><a href="#">销售总监</a></li>
+																			<li><a href="#">销售总监</a></li>
+																			<li><a href="#">销售总监</a></li>
+																			<li><a href="#">销售总监</a></li>
+																		</ol></li>
+																</ul></li>
+															<li><a href="#"><em class="icon l-arrow-down"></em>岗位&nbsp;<b
+																	class="blue">&gt;</b>&nbsp;财务部&nbsp;<b class="blue">&gt;</b>&nbsp;机构1</a>
+																<ul>
+																	<li><a href="#">财务总监</a></li>
+																	<li><a href="#">财务总监</a></li>
+																	<li><a href="#">财务总监</a></li>
+																	<li><a href="#">财务总监</a></li>
+																	<li><a href="#">财务总监</a></li>
+																	<li><a href="#">财务总监</a></li>
+																	<li><a href="#">财务总监</a></li>
+																	<li><a href="#">财务总监</a></li>
+																	<li><a href="#">财务总监</a></li>
+																	<li><a href="#">财务总监</a></li>
+																	<li><a href="#">财务总监</a></li>
+																	<li><a href="#">财务总监</a></li>
+																</ul></li>
+														</ul>
+													</section>
+												</section>
+											</section>
+										</section>
+
+										<div class="clear">&nbsp;</div>
+									</section>
+								</section>
+								<section class="btn_group">
+									<a href="#" class="btn btn_gray">添加</a><a href="#"
+										class="btn btn_gray">删除</a><a href="#" class="btn btn_gray">全部添加</a><a
+										href="#" class="btn btn_gray">全部删除</a>
+								</section>
+								<section class="tree_result">
+									<section class="title">
+										已选项（<b>1</b>）
+									</section>
+									<section class="tree_rmenu">
+										<section class="scroll">
+											<section class="padding">
+												<ul>
+													<li><a href="#">销售总监&nbsp;<b class="blue">&gt;</b>&nbsp;销售部&nbsp;<b
+															class="blue">&gt;</b>&nbsp;机构1
+													</a></li>
+													<li><a href="#" class="active">销售总监&nbsp;<b
+															class="blue">&gt;</b>&nbsp;销售部&nbsp;<b class="blue">&gt;</b>&nbsp;机构1
+													</a></li>
+													<li><a href="#">销售总监&nbsp;<b class="blue">&gt;</b>&nbsp;销售部&nbsp;<b
+															class="blue">&gt;</b>&nbsp;机构1
+													</a></li>
+													<li><a href="#">销售总监&nbsp;<b class="blue">&gt;</b>&nbsp;销售部&nbsp;<b
+															class="blue">&gt;</b>&nbsp;机构1
+													</a></li>
+													<li><a href="#">销售总监&nbsp;<b class="blue">&gt;</b>&nbsp;销售部&nbsp;<b
+															class="blue">&gt;</b>&nbsp;机构1
+													</a></li>
+													<li><a href="#">销售总监&nbsp;<b class="blue">&gt;</b>&nbsp;销售部&nbsp;<b
+															class="blue">&gt;</b>&nbsp;机构1
+													</a></li>
+													<li><a href="#" class="active">销售总监&nbsp;<b
+															class="blue">&gt;</b>&nbsp;销售部&nbsp;<b class="blue">&gt;</b>&nbsp;机构1
+													</a></li>
+													<li><a href="#">销售总监&nbsp;<b class="blue">&gt;</b>&nbsp;销售部&nbsp;<b
+															class="blue">&gt;</b>&nbsp;机构1
+													</a></li>
+													<li><a href="#">销售总监&nbsp;<b class="blue">&gt;</b>&nbsp;销售部&nbsp;<b
+															class="blue">&gt;</b>&nbsp;机构1
+													</a></li>
+													<li><a href="#">销售总监&nbsp;<b class="blue">&gt;</b>&nbsp;销售部&nbsp;<b
+															class="blue">&gt;</b>&nbsp;机构1
+													</a></li>
+													<li><a href="#">销售总监&nbsp;<b class="blue">&gt;</b>&nbsp;销售部&nbsp;<b
+															class="blue">&gt;</b>&nbsp;机构1
+													</a></li>
+													<li><a href="#" class="active">销售总监&nbsp;<b
+															class="blue">&gt;</b>&nbsp;销售部&nbsp;<b class="blue">&gt;</b>&nbsp;机构1
+													</a></li>
+													<li><a href="#">销售总监&nbsp;<b class="blue">&gt;</b>&nbsp;销售部&nbsp;<b
+															class="blue">&gt;</b>&nbsp;机构1
+													</a></li>
+													<li><a href="#">销售总监&nbsp;<b class="blue">&gt;</b>&nbsp;销售部&nbsp;<b
+															class="blue">&gt;</b>&nbsp;机构1
+													</a></li>
+													<li><a href="#">销售总监&nbsp;<b class="blue">&gt;</b>&nbsp;销售部&nbsp;<b
+															class="blue">&gt;</b>&nbsp;机构1
+													</a></li>
+													<li><a href="#">销售总监&nbsp;<b class="blue">&gt;</b>&nbsp;销售部&nbsp;<b
+															class="blue">&gt;</b>&nbsp;机构1
+													</a></li>
+													<li><a href="#" class="active">销售总监&nbsp;<b
+															class="blue">&gt;</b>&nbsp;销售部&nbsp;<b class="blue">&gt;</b>&nbsp;机构1
+													</a></li>
+													<li><a href="#">销售总监&nbsp;<b class="blue">&gt;</b>&nbsp;销售部&nbsp;<b
+															class="blue">&gt;</b>&nbsp;机构1
+													</a></li>
+													<li><a href="#">销售总监&nbsp;<b class="blue">&gt;</b>&nbsp;销售部&nbsp;<b
+															class="blue">&gt;</b>&nbsp;机构1
+													</a></li>
+													<li><a href="#">销售总监&nbsp;<b class="blue">&gt;</b>&nbsp;销售部&nbsp;<b
+															class="blue">&gt;</b>&nbsp;机构1
+													</a></li>
+													<li><a href="#">销售总监&nbsp;<b class="blue">&gt;</b>&nbsp;销售部&nbsp;<b
+															class="blue">&gt;</b>&nbsp;机构1
+													</a></li>
+													<li><a href="#" class="active">销售总监&nbsp;<b
+															class="blue">&gt;</b>&nbsp;销售部&nbsp;<b class="blue">&gt;</b>&nbsp;机构1
+													</a></li>
+													<li><a href="#">销售总监&nbsp;<b class="blue">&gt;</b>&nbsp;销售部&nbsp;<b
+															class="blue">&gt;</b>&nbsp;机构1
+													</a></li>
+													<li><a href="#">销售总监&nbsp;<b class="blue">&gt;</b>&nbsp;销售部&nbsp;<b
+															class="blue">&gt;</b>&nbsp;机构1
+													</a></li>
+													<li><a href="#">销售总监&nbsp;<b class="blue">&gt;</b>&nbsp;销售部&nbsp;<b
+															class="blue">&gt;</b>&nbsp;机构1
+													</a></li>
+													<li><a href="#">销售总监&nbsp;<b class="blue">&gt;</b>&nbsp;销售部&nbsp;<b
+															class="blue">&gt;</b>&nbsp;机构1
+													</a></li>
+													<li><a href="#" class="active">销售总监&nbsp;<b
+															class="blue">&gt;</b>&nbsp;销售部&nbsp;<b class="blue">&gt;</b>&nbsp;机构1
+													</a></li>
+													<li><a href="#">销售总监&nbsp;<b class="blue">&gt;</b>&nbsp;销售部&nbsp;<b
+															class="blue">&gt;</b>&nbsp;机构1
+													</a></li>
+													<li><a href="#">销售总监&nbsp;<b class="blue">&gt;</b>&nbsp;销售部&nbsp;<b
+															class="blue">&gt;</b>&nbsp;机构1
+													</a></li>
+													<li><a href="#">销售总监&nbsp;<b class="blue">&gt;</b>&nbsp;销售部&nbsp;<b
+															class="blue">&gt;</b>&nbsp;机构1
+													</a></li>
+													<li><a href="#">销售总监&nbsp;<b class="blue">&gt;</b>&nbsp;销售部&nbsp;<b
+															class="blue">&gt;</b>&nbsp;机构1
+													</a></li>
+													<li><a href="#" class="active">销售总监&nbsp;<b
+															class="blue">&gt;</b>&nbsp;销售部&nbsp;<b class="blue">&gt;</b>&nbsp;机构1
+													</a></li>
+													<li><a href="#">销售总监&nbsp;<b class="blue">&gt;</b>&nbsp;销售部&nbsp;<b
+															class="blue">&gt;</b>&nbsp;机构1
+													</a></li>
+													<li><a href="#">销售总监&nbsp;<b class="blue">&gt;</b>&nbsp;销售部&nbsp;<b
+															class="blue">&gt;</b>&nbsp;机构1
+													</a></li>
+													<li><a href="#">销售总监&nbsp;<b class="blue">&gt;</b>&nbsp;销售部&nbsp;<b
+															class="blue">&gt;</b>&nbsp;机构1
+													</a></li>
+													<li><a href="#">销售总监&nbsp;<b class="blue">&gt;</b>&nbsp;销售部&nbsp;<b
+															class="blue">&gt;</b>&nbsp;机构1
+													</a></li>
+													<li><a href="#" class="active">销售总监&nbsp;<b
+															class="blue">&gt;</b>&nbsp;销售部&nbsp;<b class="blue">&gt;</b>&nbsp;机构1
+													</a></li>
+													<li><a href="#">销售总监&nbsp;<b class="blue">&gt;</b>&nbsp;销售部&nbsp;<b
+															class="blue">&gt;</b>&nbsp;机构1
+													</a></li>
+													<li><a href="#">销售总监&nbsp;<b class="blue">&gt;</b>&nbsp;销售部&nbsp;<b
+															class="blue">&gt;</b>&nbsp;机构1
+													</a></li>
+													<li><a href="#">销售总监&nbsp;<b class="blue">&gt;</b>&nbsp;销售部&nbsp;<b
+															class="blue">&gt;</b>&nbsp;机构1
+													</a></li>
+												</ul>
+											</section>
+										</section>
+									</section>
+								</section>
+							</section>
+						</section>
+					</section>
+
+				</div>
+			</div>
+			<div class="dialog-button">
+				<a href="javascript:void(0)" class="l-btn l-btn-small" group=""
+					id=""><span class="l-btn-left"><span class="l-btn-text">保存</span></span></a><a
+					href="javascript:void(0)" class="l-btn l-btn-small" group="" id=""><span
+					class="l-btn-left"><span class="l-btn-text">取消</span></span></a>
+			</div>
+		</div>
+	</div>
+
+
+
+	<!-- 无right -->
+	<div class="panel window"
+		style="width: 780px; position: relative; top: 20px">
+		<!-- <div class="panel-header panel-header-noborder window-header"
+			style="width: 778.233px;">
+			<div class="panel-title" style="">选择对象</div>
+			<div class="panel-tool">
+				<a href="javascript:void(0)" class="panel-tool-close"></a>
+			</div>
+		</div> -->
+		<div style="overflow: hidden; width: 778.233px; height: 681.233px;"
+			title="" class="panel-body panel-body-noborder window-body">
+			<div class="panel" style="display: block; width: 778px;">
+				<div title=""
+					class="panel-body panel-body-noheader panel-body-noborder dialog-content"
+					style="width: 778px; height: 636px;">
+					<section class="popup_padding">
+
+						<section class="choice_form">
+							<section class="gray_border">
+								<dl>
+									<dt>
+										<a href="#">机构：</a>
+										<section class="popup_choice">
+											<em class="icon pop_arrow"></em>
+											<section class="choice_content">
+												<a href="#">机构1</a><a href="#">机构2</a><a href="#">机构2</a><a
+													href="#">机构2</a><a href="#">机构2</a><a href="#">机构1</a><a
+													href="#">机构2</a><a href="#">机构2</a><a href="#">机构2</a><a
+													href="#">机构2</a><a href="#">机构1</a><a href="#">机构2</a><a
+													href="#">机构2</a><a href="#">机构2</a><a href="#">机构2</a><a
+													href="#">机构1</a><a href="#">机构2</a><a href="#">机构2</a><a
+													href="#">机构2</a><a href="#">机构2</a><a href="#">机构1</a><a
+													href="#">机构2</a><a href="#">机构2</a><a href="#">机构2</a><a
+													href="#">机构2</a><a href="#">机构1</a><a href="#">机构2</a><a
+													href="#">机构2</a><a href="#">机构2</a><a href="#">机构2</a>
+											</section>
+											<section class="pagination">
+												<section class="right">
+													<a class="icon_bg" href="#"><em title="上一页" alt="上一页"
+														class="icon cprev"></em></a><span><a class="active"
+														href="#">1</a><a href="#">2</a><a href="#">3</a><a
+														href="#">4</a></span><span>跳转到 <input type="text"
+														value="1"> &nbsp;页/共4页
+													</span><a class="icon_bg" href="#"><em title="下一页" alt="下一页"
+														class="icon cnext"></em></a>
+												</section>
+												<section class="left">
+													<a href="#" class="btn btn_blue">确定</a>
+												</section>
+											</section>
+										</section>
+									</dt>
+									<dd>
+										<a href="#" class="right">&gt;&gt;</a><span><a href="#"
+											class="active">机构1</a><a href="#">机构1</a><a href="#">机构1</a><a
+											href="#">机构1</a><a href="#">机构1</a><a href="#">机构1</a></span>
+									</dd>
+								</dl>
+								<div class="clear">&nbsp;</div>
+								<dl class="no_dash">
+									<dt>
+										<a href="#" class="active">部门：</a>
+									</dt>
+									<dd>
+										<a href="#" class="right">&gt;&gt;</a><span><a href="#"
+											class="active">销售部</a><a href="#">销售部</a><a href="#">销售部</a><a
+											href="#">销售部</a><a href="#">销售部</a><a href="#">销售部</a></span>
+									</dd>
+								</dl>
+								<div class="clear">&nbsp;</div>
+							</section>
+
+							<section class="tap gray_border">
+								<a href="#">岗位</a><a href="#">职位</a>
+							</section>
+
+
+							<section class="gray_border">
+								<dl class="no_dash">
+									<dt>
+										<a href="#">角色：</a>
+									</dt>
+									<dd>
+										<a href="#" class="right">&gt;&gt;</a><span><a href="#"
+											class="active">角色1</a><a href="#">角色1</a><a href="#">角色1</a><a
+											href="#">角色1</a><a href="#">角色1</a><a href="#">角色1</a></span>
+									</dd>
+								</dl>
+								<div class="clear">&nbsp;</div>
+							</section>
+							<section class="choice_result">
+								<dl>
+									<dt>选择路径：</dt>
+									<dd>
+										<span><a href="#" class="active"><em class="fr">x</em>机构1&nbsp;&gt;&nbsp;财务部</a><a
+											href="#" class="active"><em class="fr">x</em>机构1</a></span>
+									</dd>
+								</dl>
+								<div class="clear">&nbsp;</div>
+							</section>
+
+
+							<section class="choice_details">
+								<section class="list_tree">
+									<section class="title">
+										待选项（<b class="blue">25</b>）
+									</section>
+									<section class="content">
+										<!-- 无right -->
+										<section>
+											<section class="tree_tab">
+												<a href="#" class="active">机构1</a><a href="#">高频分类</a>
+											</section>
+											<section class="tree_menu">
+												<section class="scroll">
+													<section class="padding">
+														<ul>
+															<li><a href="#"><em class="icon l-arrow-down"></em>机构1</a>
+																<ul>
+																	<li><a href="#"><em class="icon l-arrow-down"></em>销售部</a>
+																		<ol>
+																			<li><a href="#" class="active">销售总监</a></li>
+																			<li><a href="#">销售总监</a></li>
+																			<li><a href="#">销售总监</a></li>
+																			<li><a href="#">销售总监</a></li>
+																			<li><a href="#">销售总监</a></li>
+																			<li><a href="#">销售总监</a></li>
+																		</ol></li>
+																</ul></li>
+															<li><a href="#"><em class="icon l-arrow-down"></em>岗位&nbsp;<b
+																	class="blue">&gt;</b>&nbsp;财务部&nbsp;<b class="blue">&gt;</b>&nbsp;机构1</a>
+																<ul>
+																	<li><a href="#">财务总监</a></li>
+																	<li><a href="#">财务总监</a></li>
+																	<li><a href="#">财务总监</a></li>
+																	<li><a href="#">财务总监</a></li>
+																	<li><a href="#">财务总监</a></li>
+																	<li><a href="#">财务总监</a></li>
+																	<li><a href="#">财务总监</a></li>
+																	<li><a href="#">财务总监</a></li>
+																	<li><a href="#">财务总监</a></li>
+																	<li><a href="#">财务总监</a></li>
+																	<li><a href="#">财务总监</a></li>
+																	<li><a href="#">财务总监</a></li>
+																</ul></li>
+														</ul>
+													</section>
+												</section>
+											</section>
+										</section>
+
+										<div class="clear">&nbsp;</div>
+									</section>
+								</section>
+								<section class="btn_group">
+									<a href="#" class="btn btn_gray">添加</a><a href="#"
+										class="btn btn_gray">删除</a><a href="#" class="btn btn_gray">全部添加</a><a
+										href="#" class="btn btn_gray">全部删除</a>
+								</section>
+								<section class="tree_result">
+									<section class="title">
+										已选项（<b>1</b>）
+									</section>
+									<section class="tree_rmenu">
+										<section class="scroll">
+											<section class="padding">
+												<ul>
+													<li><a href="#">销售总监&nbsp;<b class="blue">&gt;</b>&nbsp;销售部&nbsp;<b
+															class="blue">&gt;</b>&nbsp;机构1
+													</a></li>
+													<li><a href="#" class="active">销售总监&nbsp;<b
+															class="blue">&gt;</b>&nbsp;销售部&nbsp;<b class="blue">&gt;</b>&nbsp;机构1
+													</a></li>
+													<li><a href="#">销售总监&nbsp;<b class="blue">&gt;</b>&nbsp;销售部&nbsp;<b
+															class="blue">&gt;</b>&nbsp;机构1
+													</a></li>
+													<li><a href="#">销售总监&nbsp;<b class="blue">&gt;</b>&nbsp;销售部&nbsp;<b
+															class="blue">&gt;</b>&nbsp;机构1
+													</a></li>
+													<li><a href="#">销售总监&nbsp;<b class="blue">&gt;</b>&nbsp;销售部&nbsp;<b
+															class="blue">&gt;</b>&nbsp;机构1
+													</a></li>
+													<li><a href="#">销售总监&nbsp;<b class="blue">&gt;</b>&nbsp;销售部&nbsp;<b
+															class="blue">&gt;</b>&nbsp;机构1
+													</a></li>
+													<li><a href="#" class="active">销售总监&nbsp;<b
+															class="blue">&gt;</b>&nbsp;销售部&nbsp;<b class="blue">&gt;</b>&nbsp;机构1
+													</a></li>
+													<li><a href="#">销售总监&nbsp;<b class="blue">&gt;</b>&nbsp;销售部&nbsp;<b
+															class="blue">&gt;</b>&nbsp;机构1
+													</a></li>
+													<li><a href="#">销售总监&nbsp;<b class="blue">&gt;</b>&nbsp;销售部&nbsp;<b
+															class="blue">&gt;</b>&nbsp;机构1
+													</a></li>
+													<li><a href="#">销售总监&nbsp;<b class="blue">&gt;</b>&nbsp;销售部&nbsp;<b
+															class="blue">&gt;</b>&nbsp;机构1
+													</a></li>
+													<li><a href="#">销售总监&nbsp;<b class="blue">&gt;</b>&nbsp;销售部&nbsp;<b
+															class="blue">&gt;</b>&nbsp;机构1
+													</a></li>
+													<li><a href="#" class="active">销售总监&nbsp;<b
+															class="blue">&gt;</b>&nbsp;销售部&nbsp;<b class="blue">&gt;</b>&nbsp;机构1
+													</a></li>
+													<li><a href="#">销售总监&nbsp;<b class="blue">&gt;</b>&nbsp;销售部&nbsp;<b
+															class="blue">&gt;</b>&nbsp;机构1
+													</a></li>
+													<li><a href="#">销售总监&nbsp;<b class="blue">&gt;</b>&nbsp;销售部&nbsp;<b
+															class="blue">&gt;</b>&nbsp;机构1
+													</a></li>
+													<li><a href="#">销售总监&nbsp;<b class="blue">&gt;</b>&nbsp;销售部&nbsp;<b
+															class="blue">&gt;</b>&nbsp;机构1
+													</a></li>
+													<li><a href="#">销售总监&nbsp;<b class="blue">&gt;</b>&nbsp;销售部&nbsp;<b
+															class="blue">&gt;</b>&nbsp;机构1
+													</a></li>
+													<li><a href="#" class="active">销售总监&nbsp;<b
+															class="blue">&gt;</b>&nbsp;销售部&nbsp;<b class="blue">&gt;</b>&nbsp;机构1
+													</a></li>
+													<li><a href="#">销售总监&nbsp;<b class="blue">&gt;</b>&nbsp;销售部&nbsp;<b
+															class="blue">&gt;</b>&nbsp;机构1
+													</a></li>
+													<li><a href="#">销售总监&nbsp;<b class="blue">&gt;</b>&nbsp;销售部&nbsp;<b
+															class="blue">&gt;</b>&nbsp;机构1
+													</a></li>
+													<li><a href="#">销售总监&nbsp;<b class="blue">&gt;</b>&nbsp;销售部&nbsp;<b
+															class="blue">&gt;</b>&nbsp;机构1
+													</a></li>
+													<li><a href="#">销售总监&nbsp;<b class="blue">&gt;</b>&nbsp;销售部&nbsp;<b
+															class="blue">&gt;</b>&nbsp;机构1
+													</a></li>
+													<li><a href="#" class="active">销售总监&nbsp;<b
+															class="blue">&gt;</b>&nbsp;销售部&nbsp;<b class="blue">&gt;</b>&nbsp;机构1
+													</a></li>
+													<li><a href="#">销售总监&nbsp;<b class="blue">&gt;</b>&nbsp;销售部&nbsp;<b
+															class="blue">&gt;</b>&nbsp;机构1
+													</a></li>
+													<li><a href="#">销售总监&nbsp;<b class="blue">&gt;</b>&nbsp;销售部&nbsp;<b
+															class="blue">&gt;</b>&nbsp;机构1
+													</a></li>
+													<li><a href="#">销售总监&nbsp;<b class="blue">&gt;</b>&nbsp;销售部&nbsp;<b
+															class="blue">&gt;</b>&nbsp;机构1
+													</a></li>
+													<li><a href="#">销售总监&nbsp;<b class="blue">&gt;</b>&nbsp;销售部&nbsp;<b
+															class="blue">&gt;</b>&nbsp;机构1
+													</a></li>
+													<li><a href="#" class="active">销售总监&nbsp;<b
+															class="blue">&gt;</b>&nbsp;销售部&nbsp;<b class="blue">&gt;</b>&nbsp;机构1
+													</a></li>
+													<li><a href="#">销售总监&nbsp;<b class="blue">&gt;</b>&nbsp;销售部&nbsp;<b
+															class="blue">&gt;</b>&nbsp;机构1
+													</a></li>
+													<li><a href="#">销售总监&nbsp;<b class="blue">&gt;</b>&nbsp;销售部&nbsp;<b
+															class="blue">&gt;</b>&nbsp;机构1
+													</a></li>
+													<li><a href="#">销售总监&nbsp;<b class="blue">&gt;</b>&nbsp;销售部&nbsp;<b
+															class="blue">&gt;</b>&nbsp;机构1
+													</a></li>
+													<li><a href="#">销售总监&nbsp;<b class="blue">&gt;</b>&nbsp;销售部&nbsp;<b
+															class="blue">&gt;</b>&nbsp;机构1
+													</a></li>
+													<li><a href="#" class="active">销售总监&nbsp;<b
+															class="blue">&gt;</b>&nbsp;销售部&nbsp;<b class="blue">&gt;</b>&nbsp;机构1
+													</a></li>
+													<li><a href="#">销售总监&nbsp;<b class="blue">&gt;</b>&nbsp;销售部&nbsp;<b
+															class="blue">&gt;</b>&nbsp;机构1
+													</a></li>
+													<li><a href="#">销售总监&nbsp;<b class="blue">&gt;</b>&nbsp;销售部&nbsp;<b
+															class="blue">&gt;</b>&nbsp;机构1
+													</a></li>
+													<li><a href="#">销售总监&nbsp;<b class="blue">&gt;</b>&nbsp;销售部&nbsp;<b
+															class="blue">&gt;</b>&nbsp;机构1
+													</a></li>
+													<li><a href="#">销售总监&nbsp;<b class="blue">&gt;</b>&nbsp;销售部&nbsp;<b
+															class="blue">&gt;</b>&nbsp;机构1
+													</a></li>
+													<li><a href="#" class="active">销售总监&nbsp;<b
+															class="blue">&gt;</b>&nbsp;销售部&nbsp;<b class="blue">&gt;</b>&nbsp;机构1
+													</a></li>
+													<li><a href="#">销售总监&nbsp;<b class="blue">&gt;</b>&nbsp;销售部&nbsp;<b
+															class="blue">&gt;</b>&nbsp;机构1
+													</a></li>
+													<li><a href="#">销售总监&nbsp;<b class="blue">&gt;</b>&nbsp;销售部&nbsp;<b
+															class="blue">&gt;</b>&nbsp;机构1
+													</a></li>
+													<li><a href="#">销售总监&nbsp;<b class="blue">&gt;</b>&nbsp;销售部&nbsp;<b
+															class="blue">&gt;</b>&nbsp;机构1
+													</a></li>
+												</ul>
+											</section>
+										</section>
+									</section>
+								</section>
+							</section>
+						</section>
+					</section>
+
+				</div>
+			</div>
+			<div class="dialog-button">
+				<a href="javascript:void(0)" class="l-btn l-btn-small" group=""
+					id=""><span class="l-btn-left"><span class="l-btn-text">保存</span></span></a><a
+					href="javascript:void(0)" class="l-btn l-btn-small" group="" id=""><span
+					class="l-btn-left"><span class="l-btn-text">取消</span></span></a>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

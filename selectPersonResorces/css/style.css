@@ -1,0 +1,47 @@
+@charset "utf-8";
+
+/* CSS Document */
+
+@import url("global.css");
+@import url("icons.css");
+@import url("index-min.css");
+@import url("layout-main.css");
+@import url("popup.css");
+@import url("index-middle.css");
+
+.layout-block{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height:100%;
+}
+
+.layout-block.layout{
+	overflow: hidden;
+	min-width: 1366px;
+	min-height: 800px;
+}
+
+.fl{
+	float:left;
+}
+.fr{
+	float:right;
+}
+.align-right{
+	text-align:right;
+}
+.align-left{
+	text-align:left;
+}
+.align-center{
+	text-align:center;
+}
+/* font */
+.f-red{
+	color:#e90000;
+}
+.f-blue{
+	color:#117DDE;
+}

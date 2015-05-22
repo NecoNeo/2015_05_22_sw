@@ -1,0 +1,79 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>弹窗</title>
+<link type="text/css" href="../css/datetimepicker/jquery.datetimepicker.css" rel="Stylesheet" />
+
+<link href="../js/easyui/themes/gray/easyui.css" rel="stylesheet" type="text/css" />
+<link href="../js/easyui/themes/icon.css" rel="stylesheet" type="text/css" />
+<link type="text/css" href="../css/style.css" rel="Stylesheet" />
+
+<script type="text/javascript" src="../js/jquery-1.11.0.js"></script>
+<script type="text/javascript" src="../js/datetimepicker/jquery.datetimepicker1.js"></script>
+<script type="text/javascript" src="../js/datetimepicker/datetime.js"></script>
+<script type="text/javascript" src="../js/easyui/jquery.easyui.min.js"></script>
+<script type="text/javascript" src="../js/openDialog.js"></script>
+<script type="text/javascript" src="../js/selectPosition/selectPosition2.js"></script>
+<script type="text/javascript" src="../js/selectPosition/selectFriend.js"></script>
+<script type="text/javascript" src="../js/datetimepicker/dayHourMinute.js"></script>
+<script type="text/javascript">
+var appName = "jq";
+$(function() {
+	$("#aaa").datetimeSelect({
+		onShow: function(ct) {
+			this.setOptions({
+				maxDate: jQuery('#bbb').val() ? jQuery('#bbb').val() : false
+			})
+		}
+	});
+
+	$("#bbb").datetimeSelect({
+		onShow: function(ct) {
+			this.setOptions({
+				minDate: jQuery('#aaa').val() ? jQuery('#aaa').val() : false
+			})
+		}
+	});
+
+	//只选择日期
+	$(".test1").datetimeSelect({
+		"type": "date"
+	});
+
+	$("#select").selectFriend({
+		single:false
+	});
+
+	$("#select1").selectPosition({
+		"single":false,
+		"keyType":"company_position"
+	});
+
+	$.dayHourMinute({
+		day:"day",
+		hour:"hour",
+		minute:"minute"
+	});
+});
+</script>
+</head>
+<body>
+	<input id="aaa" class="test" type="text" />
+	<a>111</a>
+	<input id="bbb" class="test" type="text" />
+	<a>222</a>
+	<input class="test1" type="text" />
+	<a>aaa</a>
+	<input class="test1" type="text" />
+	<a>bbb</a>
+	<input type="button"  value="提交" id="submit" />
+	
+	<input id="select"  type="text" value="JQ000_1" />
+	<input id="select1"  type="text" value="JQ000_1,17" />
+
+	<input id="day" type="text" value="23" />
+	<input id="hour" type="text" value="2"/>
+	<input id="minute" type="text" value="30"/>
+</body>
+</html>

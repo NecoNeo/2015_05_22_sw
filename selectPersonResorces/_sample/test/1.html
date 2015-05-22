@@ -1,0 +1,2976 @@
+﻿<html>
+<head>
+
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<link href="/jq/js/easyui/themes/gray/easyui.css" rel="stylesheet"
+	type="text/css">
+<link href="/jq/js/easyui/themes/icon.css" rel="stylesheet"
+	type="text/css">
+<link href="/jq/css/datetimepicker/jquery.datetimepicker.css"
+	rel="stylesheet" type="text/css">
+
+<link href="/jq/css/jquery.treetable.css" rel="stylesheet">
+<link href="/jq/css/jquery.treetable.theme.default.css" rel="stylesheet">
+
+<link href="/jq/css/style.css" rel="stylesheet" type="text/css">
+<script src="/jq/js/jquery-1.11.0.js" type="text/javascript"></script>
+<script src="/jq/js/datetimepicker/jquery.datetimepicker.js"
+	type="text/javascript"></script>
+<script src="/jq/js/easyui/jquery.easyui.min.js" type="text/javascript"></script>
+<script src="/jq/js/easyui/jquery.datagrid.js" type="text/javascript"></script>
+<script src="/jq/js/easyui/easyui-lang-zh_CN.js" type="text/javascript"></script>
+<script src="/jq/js/easyui/datagrid-detailview.js"
+	type="text/javascript"></script>
+<script src="/jq/js/easyui/jquery.treegrid.js" type="text/javascript"></script>
+<script src="/jq/js/utilJs/columnMovingUtil.js" type="text/javascript"></script>
+<script src="/jq/js/utilJs/formatStringUtil.js" type="text/javascript"></script>
+<script src="/jq/js/tooltip.js" type="text/javascript"></script>
+<script src="/jq/js/doT.js" type="text/javascript"></script>
+<script src="/jq/js/ajaxfileupload.js" type="text/javascript"></script>
+<script src="/jq/js/default.js" type="text/javascript"></script>
+<script src="/jq/js/utility.js" type="text/javascript"></script>
+<script src="/jq/js/ajaxSelect.js" type="text/javascript"></script>
+<script src="/jq/js/ajaxFile.js" type="text/javascript"></script>
+<script src="/jq/js/openDialog.js" type="text/javascript"></script>
+
+<title>新建项目</title>
+<script type="text/javascript">
+	dynamicLoad([ "selectPosition/selectPosition", "project/radioButton" ], [
+			"project/moment.min", "project/newProject" ]);
+</script>
+<script type="text/javascript"
+	src="/jq/js/selectPosition/selectPosition.js"></script>
+<script type="text/javascript" src="/jq/js/project/radioButton.js"></script>
+<script type="text/javascript"
+	src="/jq/js/selectPosition/selectPosition.js"></script>
+<script type="text/javascript" src="/jq/js/project/radioButton.js"></script>
+<script type="text/javascript" src="/jq/js/project/moment.min.js"></script>
+<script type="text/javascript" src="/jq/js/project/newProject.js"></script>
+<script type="text/javascript" src="/jq/js/project/moment.min.js"></script>
+<script type="text/javascript" src="/jq/js/project/newProject.js"></script>
+</head>
+<body style="min-width: 1366px;">
+	<form id="subProjectForm" name="subProjectForm"
+		action="/jq/project/newProjectAction" method="post"
+		enctype="multipart/form-data">
+
+		<input type="hidden" name="projectId" value="0" id="projectId">
+		<article class="task_article">
+			<section class="padding">
+				<article class="title_box gray_border">
+					<section class="padding">
+						<p class="gray align_center">未命名-项目</p>
+						<!-- 标题 begin -->
+						<h1>新建项目(周期)</h1>
+						<!-- 标题 end -->
+						<!-- 顶部导航 begin -->
+						<section class="btn_group">
+							<section class="big_tab">
+								<a class="active" href="javascript:void(0)"
+									onclick="switchTab('0')">新建项目</a><a href="javascript:void(0)"
+									onclick="switchTab('2')">子项目列表</a><a href="javascript:void(0)"
+									onclick="switchTab('1')">附件</a>
+							</section>
+							<section class="btn_small_group">
+								<span><a href="javascript:void(0)" id="save_Temple">保存为模板</a><em
+									class="icon isolate"></em><a href="javascript:void(0)"
+									id="save_">保存</a><em class="icon isolate"></em><a
+									href="javascript:void(0)" id="save_New">保存新建</a></span> <span><a
+									href="javascript:void(0)" id="save_Close">保存关闭</a><em
+									class="icon isolate"></em><a href="javascript:void(0)"
+									id="saveDraft">发送到草稿</a><em class="icon isolate"></em><a
+									href="javascript:void(0)" id="close">关闭 </a></span>
+							</section>
+							<div class="clear">&nbsp;</div>
+						</section>
+					</section>
+				</article>
+
+				<!-- 新建项目 begin -->
+				<article class="project_box gray_border">
+					<article id="newProject_div">
+						<section class="title">
+							<section class="right">流水号: 15435634654154</section>
+							基本信息
+						</section>
+						<section class="content">
+							<section class="edit_form">
+								<dl>
+									<dt>
+										<span class="red">*</span>&nbsp; 主题
+									</dt>
+									<dd>
+										<textarea name="title" cols="" rows="" id="title"></textarea>
+
+									</dd>
+								</dl>
+								<div class="clear">&nbsp;</div>
+								<!-- 新增标题 -->
+								<dl>
+									<dt>
+										<span class="red">*</span>&nbsp; 标题
+									</dt>
+									<dd>
+										<input type="text" name="subtitle" value="" id="subtitle">
+									</dd>
+								</dl>
+								<div class="col">
+									<dl>
+										<dt>
+											<span class="red">*</span>&nbsp; 执行人
+
+										</dt>
+										<dd>
+											<!-- <input type="text" name="user" value="" id="user" style="display: none;"> -->
+											<div class="gray_input">
+												<input type="text" readonly="true"> <a
+													href="javascript:void(0);" class="btn btn_choice">选择</a>
+											</div>
+										</dd>
+									</dl>
+									<dl>
+										<dt>抄送人</dt>
+										<dd>
+											<!-- 	<input type="text" name="notifier" value="" id="notifier" style="display: none;"> -->
+											<div class="gray_input">
+												<input type="text" readonly="true"> <a
+													href="javascript:void(0);" class="btn btn_choice">选择</a>
+											</div>
+										</dd>
+									</dl>
+									<dl>
+										<dt>归属到人员</dt>
+										<dd>
+											<!-- <input type="text" name="belongTo" value="" id="belongTo" style="display: none;"> -->
+											<div class="gray_input">
+												<input type="text" readonly="true"> <a
+													href="javascript:void(0);" class="btn btn_choice">选择</a>
+											</div>
+										</dd>
+									</dl>
+
+									<dl>
+										<dt>
+											<span class="red">*</span>&nbsp; 验收人
+
+										</dt>
+										<dd>
+											<!-- <input type="text" name="acceptor" value="" id="acceptor" style="display: none;"> -->
+											<div class="gray_input">
+												<input type="text" readonly="true"> <a
+													href="javascript:void(0);" class="btn btn_choice">选择</a>
+											</div>
+										</dd>
+									</dl>
+									<dl>
+										<dt>归属到上级项目</dt>
+										<dd>
+											<div class="gray_input">
+												<input type="text" name="belongToId" value=""
+													id="belongToId"> <a href="javascript:void(0)"
+													class="btn btn_choice">选择</a>
+											</div>
+										</dd>
+									</dl>
+									<dl>
+										<dt>被关联的项目</dt>
+										<dd>
+											<div class="gray_input">
+												<input type="text" name="relevanceProject" value=""
+													id="relevanceProject"> <a href="javascript:void(0)"
+													class="btn btn_choice">选择</a>
+											</div>
+										</dd>
+									</dl>
+
+									<dl>
+										<dt>
+											<span class="red">*</span>&nbsp; 重要性
+										</dt>
+										<dd>
+											<select name="importance" id="importance">
+												<option value="01">次要</option>
+												<option value="02">一般</option>
+												<option value="03">重要</option>
+
+
+											</select>
+
+
+										</dd>
+									</dl>
+									<dl>
+										<dt>项目类型</dt>
+										<dd>
+											<select name="type" id="type">
+												<option value="02">项目类型二</option>
+												<option value="03">项目类型三</option>
+												<option value="04">项目类型四</option>
+												<option value="05">项目类别五</option>
+
+
+											</select>
+
+
+										</dd>
+									</dl>
+									<dl>
+										<dt>收藏到</dt>
+										<dd>
+											<div class="gray_input">
+												<input type="text" name="addTo" value="" id="addTo">
+												<a href="javascript:void(0)" class="btn btn_choice">选择</a>
+											</div>
+										</dd>
+									</dl>
+
+									<dl>
+										<dt>
+											<span class="red">*</span>&nbsp; 期限
+										</dt>
+										<dd>
+											<input type="text" name="limitTime" value="" id="limitTime">
+										</dd>
+									</dl>
+									<dl>
+										<!-- 新增跟踪时间 -->
+										<dt>生成跟踪点</dt>
+										<dd>
+											<div class="gray_input">
+												<input type="text" name="trackingPoint" value=""
+													id="trackingPoint" class="dateType"> &nbsp;<a
+													href="#"><img class="calendar-pic"
+													src="../images/calendar.png"></a>
+											</div>
+										</dd>
+									</dl>
+									<dl>
+										<dt>金额</dt>
+										<dd>
+											<input type="text" name="custom_D" value="" id="custom_D">
+										</dd>
+									</dl>
+
+									<dl>
+										<dt>自定义 1</dt>
+										<dd>
+											<input type="text" name="custom_A" value="" id="custom_A">
+										</dd>
+									</dl>
+									<dl>
+										<dt>自定义 2</dt>
+										<dd>
+											<input type="text" name="custom_B" value="" id="custom_B">
+										</dd>
+									</dl>
+									<dl>
+										<dt>&nbsp;</dt>
+										<dd>
+											[<span class="red">注</span>]<span class="red">* 为必填项</span>
+										</dd>
+									</dl>
+								</div>
+								<div class="clear">&nbsp;</div>
+								<section>内容</section>
+								<textarea name="content" cols="" rows="" id="content"></textarea>
+
+							</section>
+
+
+							<!-- 附件 begin -->
+							<section id="attachment_div">
+								<article>
+									<section class="small_title">
+										<section class="right">
+
+											<a href="javascript:void(0)" id="attachment_upload"
+												class="btn btn_gray_2">上传</a>&nbsp;<a
+												href="javascript:void(0)" id="attachment_batchDelete"
+												class="btn btn_gray_2">批量删除</a><input id="file" type="file"
+												name="file" onchange="upload();"
+												style="visibility: hidden; display: none;">
+										</section>
+										附件
+										<div class="clear">&nbsp;</div>
+									</section>
+
+									<table class="task_table">
+										<thead>
+											<tr>
+												<th width="30px"><input type="checkbox"></th>
+												<th width="40px">序号</th>
+												<th>附件名称和格式</th>
+												<th>附件大小</th>
+												<th>上传时间</th>
+												<th width="80px">有效期</th>
+												<th>失效日期</th>
+												<th width="70px">上传人</th>
+												<th width="80px">操作</th>
+											</tr>
+										</thead>
+										<tbody id="attachment_tab">
+											<tr class="nonefile">
+												<td colspan="9">未上传任何文件！</td>
+											</tr>
+										</tbody>
+									</table>
+								</article>
+								<!-- 预览 -->
+								<article id="attachment_view_div" style="display: none">
+									<section class="small_title">
+										文件名 <span id="attachment_fileName_span"></span>
+									</section>
+									<section class="align_center">
+										<img id="img_attachment" src="">
+									</section>
+								</article>
+							</section>
+							<!-- 附件 end -->
+
+							<!-- 周期 start -->
+							<article>
+								<section class="small_title">
+									<section class="right">
+										<span class="red">*</span>生成 <input type="text" name=""
+											value="5" id="repeat-count"> 条子任务&nbsp;<a
+											href="javascript:void(0)" id="batchProduceSubProject"
+											class="btn btn_gray_2">生成子任务 </a>
+									</section>
+									<!-- <input type="checkbox" id="sub_time" /> -->
+									周期
+									<div class="clear">&nbsp;</div>
+								</section>
+								<!-- 子项目 begin -->
+
+								<article id="set-time-container" class="choose_date_box">
+									<section class="left">
+										<span class="table-cell"><a href="#">天</a></span>
+										<section class="table-cell">
+											<ul>
+												<li><input type="radio" name="by-cycle" value="per-day">每<input
+													type="text" id="increase-by-day" class="short-input">天</li>
+												<li><input type="radio" name="by-cycle"
+													value="per-workday">每个工作日</li>
+											</ul>
+										</section>
+									</section>
+									<section class="left">
+										<span class="table-cell"><a href="#">月</a></span>
+										<section class="table-cell">
+											<ul>
+												<li><input type="radio" name="by-cycle"
+													value="by-month-day" diabled="disabled">每<input
+													type="text" class="short-input" id="month-num-by-day">个月的第<input
+													type="text" id="day-num-by-day" class="short-input">天</li>
+												<li><input type="radio" name="by-cycle"
+													value="by-month-week">每<input type="text"
+													id="month-num-by-week" class="short-input">个月的<select
+													class="by-month-select-number"><option id="first"
+															value="1">第一个</option>
+														<option id="second" value="2" selected="">第二个</option>
+														<option id="third" value="3">第三个</option>
+														<option id="fourth" value="4">第四个</option></select><select
+													class="by-month-select-day"><option id="sunday"
+															value="0">周日</option>
+														<option id="monday" value="1">周一</option>
+														<option id="tuesday" value="2">周二</option>
+														<option id="wednesday" value="3">周三</option>
+														<option id="thursday" value="4">周四</option>
+														<option id="friday" value="5">周五</option>
+														<option id="saturday" value="6">周六</option></select></li>
+											</ul>
+										</section>
+									</section>
+									<section class="left">
+										<span class="table-cell"><a href="#" class="active">周</a></span>
+										<section class="table-cell">
+											<ul>
+												<li><input type="radio" name="by-cycle"
+													value="repeat-by-weekday"> 重复间隔为<input type="text"
+													id="repeat-week-number" class="short-input">周</li>
+												<li class="week"><span class=""><input
+														type="checkbox" id="1" name="day-name" value="monday"><label
+														class="">周一</label></span> <span class=""><input
+														type="checkbox" id="2" name="day-name" value="tuesday"><label
+														class="">周二</label></span> <span class=""><input
+														type="checkbox" id="3" name="day-name" value="wednesday"><label
+														class="">周三</label></span> <span class=""><input
+														type="checkbox" id="4" name="day-name" value="thursday"><label
+														class="">周四</label></span> <span class=""><input
+														type="checkbox" id="5" name="day-name" value="friday"><label
+														class="">周五</label></span> <span class=""><input
+														type="checkbox" id="6" name="day-name" value="saturday"><label
+														class="">周六</label></span> <span class=""><input
+														type="checkbox" id="0" name="day-name" value="sunday"><label
+														class="">周日</label></span></li>
+											</ul>
+										</section>
+
+									</section>
+									<section class="left">
+										<span class="table-cell"><a href="#">年</a></span>
+										<section class="table-cell">
+											<ul>
+												<li><input type="radio" name="by-cycle"
+													value="by-year-day">每年<select
+													class="by-year-select-day"><option id="0"
+															value="January">一月</option>
+														<option id="1" value="February">二月</option>
+														<option id="2" value="March">三月</option>
+														<option id="3" value="April">四月</option>
+														<option id="4" value="May">五月</option>
+														<option id="5" value="June">六月</option>
+														<option id="6" value="July">七月</option>
+														<option id="7" value="August">八月</option>
+														<option id="8" value="September">九月</option>
+														<option id="9" value="October">十月</option>
+														<option id="10" value="November">十一月</option>
+														<option id="11" value="December">十二月</option></select><input
+													type="text" class="short-input" id="by-year-input-day">日
+												</li>
+												<li><input type="radio" name="by-cycle"
+													value="by-year-week">每年<select
+													class="by-year-select-week-month"
+													id="by-year-select-week-month"><option id="0"
+															value="January">一月</option>
+														<option id="1" value="February">二月</option>
+														<option id="2" value="March">三月</option>
+														<option id="3" value="April">四月</option>
+														<option id="4" value="May">五月</option>
+														<option id="5" value="June">六月</option>
+														<option id="6" value="July">七月</option>
+														<option id="7" value="August">八月</option>
+														<option id="8" value="September">九月</option>
+														<option id="9" value="October">十月</option>
+														<option id="10" value="November">十一月</option>
+														<option id="11" value="December">十二月</option></select>的<select
+													class="by-year-select-week-number"
+													id="by-year-select-week-number"><option id="first"
+															value="1">第一个</option>
+														<option id="second" value="2">第二个</option>
+														<option id="third" value="3">第三个</option>
+														<option id="fourth" value="4">第四个</option></select><select
+													class="by-year-select-week-day"
+													id="by-year-select-week-day"><option id="sunday"
+															value="0">周日</option>
+														<option id="monday" value="1">周一</option>
+														<option id="tuesday" value="2">周二</option>
+														<option id="wednesday" value="3">周三</option>
+														<option id="thursday" value="4">周四</option>
+														<option id="friday" value="5">周五</option>
+														<option id="saturday" value="6">周六</option></select></li>
+											</ul>
+										</section>
+									</section>
+									<div class="clear">&nbsp;</div>
+								</article>
+								<!-- 周期 end -->
+								<!-- 定期范围 start -->
+								<article class="set_range">
+
+									<section class="edit_form">
+
+										<dl>
+											<dt>定期范围</dt>
+											<dt>开始:</dt>
+											<dd>
+												<div class="gray_input">
+													<input type="text" id="repeat-start-timepicker" readonly=""><a
+														href="#"> <img class="calendar-pic"
+														src="../images/calendar.png">
+													</a>
+												</div>
+											</dd>
+											<dt>&nbsp;</dt>
+											<dd>
+												<input type="radio" name="end-time" value="end-none"
+													checked="checked"><label class="blue_bg">无结束日期</label>
+											</dd>
+											<dt>
+												<input type="radio" name="end-time" value="end-day"><label>结束时间:</label>
+											</dt>
+											<dd>
+												<div class="gray_input">
+													<input type="text" id="repeat-end-timepicker" readonly=""><a
+														href="#"> <img class="calendar-pic"
+														src="../images/calendar.png">
+													</a>
+												</div>
+											</dd>
+										</dl>
+
+									</section>
+
+								</article>
+								<!-- 定期范围 end -->
+
+							</article>
+							<!-- 周期 end -->
+
+						</section>
+					</article>
+				</article>
+				<!-- 新建项目 end -->
+
+				<article class="project_box gray_border" id="subProject_div_2">
+					<section class="title">
+						<section class="right">
+							<a href="#" class="backtop"><em class="icon cbacktop"></em></a>
+						</section>
+						子项目列表
+
+					</section>
+					<section class="content">
+						<section class="task_table_box panel-noscroll"
+							style="height: 300px;">
+							<em class="icon isolate"></em> <a href="javascript:void(0)"
+								id="specifyTheSameExecutor">指定同一执行人</a> <em class="icon isolate"></em>
+							<input type="hidden" name="specifyTheSameExecutor_"
+								id="specifyTheSameExecutor_"> <em class="icon isolate"></em>
+							<a href="javascript:void(0)" id="batchProduceSubProject">批量生产子项目</a>
+							<em class="icon isolate"></em> <a href="javascript:void(0)"
+								id="subProject_bathDelete">批量删除</a> <em class="icon isolate"></em>
+							<a href="javascript:void(0)" id="addRootSubProject">添加根子项目</a>
+
+							<div class="panel datagrid" style="">
+								<div class="datagrid-wrap panel-body panel-body-noheader"
+									title="" style="height: 300px;">
+									<div class="datagrid-view panel-noscroll"
+										style="height: 304px;">
+										<div class="datagrid-view1" style="width: 0px;">
+											<div class="datagrid-header"
+												style="width: 0px; height: 33px;">
+												<div class="datagrid-header-inner" style="display: block;">
+													<table class="datagrid-htable" border="0" cellspacing="0"
+														cellpadding="0" style="height: 34px;">
+														<tbody></tbody>
+													</table>
+												</div>
+											</div>
+											<div class="datagrid-body"
+												style="width: 0px; margin-top: 0px; height: 266px;">
+												<div class="datagrid-body-inner"></div>
+											</div>
+											<div class="datagrid-footer" style="width: 0px;">
+												<div class="datagrid-footer-inner" style="display: none;"></div>
+											</div>
+										</div>
+										<div class="datagrid-view2" style="">
+											<div class="datagrid-header"
+												style="height: 33px;">
+												<div class="datagrid-header-inner" style="display: block;">
+													<table class="datagrid-htable" border="0" cellspacing="0"
+														cellpadding="0" style="height: 34px;">
+														<tbody>
+															<tr class="datagrid-header-row">
+																<td field="id"><div class="datagrid-header-check">
+																		<input type="checkbox">
+																	</div></td>
+																<td field="sequence"><div
+																		class="datagrid-cell datagrid-cell-c1-sequence"
+																		style="text-align: center;">
+																		<span>序号</span><span class="datagrid-sort-icon">&nbsp;</span>
+																	</div></td>
+																<td field="title"><div
+																		class="datagrid-cell datagrid-cell-c1-title"
+																		style="text-align: center;">
+																		<span>主题</span><span class="datagrid-sort-icon">&nbsp;</span>
+																	</div></td>
+																<td field="userId"><div
+																		class="datagrid-cell datagrid-cell-c1-userId"
+																		style="text-align: center;">
+																		<span>执行人</span><span class="datagrid-sort-icon">&nbsp;</span>
+																	</div></td>
+																<td field="acceptorId"><div
+																		class="datagrid-cell datagrid-cell-c1-acceptorId"
+																		style="text-align: center;">
+																		<span>验收人</span><span class="datagrid-sort-icon">&nbsp;</span>
+																	</div></td>
+																<td field="limitTime"><div
+																		class="datagrid-cell datagrid-cell-c1-limitTime"
+																		style="text-align: center;">
+																		<span>期限(天)</span><span class="datagrid-sort-icon">&nbsp;</span>
+																	</div></td>
+																<td field="startDate"><div
+																		class="datagrid-cell datagrid-cell-c1-startDate"
+																		style="text-align: center;">
+																		<span>开始日期</span><span class="datagrid-sort-icon">&nbsp;</span>
+																	</div></td>
+																<td field="endDate"><div
+																		class="datagrid-cell datagrid-cell-c1-endDate"
+																		style="text-align: center;">
+																		<span>截至日期</span><span class="datagrid-sort-icon">&nbsp;</span>
+																	</div></td>
+																<td field="sendDate"><div
+																		class="datagrid-cell datagrid-cell-c1-sendDate"
+																		style="text-align: center;">
+																		<span>定时发送</span><span class="datagrid-sort-icon">&nbsp;</span>
+																	</div></td>
+																<td field="trackingPoint"><div
+																		class="datagrid-cell datagrid-cell-c1-trackingPoint"
+																		style="text-align: center;">
+																		<span>生成跟踪点</span><span class="datagrid-sort-icon">&nbsp;</span>
+																	</div></td>
+																<td field="content"><div
+																		class="datagrid-cell datagrid-cell-c1-content"
+																		style="text-align: center;">
+																		<span>内容</span><span class="datagrid-sort-icon">&nbsp;</span>
+																	</div></td>
+																<td field="attachmentNum"><div
+																		class="datagrid-cell datagrid-cell-c1-attachmentNum"
+																		style="text-align: center;">
+																		<span>附件数量</span><span class="datagrid-sort-icon">&nbsp;</span>
+																	</div></td>
+																<td field="opt"><div
+																		class="datagrid-cell datagrid-cell-c1-opt"
+																		style="text-align: center;">
+																		<span>操作</span><span class="datagrid-sort-icon">&nbsp;</span>
+																	</div></td>
+															</tr>
+														</tbody>
+													</table>
+												</div>
+											</div>
+											<div class="datagrid-body"
+												style="overflow-x: hidden; margin-top: 0px; height: 266px;">
+												<table class="datagrid-btable" cellspacing="0"
+													cellpadding="0" border="0" style="table-layout: auto;">
+													<tbody></tbody>
+												</table>
+											</div>
+											<div class="datagrid-footer" style="">
+												<div class="datagrid-footer-inner" style="display: none;"></div>
+											</div>
+										</div>
+										<div class="panel datagrid" style="">
+											<div class="datagrid-wrap panel-body panel-body-noheader"
+												title="" style="height: 304px;">
+												<div class="datagrid-view" style="height: 308px;">
+													<div class="datagrid-view1" style="width: 0px;">
+														<div class="datagrid-header"
+															style="width: 0px; height: 33px;">
+															<div class="datagrid-header-inner"
+																style="display: block;">
+																<table class="datagrid-htable" border="0"
+																	cellspacing="0" cellpadding="0" style="height: 34px;">
+																	<tbody></tbody>
+																</table>
+															</div>
+														</div>
+														<div class="datagrid-body"
+															style="width: 0px; margin-top: 0px; height: 270px;">
+															<div class="datagrid-body-inner"></div>
+														</div>
+														<div class="datagrid-footer" style="width: 0px;">
+															<div class="datagrid-footer-inner" style="display: none;"></div>
+														</div>
+													</div>
+													<div class="datagrid-view2" style="">
+														<div class="datagrid-header" style="height: 33px;">
+															<div class="datagrid-header-inner"
+																style="display: block;">
+																<table class="datagrid-htable" border="0"
+																	cellspacing="0" cellpadding="0" style="height: 34px;">
+																	<tbody>
+																		<tr class="datagrid-header-row">
+																			<td field="id"><div
+																					class="datagrid-header-check">
+																					<input type="checkbox">
+																				</div></td>
+																			<td field="sequence"><div
+																					class="datagrid-cell datagrid-cell-c2-sequence"
+																					style="text-align: center;">
+																					<span>序号</span><span class="datagrid-sort-icon">&nbsp;</span>
+																				</div></td>
+																			<td field="title"><div
+																					class="datagrid-cell datagrid-cell-c2-title"
+																					style="text-align: center;">
+																					<span>主题</span><span class="datagrid-sort-icon">&nbsp;</span>
+																				</div></td>
+																			<td field="userId" class=""><div
+																					class="datagrid-cell datagrid-cell-c2-userId"
+																					style="text-align: center;">
+																					<span>执行人</span><span class="datagrid-sort-icon">&nbsp;</span>
+																				</div></td>
+																			<td field="acceptorId" class=""><div
+																					class="datagrid-cell datagrid-cell-c2-acceptorId"
+																					style="text-align: center;">
+																					<span>验收人</span><span class="datagrid-sort-icon">&nbsp;</span>
+																				</div></td>
+																			<td field="limitTime" class=""><div
+																					class="datagrid-cell datagrid-cell-c2-limitTime"
+																					style="text-align: center;">
+																					<span>期限(天)</span><span class="datagrid-sort-icon">&nbsp;</span>
+																				</div></td>
+																			<td field="startDate" class=""><div
+																					class="datagrid-cell datagrid-cell-c2-startDate"
+																					style="text-align: center;">
+																					<span>开始日期</span><span class="datagrid-sort-icon">&nbsp;</span>
+																				</div></td>
+																			<td field="endDate"><div
+																					class="datagrid-cell datagrid-cell-c2-endDate"
+																					style="text-align: center;">
+																					<span>截至日期</span><span class="datagrid-sort-icon">&nbsp;</span>
+																				</div></td>
+																			<td field="sendDate"><div
+																					class="datagrid-cell datagrid-cell-c2-sendDate"
+																					style="text-align: center;">
+																					<span>定时发送</span><span class="datagrid-sort-icon">&nbsp;</span>
+																				</div></td>
+																			<td field="trackingPoint" class=""><div
+																					class="datagrid-cell datagrid-cell-c2-trackingPoint"
+																					style="text-align: center;">
+																					<span>生成跟踪点</span><span class="datagrid-sort-icon">&nbsp;</span>
+																				</div></td>
+																			<td field="content"><div
+																					class="datagrid-cell datagrid-cell-c2-content"
+																					style="text-align: center;">
+																					<span>内容</span><span class="datagrid-sort-icon">&nbsp;</span>
+																				</div></td>
+																			<td field="attachmentNum"><div
+																					class="datagrid-cell datagrid-cell-c2-attachmentNum"
+																					style="text-align: center;">
+																					<span>附件数量</span><span class="datagrid-sort-icon">&nbsp;</span>
+																				</div></td>
+																			<td field="opt" class=""><div
+																					class="datagrid-cell datagrid-cell-c2-opt"
+																					style="text-align: center;">
+																					<span>操作</span><span class="datagrid-sort-icon">&nbsp;</span>
+																				</div></td>
+																		</tr>
+																	</tbody>
+																</table>
+															</div>
+														</div>
+														<div class="datagrid-body"
+															style="overflow-x: hidden; margin-top: 0px; height: 270px;"></div>
+														<div class="datagrid-footer" style="">
+															<div class="datagrid-footer-inner" style="display: none;"></div>
+														</div>
+													</div>
+													<table id="subProject_tab" class="task_table"
+														style="display: none;"></table>
+												</div>
+											</div>
+										</div>
+										<style type="text/css" easyui="true">
+.datagrid-cell-c1-sequence {
+	width: 72px
+}
+
+.datagrid-cell-c1-title {
+	width: 72px
+}
+
+.datagrid-cell-c1-userId {
+	width: 72px
+}
+
+.datagrid-cell-c1-acceptorId {
+	width: 72px
+}
+
+.datagrid-cell-c1-limitTime {
+	width: 72px
+}
+
+.datagrid-cell-c1-startDate {
+	width: 72px
+}
+
+.datagrid-cell-c1-endDate {
+	width: 72px
+}
+
+.datagrid-cell-c1-sendDate {
+	width: 72px
+}
+
+.datagrid-cell-c1-trackingPoint {
+	width: 72px
+}
+
+.datagrid-cell-c1-content {
+	width: 72px
+}
+
+.datagrid-cell-c1-attachmentNum {
+	width: 72px
+}
+
+.datagrid-cell-c1-opt {
+	width: 390px
+}
+
+.datagrid-cell-c2-sequence {
+	width: 182px
+}
+
+.datagrid-cell-c2-title {
+	width: 182px
+}
+
+.datagrid-cell-c2-userId {
+	width: 182px
+}
+
+.datagrid-cell-c2-acceptorId {
+	width: 182px
+}
+
+.datagrid-cell-c2-limitTime {
+	width: 182px
+}
+
+.datagrid-cell-c2-startDate {
+	width: 182px
+}
+
+.datagrid-cell-c2-endDate {
+	width: 182px
+}
+
+.datagrid-cell-c2-sendDate {
+	width: 182px
+}
+
+.datagrid-cell-c2-trackingPoint {
+	width: 182px
+}
+
+.datagrid-cell-c2-content {
+	width: 182px
+}
+
+.datagrid-cell-c2-attachmentNum {
+	width: 182px
+}
+
+.datagrid-cell-c2-opt {
+	width: 943px
+}
+</style>
+									</div>
+								</div>
+							</div>
+						</section>
+					</section>
+				</article>
+
+			</section>
+		</article>
+	</form>
+
+
+
+
+
+
+	<div class="xdsoft_datetimepicker xdsoft_noselect ">
+		<div class="xdsoft_mounthpicker">
+			<button type="button" class="xdsoft_prev"></button>
+			<button type="button" class="xdsoft_today_button"
+				style="display: inline-block;"></button>
+			<div class="xdsoft_label xdsoft_month" style="display: none">
+				<span>八月</span>
+				<div class="xdsoft_select xdsoft_monthselect xdsoft_scroller_box">
+					<div style="margin-top: 0px;">
+						<div class="xdsoft_option " data-value="0">一月</div>
+						<div class="xdsoft_option " data-value="1">二月</div>
+						<div class="xdsoft_option " data-value="2">三月</div>
+						<div class="xdsoft_option " data-value="3">四月</div>
+						<div class="xdsoft_option " data-value="4">五月</div>
+						<div class="xdsoft_option " data-value="5">六月</div>
+						<div class="xdsoft_option " data-value="6">七月</div>
+						<div class="xdsoft_option xdsoft_current" data-value="7">八月</div>
+						<div class="xdsoft_option " data-value="8">九月</div>
+						<div class="xdsoft_option " data-value="9">十月</div>
+						<div class="xdsoft_option " data-value="10">十一月</div>
+						<div class="xdsoft_option " data-value="11">十二月</div>
+					</div>
+					<div class="xdsoft_scrollbar">
+						<div class="xdsoft_scroller"
+							style="display: block; height: 10px; margin-top: 0px;"></div>
+					</div>
+				</div>
+			</div>
+			<div class="xdsoft_label xdsoft_year">
+				<span>2014</span>
+				<div class="xdsoft_select xdsoft_yearselect xdsoft_scroller_box">
+					<div style="margin-top: 0px;">
+						<div class="xdsoft_option " data-value="1950">1950</div>
+						<div class="xdsoft_option " data-value="1951">1951</div>
+						<div class="xdsoft_option " data-value="1952">1952</div>
+						<div class="xdsoft_option " data-value="1953">1953</div>
+						<div class="xdsoft_option " data-value="1954">1954</div>
+						<div class="xdsoft_option " data-value="1955">1955</div>
+						<div class="xdsoft_option " data-value="1956">1956</div>
+						<div class="xdsoft_option " data-value="1957">1957</div>
+						<div class="xdsoft_option " data-value="1958">1958</div>
+						<div class="xdsoft_option " data-value="1959">1959</div>
+						<div class="xdsoft_option " data-value="1960">1960</div>
+						<div class="xdsoft_option " data-value="1961">1961</div>
+						<div class="xdsoft_option " data-value="1962">1962</div>
+						<div class="xdsoft_option " data-value="1963">1963</div>
+						<div class="xdsoft_option " data-value="1964">1964</div>
+						<div class="xdsoft_option " data-value="1965">1965</div>
+						<div class="xdsoft_option " data-value="1966">1966</div>
+						<div class="xdsoft_option " data-value="1967">1967</div>
+						<div class="xdsoft_option " data-value="1968">1968</div>
+						<div class="xdsoft_option " data-value="1969">1969</div>
+						<div class="xdsoft_option " data-value="1970">1970</div>
+						<div class="xdsoft_option " data-value="1971">1971</div>
+						<div class="xdsoft_option " data-value="1972">1972</div>
+						<div class="xdsoft_option " data-value="1973">1973</div>
+						<div class="xdsoft_option " data-value="1974">1974</div>
+						<div class="xdsoft_option " data-value="1975">1975</div>
+						<div class="xdsoft_option " data-value="1976">1976</div>
+						<div class="xdsoft_option " data-value="1977">1977</div>
+						<div class="xdsoft_option " data-value="1978">1978</div>
+						<div class="xdsoft_option " data-value="1979">1979</div>
+						<div class="xdsoft_option " data-value="1980">1980</div>
+						<div class="xdsoft_option " data-value="1981">1981</div>
+						<div class="xdsoft_option " data-value="1982">1982</div>
+						<div class="xdsoft_option " data-value="1983">1983</div>
+						<div class="xdsoft_option " data-value="1984">1984</div>
+						<div class="xdsoft_option " data-value="1985">1985</div>
+						<div class="xdsoft_option " data-value="1986">1986</div>
+						<div class="xdsoft_option " data-value="1987">1987</div>
+						<div class="xdsoft_option " data-value="1988">1988</div>
+						<div class="xdsoft_option " data-value="1989">1989</div>
+						<div class="xdsoft_option " data-value="1990">1990</div>
+						<div class="xdsoft_option " data-value="1991">1991</div>
+						<div class="xdsoft_option " data-value="1992">1992</div>
+						<div class="xdsoft_option " data-value="1993">1993</div>
+						<div class="xdsoft_option " data-value="1994">1994</div>
+						<div class="xdsoft_option " data-value="1995">1995</div>
+						<div class="xdsoft_option " data-value="1996">1996</div>
+						<div class="xdsoft_option " data-value="1997">1997</div>
+						<div class="xdsoft_option " data-value="1998">1998</div>
+						<div class="xdsoft_option " data-value="1999">1999</div>
+						<div class="xdsoft_option " data-value="2000">2000</div>
+						<div class="xdsoft_option " data-value="2001">2001</div>
+						<div class="xdsoft_option " data-value="2002">2002</div>
+						<div class="xdsoft_option " data-value="2003">2003</div>
+						<div class="xdsoft_option " data-value="2004">2004</div>
+						<div class="xdsoft_option " data-value="2005">2005</div>
+						<div class="xdsoft_option " data-value="2006">2006</div>
+						<div class="xdsoft_option " data-value="2007">2007</div>
+						<div class="xdsoft_option " data-value="2008">2008</div>
+						<div class="xdsoft_option " data-value="2009">2009</div>
+						<div class="xdsoft_option " data-value="2010">2010</div>
+						<div class="xdsoft_option " data-value="2011">2011</div>
+						<div class="xdsoft_option " data-value="2012">2012</div>
+						<div class="xdsoft_option " data-value="2013">2013</div>
+						<div class="xdsoft_option xdsoft_current" data-value="2014">2014</div>
+						<div class="xdsoft_option " data-value="2015">2015</div>
+						<div class="xdsoft_option " data-value="2016">2016</div>
+						<div class="xdsoft_option " data-value="2017">2017</div>
+						<div class="xdsoft_option " data-value="2018">2018</div>
+						<div class="xdsoft_option " data-value="2019">2019</div>
+						<div class="xdsoft_option " data-value="2020">2020</div>
+						<div class="xdsoft_option " data-value="2021">2021</div>
+						<div class="xdsoft_option " data-value="2022">2022</div>
+						<div class="xdsoft_option " data-value="2023">2023</div>
+						<div class="xdsoft_option " data-value="2024">2024</div>
+						<div class="xdsoft_option " data-value="2025">2025</div>
+						<div class="xdsoft_option " data-value="2026">2026</div>
+						<div class="xdsoft_option " data-value="2027">2027</div>
+						<div class="xdsoft_option " data-value="2028">2028</div>
+						<div class="xdsoft_option " data-value="2029">2029</div>
+						<div class="xdsoft_option " data-value="2030">2030</div>
+						<div class="xdsoft_option " data-value="2031">2031</div>
+						<div class="xdsoft_option " data-value="2032">2032</div>
+						<div class="xdsoft_option " data-value="2033">2033</div>
+						<div class="xdsoft_option " data-value="2034">2034</div>
+						<div class="xdsoft_option " data-value="2035">2035</div>
+						<div class="xdsoft_option " data-value="2036">2036</div>
+						<div class="xdsoft_option " data-value="2037">2037</div>
+						<div class="xdsoft_option " data-value="2038">2038</div>
+						<div class="xdsoft_option " data-value="2039">2039</div>
+						<div class="xdsoft_option " data-value="2040">2040</div>
+						<div class="xdsoft_option " data-value="2041">2041</div>
+						<div class="xdsoft_option " data-value="2042">2042</div>
+						<div class="xdsoft_option " data-value="2043">2043</div>
+						<div class="xdsoft_option " data-value="2044">2044</div>
+						<div class="xdsoft_option " data-value="2045">2045</div>
+						<div class="xdsoft_option " data-value="2046">2046</div>
+						<div class="xdsoft_option " data-value="2047">2047</div>
+						<div class="xdsoft_option " data-value="2048">2048</div>
+						<div class="xdsoft_option " data-value="2049">2049</div>
+						<div class="xdsoft_option " data-value="2050">2050</div>
+					</div>
+					<div class="xdsoft_scrollbar">
+						<div class="xdsoft_scroller"
+							style="display: block; height: 10px; margin-top: 0px;"></div>
+					</div>
+				</div>
+			</div>
+			<button class="date_confirm_button" style="" disable="false">确定</button>
+			<button type="button" class="xdsoft_next"></button>
+		</div>
+		<table class="hoverTable selectMonth">
+			<tbody>
+				<tr>
+					<td class="xdsoft_option" data-month="1" data-value="0">1月</td>
+					<td class="xdsoft_option" data-month="2" data-value="1">2月</td>
+					<td class="xdsoft_option" data-month="3" data-value="2">3月</td>
+					<td class="xdsoft_option" data-month="4" data-value="3">4月</td>
+					<td class="xdsoft_option" data-month="5" data-value="4">5月</td>
+					<td class="xdsoft_option" data-month="6" data-value="5">6月</td>
+					<td class="xdsoft_option" data-month="7" data-value="6">7月</td>
+					<td class="xdsoft_option current_month" data-month="8"
+						data-value="7">8月</td>
+					<td class="xdsoft_option" data-month="9" data-value="8">9月</td>
+					<td class="xdsoft_option" data-month="10" data-value="9">10月</td>
+					<td class="xdsoft_option" data-month="11" data-value="10">11月</td>
+					<td class="xdsoft_option" data-month="12" data-value="11">12月</td>
+				</tr>
+			</tbody>
+		</table>
+		<div class="xdsoft_datepicker active">
+			<div class="xdsoft_calendar">
+				<table>
+					<thead>
+						<tr>
+							<th>日</th>
+							<th>一</th>
+							<th>二</th>
+							<th>三</th>
+							<th>四</th>
+							<th>五</th>
+							<th>六</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td data-date="27" data-month="6" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week0 xdsoft_date xdsoft_other_month xdsoft_weekend"><div>27</div></td>
+							<td data-date="28" data-month="6" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week1 xdsoft_date xdsoft_other_month"><div>28</div></td>
+							<td data-date="29" data-month="6" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week2 xdsoft_date xdsoft_other_month"><div>29</div></td>
+							<td data-date="30" data-month="6" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week3 xdsoft_date xdsoft_other_month"><div>30</div></td>
+							<td data-date="31" data-month="6" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week4 xdsoft_date xdsoft_other_month"><div>31</div></td>
+							<td data-date="1" data-month="7" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week5 xdsoft_date"><div>1</div></td>
+							<td data-date="2" data-month="7" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week6 xdsoft_date xdsoft_weekend"><div>2</div></td>
+						</tr>
+						<tr>
+							<td data-date="3" data-month="7" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week0 xdsoft_date xdsoft_weekend"><div>3</div></td>
+							<td data-date="4" data-month="7" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week1 xdsoft_date"><div>4</div></td>
+							<td data-date="5" data-month="7" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week2 xdsoft_date"><div>5</div></td>
+							<td data-date="6" data-month="7" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week3 xdsoft_date xdsoft_current xdsoft_today"><div>6</div></td>
+							<td data-date="7" data-month="7" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week4 xdsoft_date"><div>7</div></td>
+							<td data-date="8" data-month="7" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week5 xdsoft_date"><div>8</div></td>
+							<td data-date="9" data-month="7" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week6 xdsoft_date xdsoft_weekend"><div>9</div></td>
+						</tr>
+						<tr>
+							<td data-date="10" data-month="7" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week0 xdsoft_date xdsoft_weekend"><div>10</div></td>
+							<td data-date="11" data-month="7" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week1 xdsoft_date"><div>11</div></td>
+							<td data-date="12" data-month="7" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week2 xdsoft_date"><div>12</div></td>
+							<td data-date="13" data-month="7" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week3 xdsoft_date"><div>13</div></td>
+							<td data-date="14" data-month="7" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week4 xdsoft_date"><div>14</div></td>
+							<td data-date="15" data-month="7" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week5 xdsoft_date"><div>15</div></td>
+							<td data-date="16" data-month="7" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week6 xdsoft_date xdsoft_weekend"><div>16</div></td>
+						</tr>
+						<tr>
+							<td data-date="17" data-month="7" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week0 xdsoft_date xdsoft_weekend"><div>17</div></td>
+							<td data-date="18" data-month="7" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week1 xdsoft_date"><div>18</div></td>
+							<td data-date="19" data-month="7" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week2 xdsoft_date"><div>19</div></td>
+							<td data-date="20" data-month="7" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week3 xdsoft_date"><div>20</div></td>
+							<td data-date="21" data-month="7" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week4 xdsoft_date"><div>21</div></td>
+							<td data-date="22" data-month="7" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week5 xdsoft_date"><div>22</div></td>
+							<td data-date="23" data-month="7" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week6 xdsoft_date xdsoft_weekend"><div>23</div></td>
+						</tr>
+						<tr>
+							<td data-date="24" data-month="7" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week0 xdsoft_date xdsoft_weekend"><div>24</div></td>
+							<td data-date="25" data-month="7" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week1 xdsoft_date"><div>25</div></td>
+							<td data-date="26" data-month="7" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week2 xdsoft_date"><div>26</div></td>
+							<td data-date="27" data-month="7" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week3 xdsoft_date"><div>27</div></td>
+							<td data-date="28" data-month="7" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week4 xdsoft_date"><div>28</div></td>
+							<td data-date="29" data-month="7" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week5 xdsoft_date"><div>29</div></td>
+							<td data-date="30" data-month="7" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week6 xdsoft_date xdsoft_weekend"><div>30</div></td>
+						</tr>
+						<tr>
+							<td data-date="31" data-month="7" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week0 xdsoft_date xdsoft_weekend"><div>31</div></td>
+							<td data-date="1" data-month="8" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week1 xdsoft_date xdsoft_other_month"><div>1</div></td>
+							<td data-date="2" data-month="8" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week2 xdsoft_date xdsoft_other_month"><div>2</div></td>
+							<td data-date="3" data-month="8" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week3 xdsoft_date xdsoft_other_month"><div>3</div></td>
+							<td data-date="4" data-month="8" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week4 xdsoft_date xdsoft_other_month"><div>4</div></td>
+							<td data-date="5" data-month="8" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week5 xdsoft_date xdsoft_other_month"><div>5</div></td>
+							<td data-date="6" data-month="8" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week6 xdsoft_date xdsoft_other_month xdsoft_weekend"><div>6</div></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<div class="xdsoft_timepicker ampm active" style="display: none;">
+			<div class="xdsoft_time_box" style="margin-top: 50px; height: auto">
+				<table class="hoverTable ampmtable">
+					<tbody>
+						<tr>
+							<td data-ampm="&nbsp;上午&nbsp;">上午</td>
+						</tr>
+						<tr>
+							<td data-ampm="&nbsp;下午&nbsp;">下午</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<div class="xdsoft_timepicker active"
+			style="margin-right: 20px; display: none;">
+			<div class="xdsoft_time_box" style="margin-top: 5px; width: 80px">
+				<table class="hoverTable hourtable">
+					<tbody>
+						<tr>
+							<td data-hour="01:">01:00</td>
+							<td data-hour="07:">07:00</td>
+						</tr>
+						<tr>
+							<td data-hour="02:">02:00</td>
+							<td data-hour="08:">08:00</td>
+						</tr>
+						<tr>
+							<td data-hour="03:">03:00</td>
+							<td data-hour="09:">09:00</td>
+						</tr>
+						<tr>
+							<td data-hour="04:">04:00</td>
+							<td data-hour="10:">10:00</td>
+						</tr>
+						<tr>
+							<td data-hour="05:">05:00</td>
+							<td data-hour="11:">11:00</td>
+						</tr>
+						<tr>
+							<td data-hour="06:">06:00</td>
+							<td data-hour="12:">12:00</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<div class="xdsoft_timepicker active" style="display: none;">
+			<div class="xdsoft_time_box" style="margin-top: 5px">
+				<table class="hoverTable minutetable">
+					<tbody>
+						<tr>
+							<td data-minute="00">00分</td>
+						</tr>
+						<tr>
+							<td data-minute="10">10分</td>
+						</tr>
+						<tr>
+							<td data-minute="20">20分</td>
+						</tr>
+						<tr>
+							<td data-minute="30">30分</td>
+						</tr>
+						<tr>
+							<td data-minute="40">40分</td>
+						</tr>
+						<tr>
+							<td data-minute="50">50分</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+	<div class="xdsoft_datetimepicker xdsoft_noselect ">
+		<div class="xdsoft_mounthpicker">
+			<button type="button" class="xdsoft_prev"></button>
+			<button type="button" class="xdsoft_today_button"
+				style="display: inline-block;"></button>
+			<div class="xdsoft_label xdsoft_month" style="display: none">
+				<span>八月</span>
+				<div class="xdsoft_select xdsoft_monthselect xdsoft_scroller_box">
+					<div style="margin-top: 0px;">
+						<div class="xdsoft_option " data-value="0">一月</div>
+						<div class="xdsoft_option " data-value="1">二月</div>
+						<div class="xdsoft_option " data-value="2">三月</div>
+						<div class="xdsoft_option " data-value="3">四月</div>
+						<div class="xdsoft_option " data-value="4">五月</div>
+						<div class="xdsoft_option " data-value="5">六月</div>
+						<div class="xdsoft_option " data-value="6">七月</div>
+						<div class="xdsoft_option xdsoft_current" data-value="7">八月</div>
+						<div class="xdsoft_option " data-value="8">九月</div>
+						<div class="xdsoft_option " data-value="9">十月</div>
+						<div class="xdsoft_option " data-value="10">十一月</div>
+						<div class="xdsoft_option " data-value="11">十二月</div>
+					</div>
+					<div class="xdsoft_scrollbar">
+						<div class="xdsoft_scroller"
+							style="display: block; height: 10px; margin-top: 0px;"></div>
+					</div>
+				</div>
+			</div>
+			<div class="xdsoft_label xdsoft_year">
+				<span>2014</span>
+				<div class="xdsoft_select xdsoft_yearselect xdsoft_scroller_box">
+					<div style="margin-top: 0px;">
+						<div class="xdsoft_option " data-value="1950">1950</div>
+						<div class="xdsoft_option " data-value="1951">1951</div>
+						<div class="xdsoft_option " data-value="1952">1952</div>
+						<div class="xdsoft_option " data-value="1953">1953</div>
+						<div class="xdsoft_option " data-value="1954">1954</div>
+						<div class="xdsoft_option " data-value="1955">1955</div>
+						<div class="xdsoft_option " data-value="1956">1956</div>
+						<div class="xdsoft_option " data-value="1957">1957</div>
+						<div class="xdsoft_option " data-value="1958">1958</div>
+						<div class="xdsoft_option " data-value="1959">1959</div>
+						<div class="xdsoft_option " data-value="1960">1960</div>
+						<div class="xdsoft_option " data-value="1961">1961</div>
+						<div class="xdsoft_option " data-value="1962">1962</div>
+						<div class="xdsoft_option " data-value="1963">1963</div>
+						<div class="xdsoft_option " data-value="1964">1964</div>
+						<div class="xdsoft_option " data-value="1965">1965</div>
+						<div class="xdsoft_option " data-value="1966">1966</div>
+						<div class="xdsoft_option " data-value="1967">1967</div>
+						<div class="xdsoft_option " data-value="1968">1968</div>
+						<div class="xdsoft_option " data-value="1969">1969</div>
+						<div class="xdsoft_option " data-value="1970">1970</div>
+						<div class="xdsoft_option " data-value="1971">1971</div>
+						<div class="xdsoft_option " data-value="1972">1972</div>
+						<div class="xdsoft_option " data-value="1973">1973</div>
+						<div class="xdsoft_option " data-value="1974">1974</div>
+						<div class="xdsoft_option " data-value="1975">1975</div>
+						<div class="xdsoft_option " data-value="1976">1976</div>
+						<div class="xdsoft_option " data-value="1977">1977</div>
+						<div class="xdsoft_option " data-value="1978">1978</div>
+						<div class="xdsoft_option " data-value="1979">1979</div>
+						<div class="xdsoft_option " data-value="1980">1980</div>
+						<div class="xdsoft_option " data-value="1981">1981</div>
+						<div class="xdsoft_option " data-value="1982">1982</div>
+						<div class="xdsoft_option " data-value="1983">1983</div>
+						<div class="xdsoft_option " data-value="1984">1984</div>
+						<div class="xdsoft_option " data-value="1985">1985</div>
+						<div class="xdsoft_option " data-value="1986">1986</div>
+						<div class="xdsoft_option " data-value="1987">1987</div>
+						<div class="xdsoft_option " data-value="1988">1988</div>
+						<div class="xdsoft_option " data-value="1989">1989</div>
+						<div class="xdsoft_option " data-value="1990">1990</div>
+						<div class="xdsoft_option " data-value="1991">1991</div>
+						<div class="xdsoft_option " data-value="1992">1992</div>
+						<div class="xdsoft_option " data-value="1993">1993</div>
+						<div class="xdsoft_option " data-value="1994">1994</div>
+						<div class="xdsoft_option " data-value="1995">1995</div>
+						<div class="xdsoft_option " data-value="1996">1996</div>
+						<div class="xdsoft_option " data-value="1997">1997</div>
+						<div class="xdsoft_option " data-value="1998">1998</div>
+						<div class="xdsoft_option " data-value="1999">1999</div>
+						<div class="xdsoft_option " data-value="2000">2000</div>
+						<div class="xdsoft_option " data-value="2001">2001</div>
+						<div class="xdsoft_option " data-value="2002">2002</div>
+						<div class="xdsoft_option " data-value="2003">2003</div>
+						<div class="xdsoft_option " data-value="2004">2004</div>
+						<div class="xdsoft_option " data-value="2005">2005</div>
+						<div class="xdsoft_option " data-value="2006">2006</div>
+						<div class="xdsoft_option " data-value="2007">2007</div>
+						<div class="xdsoft_option " data-value="2008">2008</div>
+						<div class="xdsoft_option " data-value="2009">2009</div>
+						<div class="xdsoft_option " data-value="2010">2010</div>
+						<div class="xdsoft_option " data-value="2011">2011</div>
+						<div class="xdsoft_option " data-value="2012">2012</div>
+						<div class="xdsoft_option " data-value="2013">2013</div>
+						<div class="xdsoft_option xdsoft_current" data-value="2014">2014</div>
+						<div class="xdsoft_option " data-value="2015">2015</div>
+						<div class="xdsoft_option " data-value="2016">2016</div>
+						<div class="xdsoft_option " data-value="2017">2017</div>
+						<div class="xdsoft_option " data-value="2018">2018</div>
+						<div class="xdsoft_option " data-value="2019">2019</div>
+						<div class="xdsoft_option " data-value="2020">2020</div>
+						<div class="xdsoft_option " data-value="2021">2021</div>
+						<div class="xdsoft_option " data-value="2022">2022</div>
+						<div class="xdsoft_option " data-value="2023">2023</div>
+						<div class="xdsoft_option " data-value="2024">2024</div>
+						<div class="xdsoft_option " data-value="2025">2025</div>
+						<div class="xdsoft_option " data-value="2026">2026</div>
+						<div class="xdsoft_option " data-value="2027">2027</div>
+						<div class="xdsoft_option " data-value="2028">2028</div>
+						<div class="xdsoft_option " data-value="2029">2029</div>
+						<div class="xdsoft_option " data-value="2030">2030</div>
+						<div class="xdsoft_option " data-value="2031">2031</div>
+						<div class="xdsoft_option " data-value="2032">2032</div>
+						<div class="xdsoft_option " data-value="2033">2033</div>
+						<div class="xdsoft_option " data-value="2034">2034</div>
+						<div class="xdsoft_option " data-value="2035">2035</div>
+						<div class="xdsoft_option " data-value="2036">2036</div>
+						<div class="xdsoft_option " data-value="2037">2037</div>
+						<div class="xdsoft_option " data-value="2038">2038</div>
+						<div class="xdsoft_option " data-value="2039">2039</div>
+						<div class="xdsoft_option " data-value="2040">2040</div>
+						<div class="xdsoft_option " data-value="2041">2041</div>
+						<div class="xdsoft_option " data-value="2042">2042</div>
+						<div class="xdsoft_option " data-value="2043">2043</div>
+						<div class="xdsoft_option " data-value="2044">2044</div>
+						<div class="xdsoft_option " data-value="2045">2045</div>
+						<div class="xdsoft_option " data-value="2046">2046</div>
+						<div class="xdsoft_option " data-value="2047">2047</div>
+						<div class="xdsoft_option " data-value="2048">2048</div>
+						<div class="xdsoft_option " data-value="2049">2049</div>
+						<div class="xdsoft_option " data-value="2050">2050</div>
+					</div>
+					<div class="xdsoft_scrollbar">
+						<div class="xdsoft_scroller"
+							style="display: block; height: 10px; margin-top: 0px;"></div>
+					</div>
+				</div>
+			</div>
+			<button class="date_confirm_button" style="" disable="false">确定</button>
+			<button type="button" class="xdsoft_next"></button>
+		</div>
+		<table class="hoverTable selectMonth">
+			<tbody>
+				<tr>
+					<td class="xdsoft_option" data-month="1" data-value="0">1月</td>
+					<td class="xdsoft_option" data-month="2" data-value="1">2月</td>
+					<td class="xdsoft_option" data-month="3" data-value="2">3月</td>
+					<td class="xdsoft_option" data-month="4" data-value="3">4月</td>
+					<td class="xdsoft_option" data-month="5" data-value="4">5月</td>
+					<td class="xdsoft_option" data-month="6" data-value="5">6月</td>
+					<td class="xdsoft_option" data-month="7" data-value="6">7月</td>
+					<td class="xdsoft_option current_month" data-month="8"
+						data-value="7">8月</td>
+					<td class="xdsoft_option" data-month="9" data-value="8">9月</td>
+					<td class="xdsoft_option" data-month="10" data-value="9">10月</td>
+					<td class="xdsoft_option" data-month="11" data-value="10">11月</td>
+					<td class="xdsoft_option" data-month="12" data-value="11">12月</td>
+				</tr>
+			</tbody>
+		</table>
+		<div class="xdsoft_datepicker active">
+			<div class="xdsoft_calendar">
+				<table>
+					<thead>
+						<tr>
+							<th>日</th>
+							<th>一</th>
+							<th>二</th>
+							<th>三</th>
+							<th>四</th>
+							<th>五</th>
+							<th>六</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td data-date="27" data-month="6" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week0 xdsoft_date xdsoft_other_month xdsoft_weekend"><div>27</div></td>
+							<td data-date="28" data-month="6" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week1 xdsoft_date xdsoft_other_month"><div>28</div></td>
+							<td data-date="29" data-month="6" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week2 xdsoft_date xdsoft_other_month"><div>29</div></td>
+							<td data-date="30" data-month="6" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week3 xdsoft_date xdsoft_other_month"><div>30</div></td>
+							<td data-date="31" data-month="6" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week4 xdsoft_date xdsoft_other_month"><div>31</div></td>
+							<td data-date="1" data-month="7" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week5 xdsoft_date"><div>1</div></td>
+							<td data-date="2" data-month="7" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week6 xdsoft_date xdsoft_weekend"><div>2</div></td>
+						</tr>
+						<tr>
+							<td data-date="3" data-month="7" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week0 xdsoft_date xdsoft_weekend"><div>3</div></td>
+							<td data-date="4" data-month="7" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week1 xdsoft_date"><div>4</div></td>
+							<td data-date="5" data-month="7" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week2 xdsoft_date"><div>5</div></td>
+							<td data-date="6" data-month="7" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week3 xdsoft_date xdsoft_current xdsoft_today"><div>6</div></td>
+							<td data-date="7" data-month="7" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week4 xdsoft_date"><div>7</div></td>
+							<td data-date="8" data-month="7" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week5 xdsoft_date"><div>8</div></td>
+							<td data-date="9" data-month="7" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week6 xdsoft_date xdsoft_weekend"><div>9</div></td>
+						</tr>
+						<tr>
+							<td data-date="10" data-month="7" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week0 xdsoft_date xdsoft_weekend"><div>10</div></td>
+							<td data-date="11" data-month="7" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week1 xdsoft_date"><div>11</div></td>
+							<td data-date="12" data-month="7" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week2 xdsoft_date"><div>12</div></td>
+							<td data-date="13" data-month="7" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week3 xdsoft_date"><div>13</div></td>
+							<td data-date="14" data-month="7" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week4 xdsoft_date"><div>14</div></td>
+							<td data-date="15" data-month="7" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week5 xdsoft_date"><div>15</div></td>
+							<td data-date="16" data-month="7" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week6 xdsoft_date xdsoft_weekend"><div>16</div></td>
+						</tr>
+						<tr>
+							<td data-date="17" data-month="7" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week0 xdsoft_date xdsoft_weekend"><div>17</div></td>
+							<td data-date="18" data-month="7" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week1 xdsoft_date"><div>18</div></td>
+							<td data-date="19" data-month="7" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week2 xdsoft_date"><div>19</div></td>
+							<td data-date="20" data-month="7" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week3 xdsoft_date"><div>20</div></td>
+							<td data-date="21" data-month="7" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week4 xdsoft_date"><div>21</div></td>
+							<td data-date="22" data-month="7" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week5 xdsoft_date"><div>22</div></td>
+							<td data-date="23" data-month="7" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week6 xdsoft_date xdsoft_weekend"><div>23</div></td>
+						</tr>
+						<tr>
+							<td data-date="24" data-month="7" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week0 xdsoft_date xdsoft_weekend"><div>24</div></td>
+							<td data-date="25" data-month="7" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week1 xdsoft_date"><div>25</div></td>
+							<td data-date="26" data-month="7" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week2 xdsoft_date"><div>26</div></td>
+							<td data-date="27" data-month="7" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week3 xdsoft_date"><div>27</div></td>
+							<td data-date="28" data-month="7" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week4 xdsoft_date"><div>28</div></td>
+							<td data-date="29" data-month="7" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week5 xdsoft_date"><div>29</div></td>
+							<td data-date="30" data-month="7" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week6 xdsoft_date xdsoft_weekend"><div>30</div></td>
+						</tr>
+						<tr>
+							<td data-date="31" data-month="7" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week0 xdsoft_date xdsoft_weekend"><div>31</div></td>
+							<td data-date="1" data-month="8" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week1 xdsoft_date xdsoft_other_month"><div>1</div></td>
+							<td data-date="2" data-month="8" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week2 xdsoft_date xdsoft_other_month"><div>2</div></td>
+							<td data-date="3" data-month="8" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week3 xdsoft_date xdsoft_other_month"><div>3</div></td>
+							<td data-date="4" data-month="8" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week4 xdsoft_date xdsoft_other_month"><div>4</div></td>
+							<td data-date="5" data-month="8" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week5 xdsoft_date xdsoft_other_month"><div>5</div></td>
+							<td data-date="6" data-month="8" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week6 xdsoft_date xdsoft_other_month xdsoft_weekend"><div>6</div></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<div class="xdsoft_timepicker ampm active" style="display: none;">
+			<div class="xdsoft_time_box" style="margin-top: 50px; height: auto">
+				<table class="hoverTable ampmtable">
+					<tbody>
+						<tr>
+							<td data-ampm="&nbsp;上午&nbsp;">上午</td>
+						</tr>
+						<tr>
+							<td data-ampm="&nbsp;下午&nbsp;">下午</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<div class="xdsoft_timepicker active"
+			style="margin-right: 20px; display: none;">
+			<div class="xdsoft_time_box" style="margin-top: 5px; width: 80px">
+				<table class="hoverTable hourtable">
+					<tbody>
+						<tr>
+							<td data-hour="01:">01:00</td>
+							<td data-hour="07:">07:00</td>
+						</tr>
+						<tr>
+							<td data-hour="02:">02:00</td>
+							<td data-hour="08:">08:00</td>
+						</tr>
+						<tr>
+							<td data-hour="03:">03:00</td>
+							<td data-hour="09:">09:00</td>
+						</tr>
+						<tr>
+							<td data-hour="04:">04:00</td>
+							<td data-hour="10:">10:00</td>
+						</tr>
+						<tr>
+							<td data-hour="05:">05:00</td>
+							<td data-hour="11:">11:00</td>
+						</tr>
+						<tr>
+							<td data-hour="06:">06:00</td>
+							<td data-hour="12:">12:00</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<div class="xdsoft_timepicker active" style="display: none;">
+			<div class="xdsoft_time_box" style="margin-top: 5px">
+				<table class="hoverTable minutetable">
+					<tbody>
+						<tr>
+							<td data-minute="00">00分</td>
+						</tr>
+						<tr>
+							<td data-minute="10">10分</td>
+						</tr>
+						<tr>
+							<td data-minute="20">20分</td>
+						</tr>
+						<tr>
+							<td data-minute="30">30分</td>
+						</tr>
+						<tr>
+							<td data-minute="40">40分</td>
+						</tr>
+						<tr>
+							<td data-minute="50">50分</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+	<div class="xdsoft_datetimepicker xdsoft_noselect ">
+		<div class="xdsoft_mounthpicker">
+			<button type="button" class="xdsoft_prev"></button>
+			<button type="button" class="xdsoft_today_button"
+				style="display: none;"></button>
+			<div class="xdsoft_label xdsoft_month" style="display: none">
+				<span>八月</span>
+				<div class="xdsoft_select xdsoft_monthselect xdsoft_scroller_box">
+					<div style="margin-top: 0px;">
+						<div class="xdsoft_option " data-value="0">一月</div>
+						<div class="xdsoft_option " data-value="1">二月</div>
+						<div class="xdsoft_option " data-value="2">三月</div>
+						<div class="xdsoft_option " data-value="3">四月</div>
+						<div class="xdsoft_option " data-value="4">五月</div>
+						<div class="xdsoft_option " data-value="5">六月</div>
+						<div class="xdsoft_option " data-value="6">七月</div>
+						<div class="xdsoft_option xdsoft_current" data-value="7">八月</div>
+						<div class="xdsoft_option " data-value="8">九月</div>
+						<div class="xdsoft_option " data-value="9">十月</div>
+						<div class="xdsoft_option " data-value="10">十一月</div>
+						<div class="xdsoft_option " data-value="11">十二月</div>
+					</div>
+					<div class="xdsoft_scrollbar">
+						<div class="xdsoft_scroller"
+							style="display: block; height: 10px; margin-top: 0px;"></div>
+					</div>
+				</div>
+			</div>
+			<div class="xdsoft_label xdsoft_year">
+				<span>2014</span>
+				<div class="xdsoft_select xdsoft_yearselect xdsoft_scroller_box">
+					<div style="margin-top: 0px;">
+						<div class="xdsoft_option " data-value="1950">1950</div>
+						<div class="xdsoft_option " data-value="1951">1951</div>
+						<div class="xdsoft_option " data-value="1952">1952</div>
+						<div class="xdsoft_option " data-value="1953">1953</div>
+						<div class="xdsoft_option " data-value="1954">1954</div>
+						<div class="xdsoft_option " data-value="1955">1955</div>
+						<div class="xdsoft_option " data-value="1956">1956</div>
+						<div class="xdsoft_option " data-value="1957">1957</div>
+						<div class="xdsoft_option " data-value="1958">1958</div>
+						<div class="xdsoft_option " data-value="1959">1959</div>
+						<div class="xdsoft_option " data-value="1960">1960</div>
+						<div class="xdsoft_option " data-value="1961">1961</div>
+						<div class="xdsoft_option " data-value="1962">1962</div>
+						<div class="xdsoft_option " data-value="1963">1963</div>
+						<div class="xdsoft_option " data-value="1964">1964</div>
+						<div class="xdsoft_option " data-value="1965">1965</div>
+						<div class="xdsoft_option " data-value="1966">1966</div>
+						<div class="xdsoft_option " data-value="1967">1967</div>
+						<div class="xdsoft_option " data-value="1968">1968</div>
+						<div class="xdsoft_option " data-value="1969">1969</div>
+						<div class="xdsoft_option " data-value="1970">1970</div>
+						<div class="xdsoft_option " data-value="1971">1971</div>
+						<div class="xdsoft_option " data-value="1972">1972</div>
+						<div class="xdsoft_option " data-value="1973">1973</div>
+						<div class="xdsoft_option " data-value="1974">1974</div>
+						<div class="xdsoft_option " data-value="1975">1975</div>
+						<div class="xdsoft_option " data-value="1976">1976</div>
+						<div class="xdsoft_option " data-value="1977">1977</div>
+						<div class="xdsoft_option " data-value="1978">1978</div>
+						<div class="xdsoft_option " data-value="1979">1979</div>
+						<div class="xdsoft_option " data-value="1980">1980</div>
+						<div class="xdsoft_option " data-value="1981">1981</div>
+						<div class="xdsoft_option " data-value="1982">1982</div>
+						<div class="xdsoft_option " data-value="1983">1983</div>
+						<div class="xdsoft_option " data-value="1984">1984</div>
+						<div class="xdsoft_option " data-value="1985">1985</div>
+						<div class="xdsoft_option " data-value="1986">1986</div>
+						<div class="xdsoft_option " data-value="1987">1987</div>
+						<div class="xdsoft_option " data-value="1988">1988</div>
+						<div class="xdsoft_option " data-value="1989">1989</div>
+						<div class="xdsoft_option " data-value="1990">1990</div>
+						<div class="xdsoft_option " data-value="1991">1991</div>
+						<div class="xdsoft_option " data-value="1992">1992</div>
+						<div class="xdsoft_option " data-value="1993">1993</div>
+						<div class="xdsoft_option " data-value="1994">1994</div>
+						<div class="xdsoft_option " data-value="1995">1995</div>
+						<div class="xdsoft_option " data-value="1996">1996</div>
+						<div class="xdsoft_option " data-value="1997">1997</div>
+						<div class="xdsoft_option " data-value="1998">1998</div>
+						<div class="xdsoft_option " data-value="1999">1999</div>
+						<div class="xdsoft_option " data-value="2000">2000</div>
+						<div class="xdsoft_option " data-value="2001">2001</div>
+						<div class="xdsoft_option " data-value="2002">2002</div>
+						<div class="xdsoft_option " data-value="2003">2003</div>
+						<div class="xdsoft_option " data-value="2004">2004</div>
+						<div class="xdsoft_option " data-value="2005">2005</div>
+						<div class="xdsoft_option " data-value="2006">2006</div>
+						<div class="xdsoft_option " data-value="2007">2007</div>
+						<div class="xdsoft_option " data-value="2008">2008</div>
+						<div class="xdsoft_option " data-value="2009">2009</div>
+						<div class="xdsoft_option " data-value="2010">2010</div>
+						<div class="xdsoft_option " data-value="2011">2011</div>
+						<div class="xdsoft_option " data-value="2012">2012</div>
+						<div class="xdsoft_option " data-value="2013">2013</div>
+						<div class="xdsoft_option xdsoft_current" data-value="2014">2014</div>
+						<div class="xdsoft_option " data-value="2015">2015</div>
+						<div class="xdsoft_option " data-value="2016">2016</div>
+						<div class="xdsoft_option " data-value="2017">2017</div>
+						<div class="xdsoft_option " data-value="2018">2018</div>
+						<div class="xdsoft_option " data-value="2019">2019</div>
+						<div class="xdsoft_option " data-value="2020">2020</div>
+						<div class="xdsoft_option " data-value="2021">2021</div>
+						<div class="xdsoft_option " data-value="2022">2022</div>
+						<div class="xdsoft_option " data-value="2023">2023</div>
+						<div class="xdsoft_option " data-value="2024">2024</div>
+						<div class="xdsoft_option " data-value="2025">2025</div>
+						<div class="xdsoft_option " data-value="2026">2026</div>
+						<div class="xdsoft_option " data-value="2027">2027</div>
+						<div class="xdsoft_option " data-value="2028">2028</div>
+						<div class="xdsoft_option " data-value="2029">2029</div>
+						<div class="xdsoft_option " data-value="2030">2030</div>
+						<div class="xdsoft_option " data-value="2031">2031</div>
+						<div class="xdsoft_option " data-value="2032">2032</div>
+						<div class="xdsoft_option " data-value="2033">2033</div>
+						<div class="xdsoft_option " data-value="2034">2034</div>
+						<div class="xdsoft_option " data-value="2035">2035</div>
+						<div class="xdsoft_option " data-value="2036">2036</div>
+						<div class="xdsoft_option " data-value="2037">2037</div>
+						<div class="xdsoft_option " data-value="2038">2038</div>
+						<div class="xdsoft_option " data-value="2039">2039</div>
+						<div class="xdsoft_option " data-value="2040">2040</div>
+						<div class="xdsoft_option " data-value="2041">2041</div>
+						<div class="xdsoft_option " data-value="2042">2042</div>
+						<div class="xdsoft_option " data-value="2043">2043</div>
+						<div class="xdsoft_option " data-value="2044">2044</div>
+						<div class="xdsoft_option " data-value="2045">2045</div>
+						<div class="xdsoft_option " data-value="2046">2046</div>
+						<div class="xdsoft_option " data-value="2047">2047</div>
+						<div class="xdsoft_option " data-value="2048">2048</div>
+						<div class="xdsoft_option " data-value="2049">2049</div>
+						<div class="xdsoft_option " data-value="2050">2050</div>
+					</div>
+					<div class="xdsoft_scrollbar">
+						<div class="xdsoft_scroller"
+							style="display: block; height: 10px; margin-top: 0px;"></div>
+					</div>
+				</div>
+			</div>
+			<button class="date_confirm_button" style="" disable="false">确定</button>
+			<button type="button" class="xdsoft_next"></button>
+		</div>
+		<table class="hoverTable selectMonth">
+			<tbody>
+				<tr>
+					<td class="xdsoft_option" data-month="1" data-value="0">1月</td>
+					<td class="xdsoft_option" data-month="2" data-value="1">2月</td>
+					<td class="xdsoft_option" data-month="3" data-value="2">3月</td>
+					<td class="xdsoft_option" data-month="4" data-value="3">4月</td>
+					<td class="xdsoft_option" data-month="5" data-value="4">5月</td>
+					<td class="xdsoft_option" data-month="6" data-value="5">6月</td>
+					<td class="xdsoft_option" data-month="7" data-value="6">7月</td>
+					<td class="xdsoft_option current_month" data-month="8"
+						data-value="7">8月</td>
+					<td class="xdsoft_option" data-month="9" data-value="8">9月</td>
+					<td class="xdsoft_option" data-month="10" data-value="9">10月</td>
+					<td class="xdsoft_option" data-month="11" data-value="10">11月</td>
+					<td class="xdsoft_option" data-month="12" data-value="11">12月</td>
+				</tr>
+			</tbody>
+		</table>
+		<div class="xdsoft_datepicker active">
+			<div class="xdsoft_calendar">
+				<table>
+					<thead>
+						<tr>
+							<th>日</th>
+							<th>一</th>
+							<th>二</th>
+							<th>三</th>
+							<th>四</th>
+							<th>五</th>
+							<th>六</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td data-date="27" data-month="6" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week0 xdsoft_date xdsoft_disabled xdsoft_other_month xdsoft_weekend"><div>27</div></td>
+							<td data-date="28" data-month="6" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week1 xdsoft_date xdsoft_disabled xdsoft_other_month"><div>28</div></td>
+							<td data-date="29" data-month="6" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week2 xdsoft_date xdsoft_disabled xdsoft_other_month"><div>29</div></td>
+							<td data-date="30" data-month="6" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week3 xdsoft_date xdsoft_disabled xdsoft_other_month"><div>30</div></td>
+							<td data-date="31" data-month="6" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week4 xdsoft_date xdsoft_disabled xdsoft_other_month"><div>31</div></td>
+							<td data-date="1" data-month="7" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week5 xdsoft_date xdsoft_disabled"><div>1</div></td>
+							<td data-date="2" data-month="7" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week6 xdsoft_date xdsoft_disabled xdsoft_weekend"><div>2</div></td>
+						</tr>
+						<tr>
+							<td data-date="3" data-month="7" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week0 xdsoft_date xdsoft_disabled xdsoft_weekend"><div>3</div></td>
+							<td data-date="4" data-month="7" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week1 xdsoft_date xdsoft_disabled"><div>4</div></td>
+							<td data-date="5" data-month="7" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week2 xdsoft_date xdsoft_disabled"><div>5</div></td>
+							<td data-date="6" data-month="7" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week3 xdsoft_date xdsoft_current xdsoft_today"><div>6</div></td>
+							<td data-date="7" data-month="7" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week4 xdsoft_date"><div>7</div></td>
+							<td data-date="8" data-month="7" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week5 xdsoft_date"><div>8</div></td>
+							<td data-date="9" data-month="7" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week6 xdsoft_date xdsoft_weekend"><div>9</div></td>
+						</tr>
+						<tr>
+							<td data-date="10" data-month="7" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week0 xdsoft_date xdsoft_weekend"><div>10</div></td>
+							<td data-date="11" data-month="7" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week1 xdsoft_date"><div>11</div></td>
+							<td data-date="12" data-month="7" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week2 xdsoft_date"><div>12</div></td>
+							<td data-date="13" data-month="7" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week3 xdsoft_date"><div>13</div></td>
+							<td data-date="14" data-month="7" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week4 xdsoft_date"><div>14</div></td>
+							<td data-date="15" data-month="7" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week5 xdsoft_date"><div>15</div></td>
+							<td data-date="16" data-month="7" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week6 xdsoft_date xdsoft_weekend"><div>16</div></td>
+						</tr>
+						<tr>
+							<td data-date="17" data-month="7" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week0 xdsoft_date xdsoft_weekend"><div>17</div></td>
+							<td data-date="18" data-month="7" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week1 xdsoft_date"><div>18</div></td>
+							<td data-date="19" data-month="7" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week2 xdsoft_date"><div>19</div></td>
+							<td data-date="20" data-month="7" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week3 xdsoft_date"><div>20</div></td>
+							<td data-date="21" data-month="7" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week4 xdsoft_date"><div>21</div></td>
+							<td data-date="22" data-month="7" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week5 xdsoft_date"><div>22</div></td>
+							<td data-date="23" data-month="7" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week6 xdsoft_date xdsoft_weekend"><div>23</div></td>
+						</tr>
+						<tr>
+							<td data-date="24" data-month="7" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week0 xdsoft_date xdsoft_weekend"><div>24</div></td>
+							<td data-date="25" data-month="7" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week1 xdsoft_date"><div>25</div></td>
+							<td data-date="26" data-month="7" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week2 xdsoft_date"><div>26</div></td>
+							<td data-date="27" data-month="7" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week3 xdsoft_date"><div>27</div></td>
+							<td data-date="28" data-month="7" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week4 xdsoft_date"><div>28</div></td>
+							<td data-date="29" data-month="7" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week5 xdsoft_date"><div>29</div></td>
+							<td data-date="30" data-month="7" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week6 xdsoft_date xdsoft_weekend"><div>30</div></td>
+						</tr>
+						<tr>
+							<td data-date="31" data-month="7" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week0 xdsoft_date xdsoft_weekend"><div>31</div></td>
+							<td data-date="1" data-month="8" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week1 xdsoft_date xdsoft_other_month"><div>1</div></td>
+							<td data-date="2" data-month="8" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week2 xdsoft_date xdsoft_other_month"><div>2</div></td>
+							<td data-date="3" data-month="8" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week3 xdsoft_date xdsoft_other_month"><div>3</div></td>
+							<td data-date="4" data-month="8" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week4 xdsoft_date xdsoft_other_month"><div>4</div></td>
+							<td data-date="5" data-month="8" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week5 xdsoft_date xdsoft_other_month"><div>5</div></td>
+							<td data-date="6" data-month="8" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week6 xdsoft_date xdsoft_other_month xdsoft_weekend"><div>6</div></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<div class="xdsoft_timepicker ampm active" style="display: none;">
+			<div class="xdsoft_time_box" style="margin-top: 50px; height: auto">
+				<table class="hoverTable ampmtable">
+					<tbody>
+						<tr>
+							<td data-ampm="&nbsp;上午&nbsp;">上午</td>
+						</tr>
+						<tr>
+							<td data-ampm="&nbsp;下午&nbsp;">下午</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<div class="xdsoft_timepicker active"
+			style="margin-right: 20px; display: none;">
+			<div class="xdsoft_time_box" style="margin-top: 5px; width: 80px">
+				<table class="hoverTable hourtable">
+					<tbody>
+						<tr>
+							<td data-hour="01:">01:00</td>
+							<td data-hour="07:">07:00</td>
+						</tr>
+						<tr>
+							<td data-hour="02:">02:00</td>
+							<td data-hour="08:">08:00</td>
+						</tr>
+						<tr>
+							<td data-hour="03:">03:00</td>
+							<td data-hour="09:">09:00</td>
+						</tr>
+						<tr>
+							<td data-hour="04:">04:00</td>
+							<td data-hour="10:">10:00</td>
+						</tr>
+						<tr>
+							<td data-hour="05:">05:00</td>
+							<td data-hour="11:">11:00</td>
+						</tr>
+						<tr>
+							<td data-hour="06:">06:00</td>
+							<td data-hour="12:">12:00</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<div class="xdsoft_timepicker active" style="display: none;">
+			<div class="xdsoft_time_box" style="margin-top: 5px">
+				<table class="hoverTable minutetable">
+					<tbody>
+						<tr>
+							<td data-minute="00">00分</td>
+						</tr>
+						<tr>
+							<td data-minute="10">10分</td>
+						</tr>
+						<tr>
+							<td data-minute="20">20分</td>
+						</tr>
+						<tr>
+							<td data-minute="30">30分</td>
+						</tr>
+						<tr>
+							<td data-minute="40">40分</td>
+						</tr>
+						<tr>
+							<td data-minute="50">50分</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+	<div class="xdsoft_datetimepicker xdsoft_noselect ">
+		<div class="xdsoft_mounthpicker">
+			<button type="button" class="xdsoft_prev"></button>
+			<button type="button" class="xdsoft_today_button"
+				style="display: none;"></button>
+			<div class="xdsoft_label xdsoft_month" style="display: none">
+				<span>八月</span>
+				<div class="xdsoft_select xdsoft_monthselect xdsoft_scroller_box">
+					<div style="margin-top: 0px;">
+						<div class="xdsoft_option " data-value="0">一月</div>
+						<div class="xdsoft_option " data-value="1">二月</div>
+						<div class="xdsoft_option " data-value="2">三月</div>
+						<div class="xdsoft_option " data-value="3">四月</div>
+						<div class="xdsoft_option " data-value="4">五月</div>
+						<div class="xdsoft_option " data-value="5">六月</div>
+						<div class="xdsoft_option " data-value="6">七月</div>
+						<div class="xdsoft_option xdsoft_current" data-value="7">八月</div>
+						<div class="xdsoft_option " data-value="8">九月</div>
+						<div class="xdsoft_option " data-value="9">十月</div>
+						<div class="xdsoft_option " data-value="10">十一月</div>
+						<div class="xdsoft_option " data-value="11">十二月</div>
+					</div>
+					<div class="xdsoft_scrollbar">
+						<div class="xdsoft_scroller"
+							style="display: block; height: 10px; margin-top: 0px;"></div>
+					</div>
+				</div>
+			</div>
+			<div class="xdsoft_label xdsoft_year">
+				<span>2014</span>
+				<div class="xdsoft_select xdsoft_yearselect xdsoft_scroller_box">
+					<div style="margin-top: 0px;">
+						<div class="xdsoft_option " data-value="1950">1950</div>
+						<div class="xdsoft_option " data-value="1951">1951</div>
+						<div class="xdsoft_option " data-value="1952">1952</div>
+						<div class="xdsoft_option " data-value="1953">1953</div>
+						<div class="xdsoft_option " data-value="1954">1954</div>
+						<div class="xdsoft_option " data-value="1955">1955</div>
+						<div class="xdsoft_option " data-value="1956">1956</div>
+						<div class="xdsoft_option " data-value="1957">1957</div>
+						<div class="xdsoft_option " data-value="1958">1958</div>
+						<div class="xdsoft_option " data-value="1959">1959</div>
+						<div class="xdsoft_option " data-value="1960">1960</div>
+						<div class="xdsoft_option " data-value="1961">1961</div>
+						<div class="xdsoft_option " data-value="1962">1962</div>
+						<div class="xdsoft_option " data-value="1963">1963</div>
+						<div class="xdsoft_option " data-value="1964">1964</div>
+						<div class="xdsoft_option " data-value="1965">1965</div>
+						<div class="xdsoft_option " data-value="1966">1966</div>
+						<div class="xdsoft_option " data-value="1967">1967</div>
+						<div class="xdsoft_option " data-value="1968">1968</div>
+						<div class="xdsoft_option " data-value="1969">1969</div>
+						<div class="xdsoft_option " data-value="1970">1970</div>
+						<div class="xdsoft_option " data-value="1971">1971</div>
+						<div class="xdsoft_option " data-value="1972">1972</div>
+						<div class="xdsoft_option " data-value="1973">1973</div>
+						<div class="xdsoft_option " data-value="1974">1974</div>
+						<div class="xdsoft_option " data-value="1975">1975</div>
+						<div class="xdsoft_option " data-value="1976">1976</div>
+						<div class="xdsoft_option " data-value="1977">1977</div>
+						<div class="xdsoft_option " data-value="1978">1978</div>
+						<div class="xdsoft_option " data-value="1979">1979</div>
+						<div class="xdsoft_option " data-value="1980">1980</div>
+						<div class="xdsoft_option " data-value="1981">1981</div>
+						<div class="xdsoft_option " data-value="1982">1982</div>
+						<div class="xdsoft_option " data-value="1983">1983</div>
+						<div class="xdsoft_option " data-value="1984">1984</div>
+						<div class="xdsoft_option " data-value="1985">1985</div>
+						<div class="xdsoft_option " data-value="1986">1986</div>
+						<div class="xdsoft_option " data-value="1987">1987</div>
+						<div class="xdsoft_option " data-value="1988">1988</div>
+						<div class="xdsoft_option " data-value="1989">1989</div>
+						<div class="xdsoft_option " data-value="1990">1990</div>
+						<div class="xdsoft_option " data-value="1991">1991</div>
+						<div class="xdsoft_option " data-value="1992">1992</div>
+						<div class="xdsoft_option " data-value="1993">1993</div>
+						<div class="xdsoft_option " data-value="1994">1994</div>
+						<div class="xdsoft_option " data-value="1995">1995</div>
+						<div class="xdsoft_option " data-value="1996">1996</div>
+						<div class="xdsoft_option " data-value="1997">1997</div>
+						<div class="xdsoft_option " data-value="1998">1998</div>
+						<div class="xdsoft_option " data-value="1999">1999</div>
+						<div class="xdsoft_option " data-value="2000">2000</div>
+						<div class="xdsoft_option " data-value="2001">2001</div>
+						<div class="xdsoft_option " data-value="2002">2002</div>
+						<div class="xdsoft_option " data-value="2003">2003</div>
+						<div class="xdsoft_option " data-value="2004">2004</div>
+						<div class="xdsoft_option " data-value="2005">2005</div>
+						<div class="xdsoft_option " data-value="2006">2006</div>
+						<div class="xdsoft_option " data-value="2007">2007</div>
+						<div class="xdsoft_option " data-value="2008">2008</div>
+						<div class="xdsoft_option " data-value="2009">2009</div>
+						<div class="xdsoft_option " data-value="2010">2010</div>
+						<div class="xdsoft_option " data-value="2011">2011</div>
+						<div class="xdsoft_option " data-value="2012">2012</div>
+						<div class="xdsoft_option " data-value="2013">2013</div>
+						<div class="xdsoft_option xdsoft_current" data-value="2014">2014</div>
+						<div class="xdsoft_option " data-value="2015">2015</div>
+						<div class="xdsoft_option " data-value="2016">2016</div>
+						<div class="xdsoft_option " data-value="2017">2017</div>
+						<div class="xdsoft_option " data-value="2018">2018</div>
+						<div class="xdsoft_option " data-value="2019">2019</div>
+						<div class="xdsoft_option " data-value="2020">2020</div>
+						<div class="xdsoft_option " data-value="2021">2021</div>
+						<div class="xdsoft_option " data-value="2022">2022</div>
+						<div class="xdsoft_option " data-value="2023">2023</div>
+						<div class="xdsoft_option " data-value="2024">2024</div>
+						<div class="xdsoft_option " data-value="2025">2025</div>
+						<div class="xdsoft_option " data-value="2026">2026</div>
+						<div class="xdsoft_option " data-value="2027">2027</div>
+						<div class="xdsoft_option " data-value="2028">2028</div>
+						<div class="xdsoft_option " data-value="2029">2029</div>
+						<div class="xdsoft_option " data-value="2030">2030</div>
+						<div class="xdsoft_option " data-value="2031">2031</div>
+						<div class="xdsoft_option " data-value="2032">2032</div>
+						<div class="xdsoft_option " data-value="2033">2033</div>
+						<div class="xdsoft_option " data-value="2034">2034</div>
+						<div class="xdsoft_option " data-value="2035">2035</div>
+						<div class="xdsoft_option " data-value="2036">2036</div>
+						<div class="xdsoft_option " data-value="2037">2037</div>
+						<div class="xdsoft_option " data-value="2038">2038</div>
+						<div class="xdsoft_option " data-value="2039">2039</div>
+						<div class="xdsoft_option " data-value="2040">2040</div>
+						<div class="xdsoft_option " data-value="2041">2041</div>
+						<div class="xdsoft_option " data-value="2042">2042</div>
+						<div class="xdsoft_option " data-value="2043">2043</div>
+						<div class="xdsoft_option " data-value="2044">2044</div>
+						<div class="xdsoft_option " data-value="2045">2045</div>
+						<div class="xdsoft_option " data-value="2046">2046</div>
+						<div class="xdsoft_option " data-value="2047">2047</div>
+						<div class="xdsoft_option " data-value="2048">2048</div>
+						<div class="xdsoft_option " data-value="2049">2049</div>
+						<div class="xdsoft_option " data-value="2050">2050</div>
+					</div>
+					<div class="xdsoft_scrollbar">
+						<div class="xdsoft_scroller"
+							style="display: block; height: 10px; margin-top: 0px;"></div>
+					</div>
+				</div>
+			</div>
+			<button class="date_confirm_button" style="" disable="false">确定</button>
+			<button type="button" class="xdsoft_next"></button>
+		</div>
+		<table class="hoverTable selectMonth">
+			<tbody>
+				<tr>
+					<td class="xdsoft_option" data-month="1" data-value="0">1月</td>
+					<td class="xdsoft_option" data-month="2" data-value="1">2月</td>
+					<td class="xdsoft_option" data-month="3" data-value="2">3月</td>
+					<td class="xdsoft_option" data-month="4" data-value="3">4月</td>
+					<td class="xdsoft_option" data-month="5" data-value="4">5月</td>
+					<td class="xdsoft_option" data-month="6" data-value="5">6月</td>
+					<td class="xdsoft_option" data-month="7" data-value="6">7月</td>
+					<td class="xdsoft_option current_month" data-month="8"
+						data-value="7">8月</td>
+					<td class="xdsoft_option" data-month="9" data-value="8">9月</td>
+					<td class="xdsoft_option" data-month="10" data-value="9">10月</td>
+					<td class="xdsoft_option" data-month="11" data-value="10">11月</td>
+					<td class="xdsoft_option" data-month="12" data-value="11">12月</td>
+				</tr>
+			</tbody>
+		</table>
+		<div class="xdsoft_datepicker active">
+			<div class="xdsoft_calendar">
+				<table>
+					<thead>
+						<tr>
+							<th>日</th>
+							<th>一</th>
+							<th>二</th>
+							<th>三</th>
+							<th>四</th>
+							<th>五</th>
+							<th>六</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td data-date="27" data-month="6" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week0 xdsoft_date xdsoft_disabled xdsoft_other_month xdsoft_weekend"><div>27</div></td>
+							<td data-date="28" data-month="6" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week1 xdsoft_date xdsoft_disabled xdsoft_other_month"><div>28</div></td>
+							<td data-date="29" data-month="6" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week2 xdsoft_date xdsoft_disabled xdsoft_other_month"><div>29</div></td>
+							<td data-date="30" data-month="6" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week3 xdsoft_date xdsoft_disabled xdsoft_other_month"><div>30</div></td>
+							<td data-date="31" data-month="6" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week4 xdsoft_date xdsoft_disabled xdsoft_other_month"><div>31</div></td>
+							<td data-date="1" data-month="7" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week5 xdsoft_date xdsoft_disabled"><div>1</div></td>
+							<td data-date="2" data-month="7" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week6 xdsoft_date xdsoft_disabled xdsoft_weekend"><div>2</div></td>
+						</tr>
+						<tr>
+							<td data-date="3" data-month="7" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week0 xdsoft_date xdsoft_disabled xdsoft_weekend"><div>3</div></td>
+							<td data-date="4" data-month="7" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week1 xdsoft_date xdsoft_disabled"><div>4</div></td>
+							<td data-date="5" data-month="7" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week2 xdsoft_date xdsoft_disabled"><div>5</div></td>
+							<td data-date="6" data-month="7" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week3 xdsoft_date xdsoft_current xdsoft_today"><div>6</div></td>
+							<td data-date="7" data-month="7" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week4 xdsoft_date"><div>7</div></td>
+							<td data-date="8" data-month="7" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week5 xdsoft_date"><div>8</div></td>
+							<td data-date="9" data-month="7" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week6 xdsoft_date xdsoft_weekend"><div>9</div></td>
+						</tr>
+						<tr>
+							<td data-date="10" data-month="7" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week0 xdsoft_date xdsoft_weekend"><div>10</div></td>
+							<td data-date="11" data-month="7" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week1 xdsoft_date"><div>11</div></td>
+							<td data-date="12" data-month="7" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week2 xdsoft_date"><div>12</div></td>
+							<td data-date="13" data-month="7" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week3 xdsoft_date"><div>13</div></td>
+							<td data-date="14" data-month="7" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week4 xdsoft_date"><div>14</div></td>
+							<td data-date="15" data-month="7" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week5 xdsoft_date"><div>15</div></td>
+							<td data-date="16" data-month="7" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week6 xdsoft_date xdsoft_weekend"><div>16</div></td>
+						</tr>
+						<tr>
+							<td data-date="17" data-month="7" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week0 xdsoft_date xdsoft_weekend"><div>17</div></td>
+							<td data-date="18" data-month="7" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week1 xdsoft_date"><div>18</div></td>
+							<td data-date="19" data-month="7" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week2 xdsoft_date"><div>19</div></td>
+							<td data-date="20" data-month="7" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week3 xdsoft_date"><div>20</div></td>
+							<td data-date="21" data-month="7" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week4 xdsoft_date"><div>21</div></td>
+							<td data-date="22" data-month="7" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week5 xdsoft_date"><div>22</div></td>
+							<td data-date="23" data-month="7" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week6 xdsoft_date xdsoft_weekend"><div>23</div></td>
+						</tr>
+						<tr>
+							<td data-date="24" data-month="7" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week0 xdsoft_date xdsoft_weekend"><div>24</div></td>
+							<td data-date="25" data-month="7" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week1 xdsoft_date"><div>25</div></td>
+							<td data-date="26" data-month="7" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week2 xdsoft_date"><div>26</div></td>
+							<td data-date="27" data-month="7" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week3 xdsoft_date"><div>27</div></td>
+							<td data-date="28" data-month="7" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week4 xdsoft_date"><div>28</div></td>
+							<td data-date="29" data-month="7" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week5 xdsoft_date"><div>29</div></td>
+							<td data-date="30" data-month="7" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week6 xdsoft_date xdsoft_weekend"><div>30</div></td>
+						</tr>
+						<tr>
+							<td data-date="31" data-month="7" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week0 xdsoft_date xdsoft_weekend"><div>31</div></td>
+							<td data-date="1" data-month="8" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week1 xdsoft_date xdsoft_other_month"><div>1</div></td>
+							<td data-date="2" data-month="8" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week2 xdsoft_date xdsoft_other_month"><div>2</div></td>
+							<td data-date="3" data-month="8" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week3 xdsoft_date xdsoft_other_month"><div>3</div></td>
+							<td data-date="4" data-month="8" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week4 xdsoft_date xdsoft_other_month"><div>4</div></td>
+							<td data-date="5" data-month="8" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week5 xdsoft_date xdsoft_other_month"><div>5</div></td>
+							<td data-date="6" data-month="8" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week6 xdsoft_date xdsoft_other_month xdsoft_weekend"><div>6</div></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<div class="xdsoft_timepicker ampm active" style="display: none;">
+			<div class="xdsoft_time_box" style="margin-top: 50px; height: auto">
+				<table class="hoverTable ampmtable">
+					<tbody>
+						<tr>
+							<td data-ampm="&nbsp;上午&nbsp;">上午</td>
+						</tr>
+						<tr>
+							<td data-ampm="&nbsp;下午&nbsp;">下午</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<div class="xdsoft_timepicker active"
+			style="margin-right: 20px; display: none;">
+			<div class="xdsoft_time_box" style="margin-top: 5px; width: 80px">
+				<table class="hoverTable hourtable">
+					<tbody>
+						<tr>
+							<td data-hour="01:">01:00</td>
+							<td data-hour="07:">07:00</td>
+						</tr>
+						<tr>
+							<td data-hour="02:">02:00</td>
+							<td data-hour="08:">08:00</td>
+						</tr>
+						<tr>
+							<td data-hour="03:">03:00</td>
+							<td data-hour="09:">09:00</td>
+						</tr>
+						<tr>
+							<td data-hour="04:">04:00</td>
+							<td data-hour="10:">10:00</td>
+						</tr>
+						<tr>
+							<td data-hour="05:">05:00</td>
+							<td data-hour="11:">11:00</td>
+						</tr>
+						<tr>
+							<td data-hour="06:">06:00</td>
+							<td data-hour="12:">12:00</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<div class="xdsoft_timepicker active" style="display: none;">
+			<div class="xdsoft_time_box" style="margin-top: 5px">
+				<table class="hoverTable minutetable">
+					<tbody>
+						<tr>
+							<td data-minute="00">00分</td>
+						</tr>
+						<tr>
+							<td data-minute="10">10分</td>
+						</tr>
+						<tr>
+							<td data-minute="20">20分</td>
+						</tr>
+						<tr>
+							<td data-minute="30">30分</td>
+						</tr>
+						<tr>
+							<td data-minute="40">40分</td>
+						</tr>
+						<tr>
+							<td data-minute="50">50分</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+	<div class="xdsoft_datetimepicker xdsoft_noselect ">
+		<div class="xdsoft_mounthpicker">
+			<button type="button" class="xdsoft_prev"></button>
+			<button type="button" class="xdsoft_today_button"
+				style="display: inline-block;"></button>
+			<div class="xdsoft_label xdsoft_month" style="display: none">
+				<span>八月</span>
+				<div class="xdsoft_select xdsoft_monthselect xdsoft_scroller_box">
+					<div style="margin-top: 0px;">
+						<div class="xdsoft_option " data-value="0">一月</div>
+						<div class="xdsoft_option " data-value="1">二月</div>
+						<div class="xdsoft_option " data-value="2">三月</div>
+						<div class="xdsoft_option " data-value="3">四月</div>
+						<div class="xdsoft_option " data-value="4">五月</div>
+						<div class="xdsoft_option " data-value="5">六月</div>
+						<div class="xdsoft_option " data-value="6">七月</div>
+						<div class="xdsoft_option xdsoft_current" data-value="7">八月</div>
+						<div class="xdsoft_option " data-value="8">九月</div>
+						<div class="xdsoft_option " data-value="9">十月</div>
+						<div class="xdsoft_option " data-value="10">十一月</div>
+						<div class="xdsoft_option " data-value="11">十二月</div>
+					</div>
+					<div class="xdsoft_scrollbar">
+						<div class="xdsoft_scroller"
+							style="display: block; height: 10px; margin-top: 0px;"></div>
+					</div>
+				</div>
+			</div>
+			<div class="xdsoft_label xdsoft_year">
+				<span>2014</span>
+				<div class="xdsoft_select xdsoft_yearselect xdsoft_scroller_box">
+					<div style="margin-top: 0px;">
+						<div class="xdsoft_option " data-value="1950">1950</div>
+						<div class="xdsoft_option " data-value="1951">1951</div>
+						<div class="xdsoft_option " data-value="1952">1952</div>
+						<div class="xdsoft_option " data-value="1953">1953</div>
+						<div class="xdsoft_option " data-value="1954">1954</div>
+						<div class="xdsoft_option " data-value="1955">1955</div>
+						<div class="xdsoft_option " data-value="1956">1956</div>
+						<div class="xdsoft_option " data-value="1957">1957</div>
+						<div class="xdsoft_option " data-value="1958">1958</div>
+						<div class="xdsoft_option " data-value="1959">1959</div>
+						<div class="xdsoft_option " data-value="1960">1960</div>
+						<div class="xdsoft_option " data-value="1961">1961</div>
+						<div class="xdsoft_option " data-value="1962">1962</div>
+						<div class="xdsoft_option " data-value="1963">1963</div>
+						<div class="xdsoft_option " data-value="1964">1964</div>
+						<div class="xdsoft_option " data-value="1965">1965</div>
+						<div class="xdsoft_option " data-value="1966">1966</div>
+						<div class="xdsoft_option " data-value="1967">1967</div>
+						<div class="xdsoft_option " data-value="1968">1968</div>
+						<div class="xdsoft_option " data-value="1969">1969</div>
+						<div class="xdsoft_option " data-value="1970">1970</div>
+						<div class="xdsoft_option " data-value="1971">1971</div>
+						<div class="xdsoft_option " data-value="1972">1972</div>
+						<div class="xdsoft_option " data-value="1973">1973</div>
+						<div class="xdsoft_option " data-value="1974">1974</div>
+						<div class="xdsoft_option " data-value="1975">1975</div>
+						<div class="xdsoft_option " data-value="1976">1976</div>
+						<div class="xdsoft_option " data-value="1977">1977</div>
+						<div class="xdsoft_option " data-value="1978">1978</div>
+						<div class="xdsoft_option " data-value="1979">1979</div>
+						<div class="xdsoft_option " data-value="1980">1980</div>
+						<div class="xdsoft_option " data-value="1981">1981</div>
+						<div class="xdsoft_option " data-value="1982">1982</div>
+						<div class="xdsoft_option " data-value="1983">1983</div>
+						<div class="xdsoft_option " data-value="1984">1984</div>
+						<div class="xdsoft_option " data-value="1985">1985</div>
+						<div class="xdsoft_option " data-value="1986">1986</div>
+						<div class="xdsoft_option " data-value="1987">1987</div>
+						<div class="xdsoft_option " data-value="1988">1988</div>
+						<div class="xdsoft_option " data-value="1989">1989</div>
+						<div class="xdsoft_option " data-value="1990">1990</div>
+						<div class="xdsoft_option " data-value="1991">1991</div>
+						<div class="xdsoft_option " data-value="1992">1992</div>
+						<div class="xdsoft_option " data-value="1993">1993</div>
+						<div class="xdsoft_option " data-value="1994">1994</div>
+						<div class="xdsoft_option " data-value="1995">1995</div>
+						<div class="xdsoft_option " data-value="1996">1996</div>
+						<div class="xdsoft_option " data-value="1997">1997</div>
+						<div class="xdsoft_option " data-value="1998">1998</div>
+						<div class="xdsoft_option " data-value="1999">1999</div>
+						<div class="xdsoft_option " data-value="2000">2000</div>
+						<div class="xdsoft_option " data-value="2001">2001</div>
+						<div class="xdsoft_option " data-value="2002">2002</div>
+						<div class="xdsoft_option " data-value="2003">2003</div>
+						<div class="xdsoft_option " data-value="2004">2004</div>
+						<div class="xdsoft_option " data-value="2005">2005</div>
+						<div class="xdsoft_option " data-value="2006">2006</div>
+						<div class="xdsoft_option " data-value="2007">2007</div>
+						<div class="xdsoft_option " data-value="2008">2008</div>
+						<div class="xdsoft_option " data-value="2009">2009</div>
+						<div class="xdsoft_option " data-value="2010">2010</div>
+						<div class="xdsoft_option " data-value="2011">2011</div>
+						<div class="xdsoft_option " data-value="2012">2012</div>
+						<div class="xdsoft_option " data-value="2013">2013</div>
+						<div class="xdsoft_option xdsoft_current" data-value="2014">2014</div>
+						<div class="xdsoft_option " data-value="2015">2015</div>
+						<div class="xdsoft_option " data-value="2016">2016</div>
+						<div class="xdsoft_option " data-value="2017">2017</div>
+						<div class="xdsoft_option " data-value="2018">2018</div>
+						<div class="xdsoft_option " data-value="2019">2019</div>
+						<div class="xdsoft_option " data-value="2020">2020</div>
+						<div class="xdsoft_option " data-value="2021">2021</div>
+						<div class="xdsoft_option " data-value="2022">2022</div>
+						<div class="xdsoft_option " data-value="2023">2023</div>
+						<div class="xdsoft_option " data-value="2024">2024</div>
+						<div class="xdsoft_option " data-value="2025">2025</div>
+						<div class="xdsoft_option " data-value="2026">2026</div>
+						<div class="xdsoft_option " data-value="2027">2027</div>
+						<div class="xdsoft_option " data-value="2028">2028</div>
+						<div class="xdsoft_option " data-value="2029">2029</div>
+						<div class="xdsoft_option " data-value="2030">2030</div>
+						<div class="xdsoft_option " data-value="2031">2031</div>
+						<div class="xdsoft_option " data-value="2032">2032</div>
+						<div class="xdsoft_option " data-value="2033">2033</div>
+						<div class="xdsoft_option " data-value="2034">2034</div>
+						<div class="xdsoft_option " data-value="2035">2035</div>
+						<div class="xdsoft_option " data-value="2036">2036</div>
+						<div class="xdsoft_option " data-value="2037">2037</div>
+						<div class="xdsoft_option " data-value="2038">2038</div>
+						<div class="xdsoft_option " data-value="2039">2039</div>
+						<div class="xdsoft_option " data-value="2040">2040</div>
+						<div class="xdsoft_option " data-value="2041">2041</div>
+						<div class="xdsoft_option " data-value="2042">2042</div>
+						<div class="xdsoft_option " data-value="2043">2043</div>
+						<div class="xdsoft_option " data-value="2044">2044</div>
+						<div class="xdsoft_option " data-value="2045">2045</div>
+						<div class="xdsoft_option " data-value="2046">2046</div>
+						<div class="xdsoft_option " data-value="2047">2047</div>
+						<div class="xdsoft_option " data-value="2048">2048</div>
+						<div class="xdsoft_option " data-value="2049">2049</div>
+						<div class="xdsoft_option " data-value="2050">2050</div>
+					</div>
+					<div class="xdsoft_scrollbar">
+						<div class="xdsoft_scroller"
+							style="display: block; height: 10px; margin-top: 0px;"></div>
+					</div>
+				</div>
+			</div>
+			<button class="date_confirm_button" style="" disable="false">确定</button>
+			<button type="button" class="xdsoft_next"></button>
+		</div>
+		<table class="hoverTable selectMonth">
+			<tbody>
+				<tr>
+					<td class="xdsoft_option" data-month="1" data-value="0">1月</td>
+					<td class="xdsoft_option" data-month="2" data-value="1">2月</td>
+					<td class="xdsoft_option" data-month="3" data-value="2">3月</td>
+					<td class="xdsoft_option" data-month="4" data-value="3">4月</td>
+					<td class="xdsoft_option" data-month="5" data-value="4">5月</td>
+					<td class="xdsoft_option" data-month="6" data-value="5">6月</td>
+					<td class="xdsoft_option" data-month="7" data-value="6">7月</td>
+					<td class="xdsoft_option current_month" data-month="8"
+						data-value="7">8月</td>
+					<td class="xdsoft_option" data-month="9" data-value="8">9月</td>
+					<td class="xdsoft_option" data-month="10" data-value="9">10月</td>
+					<td class="xdsoft_option" data-month="11" data-value="10">11月</td>
+					<td class="xdsoft_option" data-month="12" data-value="11">12月</td>
+				</tr>
+			</tbody>
+		</table>
+		<div class="xdsoft_datepicker active">
+			<div class="xdsoft_calendar">
+				<table>
+					<thead>
+						<tr>
+							<th>日</th>
+							<th>一</th>
+							<th>二</th>
+							<th>三</th>
+							<th>四</th>
+							<th>五</th>
+							<th>六</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td data-date="27" data-month="6" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week0 xdsoft_date xdsoft_other_month xdsoft_weekend"><div>27</div></td>
+							<td data-date="28" data-month="6" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week1 xdsoft_date xdsoft_other_month"><div>28</div></td>
+							<td data-date="29" data-month="6" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week2 xdsoft_date xdsoft_other_month"><div>29</div></td>
+							<td data-date="30" data-month="6" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week3 xdsoft_date xdsoft_other_month"><div>30</div></td>
+							<td data-date="31" data-month="6" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week4 xdsoft_date xdsoft_other_month"><div>31</div></td>
+							<td data-date="1" data-month="7" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week5 xdsoft_date"><div>1</div></td>
+							<td data-date="2" data-month="7" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week6 xdsoft_date xdsoft_weekend"><div>2</div></td>
+						</tr>
+						<tr>
+							<td data-date="3" data-month="7" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week0 xdsoft_date xdsoft_weekend"><div>3</div></td>
+							<td data-date="4" data-month="7" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week1 xdsoft_date"><div>4</div></td>
+							<td data-date="5" data-month="7" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week2 xdsoft_date"><div>5</div></td>
+							<td data-date="6" data-month="7" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week3 xdsoft_date xdsoft_current xdsoft_today"><div>6</div></td>
+							<td data-date="7" data-month="7" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week4 xdsoft_date"><div>7</div></td>
+							<td data-date="8" data-month="7" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week5 xdsoft_date"><div>8</div></td>
+							<td data-date="9" data-month="7" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week6 xdsoft_date xdsoft_weekend"><div>9</div></td>
+						</tr>
+						<tr>
+							<td data-date="10" data-month="7" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week0 xdsoft_date xdsoft_weekend"><div>10</div></td>
+							<td data-date="11" data-month="7" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week1 xdsoft_date"><div>11</div></td>
+							<td data-date="12" data-month="7" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week2 xdsoft_date"><div>12</div></td>
+							<td data-date="13" data-month="7" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week3 xdsoft_date"><div>13</div></td>
+							<td data-date="14" data-month="7" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week4 xdsoft_date"><div>14</div></td>
+							<td data-date="15" data-month="7" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week5 xdsoft_date"><div>15</div></td>
+							<td data-date="16" data-month="7" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week6 xdsoft_date xdsoft_weekend"><div>16</div></td>
+						</tr>
+						<tr>
+							<td data-date="17" data-month="7" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week0 xdsoft_date xdsoft_weekend"><div>17</div></td>
+							<td data-date="18" data-month="7" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week1 xdsoft_date"><div>18</div></td>
+							<td data-date="19" data-month="7" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week2 xdsoft_date"><div>19</div></td>
+							<td data-date="20" data-month="7" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week3 xdsoft_date"><div>20</div></td>
+							<td data-date="21" data-month="7" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week4 xdsoft_date"><div>21</div></td>
+							<td data-date="22" data-month="7" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week5 xdsoft_date"><div>22</div></td>
+							<td data-date="23" data-month="7" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week6 xdsoft_date xdsoft_weekend"><div>23</div></td>
+						</tr>
+						<tr>
+							<td data-date="24" data-month="7" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week0 xdsoft_date xdsoft_weekend"><div>24</div></td>
+							<td data-date="25" data-month="7" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week1 xdsoft_date"><div>25</div></td>
+							<td data-date="26" data-month="7" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week2 xdsoft_date"><div>26</div></td>
+							<td data-date="27" data-month="7" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week3 xdsoft_date"><div>27</div></td>
+							<td data-date="28" data-month="7" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week4 xdsoft_date"><div>28</div></td>
+							<td data-date="29" data-month="7" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week5 xdsoft_date"><div>29</div></td>
+							<td data-date="30" data-month="7" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week6 xdsoft_date xdsoft_weekend"><div>30</div></td>
+						</tr>
+						<tr>
+							<td data-date="31" data-month="7" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week0 xdsoft_date xdsoft_weekend"><div>31</div></td>
+							<td data-date="1" data-month="8" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week1 xdsoft_date xdsoft_other_month"><div>1</div></td>
+							<td data-date="2" data-month="8" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week2 xdsoft_date xdsoft_other_month"><div>2</div></td>
+							<td data-date="3" data-month="8" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week3 xdsoft_date xdsoft_other_month"><div>3</div></td>
+							<td data-date="4" data-month="8" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week4 xdsoft_date xdsoft_other_month"><div>4</div></td>
+							<td data-date="5" data-month="8" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week5 xdsoft_date xdsoft_other_month"><div>5</div></td>
+							<td data-date="6" data-month="8" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week6 xdsoft_date xdsoft_other_month xdsoft_weekend"><div>6</div></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<div class="xdsoft_timepicker ampm active" style="display: none;">
+			<div class="xdsoft_time_box" style="margin-top: 50px; height: auto">
+				<table class="hoverTable ampmtable">
+					<tbody>
+						<tr>
+							<td data-ampm="&nbsp;上午&nbsp;">上午</td>
+						</tr>
+						<tr>
+							<td data-ampm="&nbsp;下午&nbsp;">下午</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<div class="xdsoft_timepicker active"
+			style="margin-right: 20px; display: none;">
+			<div class="xdsoft_time_box" style="margin-top: 5px; width: 80px">
+				<table class="hoverTable hourtable">
+					<tbody>
+						<tr>
+							<td data-hour="01:">01:00</td>
+							<td data-hour="07:">07:00</td>
+						</tr>
+						<tr>
+							<td data-hour="02:">02:00</td>
+							<td data-hour="08:">08:00</td>
+						</tr>
+						<tr>
+							<td data-hour="03:">03:00</td>
+							<td data-hour="09:">09:00</td>
+						</tr>
+						<tr>
+							<td data-hour="04:">04:00</td>
+							<td data-hour="10:">10:00</td>
+						</tr>
+						<tr>
+							<td data-hour="05:">05:00</td>
+							<td data-hour="11:">11:00</td>
+						</tr>
+						<tr>
+							<td data-hour="06:">06:00</td>
+							<td data-hour="12:">12:00</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<div class="xdsoft_timepicker active" style="display: none;">
+			<div class="xdsoft_time_box" style="margin-top: 5px">
+				<table class="hoverTable minutetable">
+					<tbody>
+						<tr>
+							<td data-minute="00">00分</td>
+						</tr>
+						<tr>
+							<td data-minute="10">10分</td>
+						</tr>
+						<tr>
+							<td data-minute="20">20分</td>
+						</tr>
+						<tr>
+							<td data-minute="30">30分</td>
+						</tr>
+						<tr>
+							<td data-minute="40">40分</td>
+						</tr>
+						<tr>
+							<td data-minute="50">50分</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+	<div class="xdsoft_datetimepicker xdsoft_noselect ">
+		<div class="xdsoft_mounthpicker">
+			<button type="button" class="xdsoft_prev"></button>
+			<button type="button" class="xdsoft_today_button"
+				style="display: inline-block;"></button>
+			<div class="xdsoft_label xdsoft_month" style="display: none">
+				<span>八月</span>
+				<div class="xdsoft_select xdsoft_monthselect xdsoft_scroller_box">
+					<div style="margin-top: 0px;">
+						<div class="xdsoft_option " data-value="0">一月</div>
+						<div class="xdsoft_option " data-value="1">二月</div>
+						<div class="xdsoft_option " data-value="2">三月</div>
+						<div class="xdsoft_option " data-value="3">四月</div>
+						<div class="xdsoft_option " data-value="4">五月</div>
+						<div class="xdsoft_option " data-value="5">六月</div>
+						<div class="xdsoft_option " data-value="6">七月</div>
+						<div class="xdsoft_option xdsoft_current" data-value="7">八月</div>
+						<div class="xdsoft_option " data-value="8">九月</div>
+						<div class="xdsoft_option " data-value="9">十月</div>
+						<div class="xdsoft_option " data-value="10">十一月</div>
+						<div class="xdsoft_option " data-value="11">十二月</div>
+					</div>
+					<div class="xdsoft_scrollbar">
+						<div class="xdsoft_scroller"
+							style="display: block; height: 10px; margin-top: 0px;"></div>
+					</div>
+				</div>
+			</div>
+			<div class="xdsoft_label xdsoft_year">
+				<span>2014</span>
+				<div class="xdsoft_select xdsoft_yearselect xdsoft_scroller_box">
+					<div style="margin-top: 0px;">
+						<div class="xdsoft_option " data-value="1950">1950</div>
+						<div class="xdsoft_option " data-value="1951">1951</div>
+						<div class="xdsoft_option " data-value="1952">1952</div>
+						<div class="xdsoft_option " data-value="1953">1953</div>
+						<div class="xdsoft_option " data-value="1954">1954</div>
+						<div class="xdsoft_option " data-value="1955">1955</div>
+						<div class="xdsoft_option " data-value="1956">1956</div>
+						<div class="xdsoft_option " data-value="1957">1957</div>
+						<div class="xdsoft_option " data-value="1958">1958</div>
+						<div class="xdsoft_option " data-value="1959">1959</div>
+						<div class="xdsoft_option " data-value="1960">1960</div>
+						<div class="xdsoft_option " data-value="1961">1961</div>
+						<div class="xdsoft_option " data-value="1962">1962</div>
+						<div class="xdsoft_option " data-value="1963">1963</div>
+						<div class="xdsoft_option " data-value="1964">1964</div>
+						<div class="xdsoft_option " data-value="1965">1965</div>
+						<div class="xdsoft_option " data-value="1966">1966</div>
+						<div class="xdsoft_option " data-value="1967">1967</div>
+						<div class="xdsoft_option " data-value="1968">1968</div>
+						<div class="xdsoft_option " data-value="1969">1969</div>
+						<div class="xdsoft_option " data-value="1970">1970</div>
+						<div class="xdsoft_option " data-value="1971">1971</div>
+						<div class="xdsoft_option " data-value="1972">1972</div>
+						<div class="xdsoft_option " data-value="1973">1973</div>
+						<div class="xdsoft_option " data-value="1974">1974</div>
+						<div class="xdsoft_option " data-value="1975">1975</div>
+						<div class="xdsoft_option " data-value="1976">1976</div>
+						<div class="xdsoft_option " data-value="1977">1977</div>
+						<div class="xdsoft_option " data-value="1978">1978</div>
+						<div class="xdsoft_option " data-value="1979">1979</div>
+						<div class="xdsoft_option " data-value="1980">1980</div>
+						<div class="xdsoft_option " data-value="1981">1981</div>
+						<div class="xdsoft_option " data-value="1982">1982</div>
+						<div class="xdsoft_option " data-value="1983">1983</div>
+						<div class="xdsoft_option " data-value="1984">1984</div>
+						<div class="xdsoft_option " data-value="1985">1985</div>
+						<div class="xdsoft_option " data-value="1986">1986</div>
+						<div class="xdsoft_option " data-value="1987">1987</div>
+						<div class="xdsoft_option " data-value="1988">1988</div>
+						<div class="xdsoft_option " data-value="1989">1989</div>
+						<div class="xdsoft_option " data-value="1990">1990</div>
+						<div class="xdsoft_option " data-value="1991">1991</div>
+						<div class="xdsoft_option " data-value="1992">1992</div>
+						<div class="xdsoft_option " data-value="1993">1993</div>
+						<div class="xdsoft_option " data-value="1994">1994</div>
+						<div class="xdsoft_option " data-value="1995">1995</div>
+						<div class="xdsoft_option " data-value="1996">1996</div>
+						<div class="xdsoft_option " data-value="1997">1997</div>
+						<div class="xdsoft_option " data-value="1998">1998</div>
+						<div class="xdsoft_option " data-value="1999">1999</div>
+						<div class="xdsoft_option " data-value="2000">2000</div>
+						<div class="xdsoft_option " data-value="2001">2001</div>
+						<div class="xdsoft_option " data-value="2002">2002</div>
+						<div class="xdsoft_option " data-value="2003">2003</div>
+						<div class="xdsoft_option " data-value="2004">2004</div>
+						<div class="xdsoft_option " data-value="2005">2005</div>
+						<div class="xdsoft_option " data-value="2006">2006</div>
+						<div class="xdsoft_option " data-value="2007">2007</div>
+						<div class="xdsoft_option " data-value="2008">2008</div>
+						<div class="xdsoft_option " data-value="2009">2009</div>
+						<div class="xdsoft_option " data-value="2010">2010</div>
+						<div class="xdsoft_option " data-value="2011">2011</div>
+						<div class="xdsoft_option " data-value="2012">2012</div>
+						<div class="xdsoft_option " data-value="2013">2013</div>
+						<div class="xdsoft_option xdsoft_current" data-value="2014">2014</div>
+						<div class="xdsoft_option " data-value="2015">2015</div>
+						<div class="xdsoft_option " data-value="2016">2016</div>
+						<div class="xdsoft_option " data-value="2017">2017</div>
+						<div class="xdsoft_option " data-value="2018">2018</div>
+						<div class="xdsoft_option " data-value="2019">2019</div>
+						<div class="xdsoft_option " data-value="2020">2020</div>
+						<div class="xdsoft_option " data-value="2021">2021</div>
+						<div class="xdsoft_option " data-value="2022">2022</div>
+						<div class="xdsoft_option " data-value="2023">2023</div>
+						<div class="xdsoft_option " data-value="2024">2024</div>
+						<div class="xdsoft_option " data-value="2025">2025</div>
+						<div class="xdsoft_option " data-value="2026">2026</div>
+						<div class="xdsoft_option " data-value="2027">2027</div>
+						<div class="xdsoft_option " data-value="2028">2028</div>
+						<div class="xdsoft_option " data-value="2029">2029</div>
+						<div class="xdsoft_option " data-value="2030">2030</div>
+						<div class="xdsoft_option " data-value="2031">2031</div>
+						<div class="xdsoft_option " data-value="2032">2032</div>
+						<div class="xdsoft_option " data-value="2033">2033</div>
+						<div class="xdsoft_option " data-value="2034">2034</div>
+						<div class="xdsoft_option " data-value="2035">2035</div>
+						<div class="xdsoft_option " data-value="2036">2036</div>
+						<div class="xdsoft_option " data-value="2037">2037</div>
+						<div class="xdsoft_option " data-value="2038">2038</div>
+						<div class="xdsoft_option " data-value="2039">2039</div>
+						<div class="xdsoft_option " data-value="2040">2040</div>
+						<div class="xdsoft_option " data-value="2041">2041</div>
+						<div class="xdsoft_option " data-value="2042">2042</div>
+						<div class="xdsoft_option " data-value="2043">2043</div>
+						<div class="xdsoft_option " data-value="2044">2044</div>
+						<div class="xdsoft_option " data-value="2045">2045</div>
+						<div class="xdsoft_option " data-value="2046">2046</div>
+						<div class="xdsoft_option " data-value="2047">2047</div>
+						<div class="xdsoft_option " data-value="2048">2048</div>
+						<div class="xdsoft_option " data-value="2049">2049</div>
+						<div class="xdsoft_option " data-value="2050">2050</div>
+					</div>
+					<div class="xdsoft_scrollbar">
+						<div class="xdsoft_scroller"
+							style="display: block; height: 10px; margin-top: 0px;"></div>
+					</div>
+				</div>
+			</div>
+			<button class="date_confirm_button" style="" disable="false">确定</button>
+			<button type="button" class="xdsoft_next"></button>
+		</div>
+		<table class="hoverTable selectMonth">
+			<tbody>
+				<tr>
+					<td class="xdsoft_option" data-month="1" data-value="0">1月</td>
+					<td class="xdsoft_option" data-month="2" data-value="1">2月</td>
+					<td class="xdsoft_option" data-month="3" data-value="2">3月</td>
+					<td class="xdsoft_option" data-month="4" data-value="3">4月</td>
+					<td class="xdsoft_option" data-month="5" data-value="4">5月</td>
+					<td class="xdsoft_option" data-month="6" data-value="5">6月</td>
+					<td class="xdsoft_option" data-month="7" data-value="6">7月</td>
+					<td class="xdsoft_option current_month" data-month="8"
+						data-value="7">8月</td>
+					<td class="xdsoft_option" data-month="9" data-value="8">9月</td>
+					<td class="xdsoft_option" data-month="10" data-value="9">10月</td>
+					<td class="xdsoft_option" data-month="11" data-value="10">11月</td>
+					<td class="xdsoft_option" data-month="12" data-value="11">12月</td>
+				</tr>
+			</tbody>
+		</table>
+		<div class="xdsoft_datepicker active">
+			<div class="xdsoft_calendar">
+				<table>
+					<thead>
+						<tr>
+							<th>日</th>
+							<th>一</th>
+							<th>二</th>
+							<th>三</th>
+							<th>四</th>
+							<th>五</th>
+							<th>六</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td data-date="27" data-month="6" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week0 xdsoft_date xdsoft_other_month xdsoft_weekend"><div>27</div></td>
+							<td data-date="28" data-month="6" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week1 xdsoft_date xdsoft_other_month"><div>28</div></td>
+							<td data-date="29" data-month="6" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week2 xdsoft_date xdsoft_other_month"><div>29</div></td>
+							<td data-date="30" data-month="6" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week3 xdsoft_date xdsoft_other_month"><div>30</div></td>
+							<td data-date="31" data-month="6" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week4 xdsoft_date xdsoft_other_month"><div>31</div></td>
+							<td data-date="1" data-month="7" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week5 xdsoft_date"><div>1</div></td>
+							<td data-date="2" data-month="7" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week6 xdsoft_date xdsoft_weekend"><div>2</div></td>
+						</tr>
+						<tr>
+							<td data-date="3" data-month="7" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week0 xdsoft_date xdsoft_weekend"><div>3</div></td>
+							<td data-date="4" data-month="7" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week1 xdsoft_date"><div>4</div></td>
+							<td data-date="5" data-month="7" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week2 xdsoft_date"><div>5</div></td>
+							<td data-date="6" data-month="7" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week3 xdsoft_date xdsoft_current xdsoft_today"><div>6</div></td>
+							<td data-date="7" data-month="7" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week4 xdsoft_date"><div>7</div></td>
+							<td data-date="8" data-month="7" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week5 xdsoft_date"><div>8</div></td>
+							<td data-date="9" data-month="7" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week6 xdsoft_date xdsoft_weekend"><div>9</div></td>
+						</tr>
+						<tr>
+							<td data-date="10" data-month="7" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week0 xdsoft_date xdsoft_weekend"><div>10</div></td>
+							<td data-date="11" data-month="7" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week1 xdsoft_date"><div>11</div></td>
+							<td data-date="12" data-month="7" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week2 xdsoft_date"><div>12</div></td>
+							<td data-date="13" data-month="7" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week3 xdsoft_date"><div>13</div></td>
+							<td data-date="14" data-month="7" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week4 xdsoft_date"><div>14</div></td>
+							<td data-date="15" data-month="7" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week5 xdsoft_date"><div>15</div></td>
+							<td data-date="16" data-month="7" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week6 xdsoft_date xdsoft_weekend"><div>16</div></td>
+						</tr>
+						<tr>
+							<td data-date="17" data-month="7" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week0 xdsoft_date xdsoft_weekend"><div>17</div></td>
+							<td data-date="18" data-month="7" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week1 xdsoft_date"><div>18</div></td>
+							<td data-date="19" data-month="7" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week2 xdsoft_date"><div>19</div></td>
+							<td data-date="20" data-month="7" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week3 xdsoft_date"><div>20</div></td>
+							<td data-date="21" data-month="7" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week4 xdsoft_date"><div>21</div></td>
+							<td data-date="22" data-month="7" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week5 xdsoft_date"><div>22</div></td>
+							<td data-date="23" data-month="7" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week6 xdsoft_date xdsoft_weekend"><div>23</div></td>
+						</tr>
+						<tr>
+							<td data-date="24" data-month="7" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week0 xdsoft_date xdsoft_weekend"><div>24</div></td>
+							<td data-date="25" data-month="7" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week1 xdsoft_date"><div>25</div></td>
+							<td data-date="26" data-month="7" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week2 xdsoft_date"><div>26</div></td>
+							<td data-date="27" data-month="7" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week3 xdsoft_date"><div>27</div></td>
+							<td data-date="28" data-month="7" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week4 xdsoft_date"><div>28</div></td>
+							<td data-date="29" data-month="7" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week5 xdsoft_date"><div>29</div></td>
+							<td data-date="30" data-month="7" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week6 xdsoft_date xdsoft_weekend"><div>30</div></td>
+						</tr>
+						<tr>
+							<td data-date="31" data-month="7" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week0 xdsoft_date xdsoft_weekend"><div>31</div></td>
+							<td data-date="1" data-month="8" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week1 xdsoft_date xdsoft_other_month"><div>1</div></td>
+							<td data-date="2" data-month="8" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week2 xdsoft_date xdsoft_other_month"><div>2</div></td>
+							<td data-date="3" data-month="8" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week3 xdsoft_date xdsoft_other_month"><div>3</div></td>
+							<td data-date="4" data-month="8" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week4 xdsoft_date xdsoft_other_month"><div>4</div></td>
+							<td data-date="5" data-month="8" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week5 xdsoft_date xdsoft_other_month"><div>5</div></td>
+							<td data-date="6" data-month="8" data-year="2014"
+								class="xdsoft_date xdsoft_day_of_week6 xdsoft_date xdsoft_other_month xdsoft_weekend"><div>6</div></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<div class="xdsoft_timepicker ampm active" style="display: none;">
+			<div class="xdsoft_time_box" style="margin-top: 50px; height: auto">
+				<table class="hoverTable ampmtable">
+					<tbody>
+						<tr>
+							<td data-ampm="&nbsp;上午&nbsp;">上午</td>
+						</tr>
+						<tr>
+							<td data-ampm="&nbsp;下午&nbsp;">下午</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<div class="xdsoft_timepicker active"
+			style="margin-right: 20px; display: none;">
+			<div class="xdsoft_time_box" style="margin-top: 5px; width: 80px">
+				<table class="hoverTable hourtable">
+					<tbody>
+						<tr>
+							<td data-hour="01:">01:00</td>
+							<td data-hour="07:">07:00</td>
+						</tr>
+						<tr>
+							<td data-hour="02:">02:00</td>
+							<td data-hour="08:">08:00</td>
+						</tr>
+						<tr>
+							<td data-hour="03:">03:00</td>
+							<td data-hour="09:">09:00</td>
+						</tr>
+						<tr>
+							<td data-hour="04:">04:00</td>
+							<td data-hour="10:">10:00</td>
+						</tr>
+						<tr>
+							<td data-hour="05:">05:00</td>
+							<td data-hour="11:">11:00</td>
+						</tr>
+						<tr>
+							<td data-hour="06:">06:00</td>
+							<td data-hour="12:">12:00</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<div class="xdsoft_timepicker active" style="display: none;">
+			<div class="xdsoft_time_box" style="margin-top: 5px">
+				<table class="hoverTable minutetable">
+					<tbody>
+						<tr>
+							<td data-minute="00">00分</td>
+						</tr>
+						<tr>
+							<td data-minute="10">10分</td>
+						</tr>
+						<tr>
+							<td data-minute="20">20分</td>
+						</tr>
+						<tr>
+							<td data-minute="30">30分</td>
+						</tr>
+						<tr>
+							<td data-minute="40">40分</td>
+						</tr>
+						<tr>
+							<td data-minute="50">50分</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

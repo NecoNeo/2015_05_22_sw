@@ -1,0 +1,278 @@
+@charset "utf-8";
+
+/* CSS Document */
+@import url("global.css");
+@import url("icons.css");
+@import url("index-middle.css");
+
+.login_bg{
+	background:url(../images/ad/login_bg.jpg) no-repeat left;
+	background-size:100% 100%;
+	color:#999;
+}
+.login-nav{
+	height:2em;
+	text-align:center;
+	line-height:2em;
+	position:relative;
+}
+.login-nav-bg{
+	background:#adadad;
+	opacity:1;
+	position:absolute;
+	height:100%;
+	width:100%;
+	top:0em;
+	left:0em;
+}
+.login-nav a{
+	color:#fff;
+	margin:0em 1em;
+	position:relative;
+}
+.login-nav a.active{
+	font-weight:bold;
+}
+.login-info {
+	width: 90%;
+	text-align: right;
+	margin: 0 auto;
+	margin-top: 0.4em;
+}
+.login-info span{
+	margin-right:0.7em;
+}
+.icon.ctel {
+	display: inline-block;
+	background: url(../images/icons/tel_icon.png) left center no-repeat;
+	width: 0.6em;
+	height: 1em;
+	margin-top:-0.1em;
+	vertical-align: middle;
+}
+.login-info .trangle{
+	position:static;
+	margin-left:0em;
+	margin-top:0em;
+	border-top-color: #b3b3b3;
+	cursor: pointer;
+}
+.login-main {
+	width: 90%;
+	position: relative;
+	left: 50%;
+	top: 50%;
+	margin-left: -45%;
+	margin-top: -22em;
+	height: 41.2em;
+}
+.l-m-left{
+	width:60%;
+	height:100%;
+	position: absolute;
+	left: 0px;
+	top: 0px;
+}
+.l-m-left p {
+	position: absolute;
+	width:100%;
+	bottom:2.2em;
+	line-height:1.5em;
+}
+.login-box {
+	background: url(../images/login_shaodow_bg.png) center bottom no-repeat;
+	height:41.2em;
+	width: 30%;
+	min-width: 25em;
+	position: absolute;
+	right: 0px;
+	top: 0px;
+}
+
+.login{
+	-moz-box-shadow: inset 0px 0px 0.1em 0px #ffffff;
+	-webkit-box-shadow: inset 0px 0px 0.1em 0px #ffffff;
+	box-shadow: inset 0px 0px 0.1em 0px #ffffff;
+	border: 0.1em solid #e5e5e5;
+	-webkit-border-radius: 0.5em;
+	-moz-border-radius: 0.5em;
+	-ms-border-radius: 0.5em;
+	-khtml-border-radius: 0.5em;
+	-o-border-radius: 0.5em;
+	border-radius: 0.5em;
+	background: #f7f7f7 url(../images/login_repeat_bg.png) repeat;
+	height: 39em;
+}
+.login .line {
+	border-top: 0.1em solid #c8c8c8;
+	border-bottom: 0.1em solid #fff;
+	height: 0px;
+	margin: 0.8em 0px;
+}
+.login .title {
+	background: url(../images/login_title_bg.png) center bottom no-repeat;
+	background-size:100% 100%;
+	color: #fff;
+	height: 4.6em;
+	line-height: 4.4em;
+	margin: 0 auto;
+	margin-bottom: 0.7em;
+	position: relative;
+	text-align: center;
+	margin-top: -1.8em;
+	width: 13em;
+}
+.login .title h2{
+	font-size:1.5em;
+	font-weight:normal;
+}
+.login .fill{
+	width: 80%;
+	margin: 0 auto;
+	position:relative;
+	height:35em;
+}
+.login .l-form{
+	padding:0em 0.6em;
+}
+.l-form > div{
+	margin:0.6em 0em;
+	position:relative;
+}
+.l-form > div.errorMessage{
+	margin-top:1em;
+	color:#e90000;
+}
+.login .l-bottom{
+	position:absolute;
+	bottom:2em;
+	width: 100%;
+}
+.l-form input[type=text],.l-form select,.l-form input[type=password],.l-form .border-box,.l-form .p-group input[type=password]{
+	border: 0.1em solid #999999;
+	-webkit-border-radius: 0.4em;
+	-moz-border-radius: 0.4em;
+	-ms-border-radius: 0.4em;
+	-khtml-border-radius: 0.4em;
+	-o-border-radius: 0.4em;
+	border-radius: 0.4em;
+}
+.l-form input[type=text],.l-form select,.l-form input[type=password]{
+	width: 100%;
+	padding: 0px 0.7em;
+	height: 2.3em;
+	line-height: 2.1em;
+	color: #757575;
+	vertical-align: top;
+}
+
+.l-form input[type=text]:active,.l-form select:active,.l-form select.active,.l-form input[type=password]:active,.l-form input[type=text].active,.l-form input[type=password].active
+	{
+	border: 0.1em solid #5da9eb;
+	color: #000;
+} 
+.l-form select {
+	padding: 0.3em 0px 0.3em 0.4em;
+}
+.l-form .border-box {
+	background: #fff;
+	padding: 0.4em 0.7em;
+}
+.l-form .p-group{
+	margin-top:0.4em;
+}
+.l-form .border-box span {
+	display: block;
+	float: left;
+	margin-right: 0.4em;
+	text-align: center;
+	line-height:1.8em;
+}
+.l-form .p-group input[type=password] {
+	padding: 0px;
+	width: 1.8em;
+	height: 1.8em;
+	line-height: 1.8em;
+	vertical-align: middle;
+	-moz-box-shadow: inset 0px 0px 0.2em 0px #d8d5d0;
+	-webkit-box-shadow: inset 0px 0px 0.2em 0px #d8d5d0;
+	box-shadow: inset 0.1em 0.1em 0.2em 0.1em #d8d5d0;
+	border: 0px;
+	background: #f8f6f4;
+	text-align: center;
+}
+.l-form a {
+	color: #097de0;
+	display:block;
+	margin-top:0.3em;
+}
+.l-form .verify_code{
+	padding-right:30%;
+}
+.l-form .verify_code .img_box{
+	width:28%;
+	display:block;
+	position:absolute;
+	right:0em;
+	top:0em;
+	height:2.3em;
+	overflow:hidden;
+	border: 0.1em solid #cecece;
+	box-sizing:border-box;
+}
+.l-form .verify_code .img_box img{
+	width:100%;
+	height:100%;
+}
+
+.l-bottom .btn_group {
+	text-align: center;
+	margin-bottom: 0.7em;
+}
+.l-bottom .link{
+	text-align:center;
+}
+.l-bottom a{
+	color: #999999;
+}
+.l-bottom .link a{
+	margin:0em 0.5em;
+	text-decoration: underline;
+}
+
+.l-bottom .btn_group {
+	text-align: center;
+	margin-bottom: 10px;
+}
+.l-bottom .btn_group .btn_gray {
+	background-image: -moz-linear-gradient(top, #fefefe, #e2e2e2);
+	background-image: -ms-linear-gradient(top, #fefefe, #e2e2e2);
+	background-image: -o-linear-gradient(top, #fefefe, #e2e2e2);
+	background-image: -webkit-gradient(linear, center top, center bottom, from(#fefefe),
+		to(#e2e2e2));
+	background-image: -webkit-linear-gradient(top, #fefefe, #e2e2e2);
+	background-image: linear-gradient(top, #fefefe, #e2e2e2);
+	border-color:#c0c0c0;	
+	color: #8e8e8e;
+	letter-spacing:0.1em;	
+	-moz-box-shadow: 0px 0px 0.1em 0px #c0c0c0;
+	-webkit-box-shadow: 0px 0px 0.1em 0px #c0c0c0;
+	box-shadow: 0px 0px 0.1em 0px #c0c0c0;
+	height: 2.2em;
+	line-height: 2em;
+	padding:0em 1.6em;
+}
+
+.l-bottom .btn_group .btn_gray:hover {
+	background-image: -moz-linear-gradient(top, #e2e2e2, #fefefe);
+	background-image: -ms-linear-gradient(top, #e2e2e2, #fefefe);
+	background-image: -o-linear-gradient(top, #e2e2e2, #fefefe);
+	background-image: -webkit-gradient(linear, center top, center bottom, from(#e2e2e2),
+		to(#fefefe));
+	background-image: -webkit-linear-gradient(top, #e2e2e2, #fefefe);
+	background-image: linear-gradient(top, #e2e2e2, #fefefe);
+	
+}
+.l-bottom .btn_group .btn_gray {
+	margin: 0px 10px;
+}

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>test</title>
+        <link rel="stylesheet" href="css/reset.css" />
+        <link rel="stylesheet" href="css/jquery-ui.css" />
+        <script src="jquery.js"></script>
+        <script src="jquery-ui.js"></script>
+        <script src="selector.js"></script>
+    </head>
+    <body>
+        <div>selectPerson</div>
+        <div id="selectPerson" class="selectPerson"></div>
+        <div class="selectPerson"></div>
+        <div class="selectPerson"></div>
+        <script type="text/javascript">
+        $(function () {
+            $(".selectPerson")._selectPerson();
+        });
+        </script>
+    </body>
+</html>
