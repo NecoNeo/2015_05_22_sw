@@ -7,16 +7,19 @@
         <link rel="stylesheet" href="css/jquery-ui.css" />
         <script src="jquery.js"></script>
         <script src="jquery-ui.js"></script>
+        <script src="utils.js"></script>
         <script src="selector.js"></script>
+        <script src="datepicker.js"></script>
     </head>
     <body>
-        <div>selectPerson</div>
-        <div id="selectPerson" class="selectPerson"></div>
-        <div class="selectPerson"></div>
-        <div class="selectPerson"></div>
+        <div id="testdiv" value="123"></div>
+        <div id="selectTime">selectTime</div>
+        <div id="selectPerson" class="selectPerson">selectPerson</div>
         <script type="text/javascript">
         $(function () {
+            //$("#selectTime")._datepicker();
             $(".selectPerson")._selectPerson();
+            //$._dialog();
         });
         </script>
     </body>
